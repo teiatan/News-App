@@ -1,6 +1,6 @@
 import { refs } from './refs';
 import { addIsHidden, removeIsHidden } from './isHidden';
-import { authEntranceBtnHandler } from './auth';
+import { authEntranceBtnHandler, signUpBtnHandler } from './auth';
 
 export function addModalOpenListeners() {
     if(refs.modalOpenBtns.length === 0) {
@@ -45,12 +45,15 @@ export function addModalOpenListeners() {
 export function openAuthModal() {
     removeIsHidden(refs.authModal);
     refs.authEntranceBtn.addEventListener('click', authEntranceBtnHandler);
+    refs.authRegistrationBtn.addEventListener('click', signUpBtnHandler);
     document.addEventListener( 'keyup', authWithEnter);
+
 };
 
 export function closeAuthModal() {
     addIsHidden(refs.authModal);
     refs.authEntranceBtn.removeEventListener('click', authEntranceBtnHandler);
+    refs.authRegistrationBtn.addEventListener('click', signUpBtnHandler);
     document.removeEventListener( 'keyup', authWithEnter);
 };
 
@@ -58,7 +61,15 @@ export function openNewsModal() {
     
 };
 
+export function closeNewsModal() {
+    
+};
+
 export function openDevelopersModal() {
+    
+};
+
+export function closeDevelopersModal() {
     
 };
 
