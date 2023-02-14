@@ -9,7 +9,7 @@ Notiflix.Loading.pulse();
 defaultLocalStorage();
 addModalOpenListeners();
 headerLogic();
-showNews(getMostViewedNews());
 
-Notiflix.Loading.remove();
-//getMostViewedNews();
+
+window.setTimeout(Notiflix.Loading.remove(), 5000);
+
