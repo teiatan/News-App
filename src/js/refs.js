@@ -4,6 +4,7 @@ export const refs = {
     navRead: document.querySelector('.navigation__item--read'),
     headerSignInBtn: document.querySelector('.auth-btn__sign-in'),
     headerSignOutBtn: document.querySelector('.auth-btn__sign-out'),
+    renderContainerHome: document.querySelector('.render-container--home'),
 
 // відкриття/закриття модалок
     modalOpenBtns:document.querySelectorAll('[data-modal-open]'),
