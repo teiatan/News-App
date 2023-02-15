@@ -11,5 +11,6 @@ addModalOpenListeners();
 headerLogic();
 
 
+
 window.setTimeout(Notiflix.Loading.remove(), 5000);
 
