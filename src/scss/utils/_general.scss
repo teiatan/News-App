@@ -123,17 +123,16 @@ body {
 }
 
 .news__item {
+  position: relative;
+  pointer-events: auto;
+  width: 100%;
+  max-height: 630px;
+
   @include mq(tablet) {
     width: calc((100% - 90px) / 3);
-    // width: 353px;
-    min-height: 675px;
-    max-height: 400px;
   }
   @include mq(desktop) {
     width: calc((100% - 60px) / 3);
-    // width: 395px;
-    min-height: 675px;
-    max-height: 400px;
   }
 }
 
