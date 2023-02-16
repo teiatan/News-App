@@ -49,11 +49,12 @@ button {
 .container {
   padding-left: 16px;
   padding-right: 16px;
+  margin: 0 auto 0 auto;
   @include mq(tablet) {
-    // width: 320px;
+    width: 768px;
   }
   @include mq(desktop) {
-    width: 768px;
+    width: 1280px;
   }
 }
 
@@ -123,37 +124,53 @@ body {
 }
 
 .card {
-  position: relative;
-  pointer-events: auto;
-  width: 100%;
-  max-height: 630px;
+  height: 469px;
+  margin: 28px 0;
+  background-color:#f4f4f4;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @include mq(mobile) {
-    max-height: 100%;
-    width: calc((100% - 30px) / 2);
-    &:not(:last-child) {
-      margin-bottom: 40px;
+    width: 288px;
     }
 
-    &:not(:last-child) {
-      margin-bottom: 40px;
-    }
-  }
   @include mq(tablet) {
-    width: calc((100% - 30px) / 3);
-    max-height: 630px;
+    width: 353px;
+    height: 675px;
+    margin: 0;
   }
 
   @include mq(desktop) {
-    width: calc((100% - 60px) / 3);
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
+    width: 395px;
+    margin: 0;
   }
 }
 
-.render-container--home {
-  flex-wrap: wrap;
-  gap: 32px;
+.bottom-container {
   display: flex;
+  justify-content: center;
+}
+
+
+.render-container {
+  @include mq(mobile) {   
+  }
+
+  @include mq(tablet) {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  @include mq(desktop) {
+    gap: 31px;
+  }
+  
 }
