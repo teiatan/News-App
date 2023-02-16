@@ -124,3 +124,27 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
+.news__item {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+@include mq(tablet) {
+  .news__item {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include mq(desktop) {
+  .news__item {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
