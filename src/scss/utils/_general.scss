@@ -124,3 +124,21 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
+.news__item {
+  width: calc((100% - 30px) / 2);
+  min-height: 675px;
+  max-height: none;
+  margin-bottom: 30px;
+
+  @include mq(tablet) {
+    width: calc((100% - 60px) / 3);
+    min-height: 400px;
+    max-height: 400px;
+  }
+  @include mq(desktop) {
+    width: calc((100% - 90px) / 4);
+    min-height: 400px;
+    max-height: 400px;
+  }
+}
