@@ -1,5 +1,5 @@
 import { refs } from './refs';
-import { weatherMarkup } from '../partials/components/weather-card';
+import { weatherMarkup } from './API/getWeather';
 
 export async function showNews(apiFetch) {
     renderNewsCard(await apiFetch);
@@ -8,7 +8,6 @@ export async function showNews(apiFetch) {
 export async function renderNewsCard({results}) {
     refs.renderContainerHome.innerHTML = '';
     let imgSrc = '/assets/actions-config-step-1.png';
-    //const weatherMarkup = '<h3>ПОГОДА</h3>';
 
     const newsMarkup = results
     .map(
