@@ -129,7 +129,6 @@ body {
   width: calc((100% - 30px) / 2);
   min-height: 675px;
   max-height: none;
-  margin-bottom: 30px;
 
   @include mq(tablet) {
     width: calc((100% - 60px) / 3);
