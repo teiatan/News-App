@@ -29,7 +29,7 @@ export async function renderNewsCard({results}) {
         }
 
         return `
-            <li class="news__item" data-id=${id}>
+            <li class="news__item card" data-id=${id}>
                 <span class="news__category">${subsection}</span>
                 <span class="news__read is-hidden"></span>
                 <button class="news__favorite">Add to favorite</button>
