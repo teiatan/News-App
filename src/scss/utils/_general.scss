@@ -138,3 +138,9 @@ body {
     max-height: 400px;
   }
 }
+
+.render-container--home {
+  flex-wrap: wrap;
+  gap: 30px;
+  display: flex;
+}
