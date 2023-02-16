@@ -17,15 +17,6 @@ export async function getMostViewedNews() {
             if (!response) {
                 throw new Error(response.status);
               }
-              /* console.log(response.data);
-              console.log(response.data.results[0]);
-              console.log(response.data.results[0].url);
-              console.log(response.data.results[0].id);
-              console.log(response.data.results[0].title);
-              console.log(response.data.results[0].abstract);
-              console.log(response.data.results[0].media);
-              console.log(response.data.results[0].media[0].caption);
-              console.log(response.data.results[0].media[0]["media-metadata"][2].url); */
               
               return response.data;
         });
