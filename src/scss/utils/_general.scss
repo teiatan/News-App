@@ -1,7 +1,4 @@
-
-
 body {
-  
 }
 
 a,
@@ -34,6 +31,20 @@ svg {
   display: block;
 }
 
+address {
+  font-style: inherit;
+}
+
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: inherit;
+  box-shadow: none;
+}
+
 .is-hidden {
   display: none;
 }
@@ -47,4 +58,8 @@ svg {
   @include mq(desktop) {
     width: 768px;
   }
+}
+
+body {
+  font-family: 'Manrope';
 }
