@@ -128,9 +128,13 @@ body {
   width: 100%;
   max-height: 630px;
 
-  @include mq(tablet) {
-    width: calc((100% - 90px) / 3);
+  @include mq(mobile) {
+    max-height: 100%;
   }
+  @include mq(tablet) {
+    width: calc((100% - 30px) / 3);
+  }
+
   @include mq(desktop) {
     width: calc((100% - 60px) / 3);
   }
