@@ -47,7 +47,7 @@ button {
 }
 
 .container {
-  display: flex;
+  
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto 0 auto;
@@ -180,6 +180,9 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-.header-container {
-  align-items: baseline;
+.header__container {
+  display: flex;
+  @include mq(tablet) {
+    align-items: baseline;
+  }
 }

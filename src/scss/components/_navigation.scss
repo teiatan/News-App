@@ -5,6 +5,9 @@
     --current-link-underline-color: #4440F7;
 }
 
+.navigation-wrapper {
+}
+
 .navigation {
     display: none;
     @include mq(tablet){
@@ -63,19 +66,21 @@
     }
 }
 
-.navigation-icon {
+.navigation__icon {
     margin-right: 14px;
     @include mq(tablet) {
         display: none;
     }
 }
 
-.navigation-icon-after {
+.navigation__icon--after {
     margin-left: auto;
     @include mq(tablet) {
         display: none;
     }
 }
+
+
 
 
 
@@ -83,8 +88,10 @@
 
 .auth-btn__sign-in {
     margin-left: auto;
+    display: none;
 }
 
 .auth-btn__sign-out {
     margin-left: auto;
+    display: none;
 }
