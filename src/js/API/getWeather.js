@@ -1,17 +1,18 @@
-
+import axios from "axios";
+export let weatherMarkup;
 const API_KEY = '91d751a02dafc0c836af10d6250528cb';
 const ENDPOINT = 'https://api.openweathermap.org/data/2.5/weather?';
 
 async function fetchDefaultWeather() {
   const url = `${ENDPOINT}q=Kyiv&units=metric&appid=${API_KEY}`;
   try {
-    return (data = await axios.get(url));
+    return data = await axios.get(url);
     //  console.log(data);
   } catch (error) {
     console.log(error);
   }
 }
-fetchDefaultWeather();
+// fetchDefaultWeather();
 
 async function getGeoposition() {
   if (navigator.geolocation) {
@@ -36,4 +37,3 @@ async function fetchWeatherByGeo(lat, lon) {
 }
 getGeoposition();
 
-export const weatherMarkup = `<li class="weather-item card"><div class="weather-header">header</div><img class=weather-img>img</><p class="weather-date">DATE</p><a class="weather-link">LINK</a></li>`;
