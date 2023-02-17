@@ -42,11 +42,12 @@ button {
   box-shadow: none;
 }
 
-.is-hidden {
-  display: none;
-}
+// .is-hidden {
+//   display: none;
+// }
 
 .container {
+  display: flex;
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto 0 auto;
@@ -173,4 +174,12 @@ body {
     gap: 31px;
   }
   
+}
+
+.header {
+  border-bottom: 1px solid var(--border);
+}
+
+.header-container {
+  align-items: baseline;
 }
