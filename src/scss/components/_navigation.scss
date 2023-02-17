@@ -8,8 +8,11 @@
 .navigation {
     display: none;
     @include mq(tablet){
-        margin-left: 44px;
+        margin-left: 48px;
         display: block;
+    }
+    @include mq(desktop){
+        margin-left: 102px;
     }
 }
 
@@ -19,13 +22,13 @@
     align-items: baseline;
 
     @include mq(tablet) {
+        flex-direction: row;
         display: flex;
         align-items: center;
         gap: 44px;
     }
-    
     @include mq(desktop) {
-        margin-left: 102px;
+        gap: 69px;
     }
 }
 
@@ -62,6 +65,9 @@
 
 .navigation-icon {
     margin-right: 14px;
+    @include mq(tablet) {
+        display: none;
+    }
 }
 
 .navigation-icon-after {
