@@ -81,5 +81,13 @@
 <path style="fill: var(--color1, #4b48db)" d="M27.2 16c0 7.069-5.731 12.8-12.8 12.8s-12.8-5.731-12.8-12.8c0-7.069 5.731-12.8 12.8-12.8s12.8 5.731 12.8 12.8z"></path>
 <path fill="none" stroke="#4b48db" style="stroke: var(--color1, #4b48db)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.9675" d="M16 0.484h32c8.569 0 15.516 6.947 15.516 15.516s-6.947 15.516-15.516 15.516h-32c-8.569 0-15.516-6.947-15.516-15.516s6.947-15.516 15.516-15.516z"></path>
 </symbol>
+
+<symbol id="icon-prew" viewBox="0 0 18 32">
+<path d="M6.464 16l11.314 11.314-3.232 3.232-14.546-14.546 14.546-14.546 3.232 3.232-11.314 11.314z"></path>
+</symbol>
+
+<symbol id="icon-next" viewBox="0 0 19 32">
+<path d="M10.15 16l-9.053-9.050 4.525-4.528 13.578 13.578-13.578 13.578-4.525-4.528 9.053-9.050z"></path>
+</symbol>
 </defs>
 </svg>
