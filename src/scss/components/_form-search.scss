@@ -1,0 +1,53 @@
+.search-form {
+  position: relative;
+}
+
+.search-form > input {
+  width: 173px;
+  height: 31px;
+
+  font-size: 14px;
+
+  padding-top: 6.5px;
+  padding-bottom: 6.5px;
+  padding-right: 12px;
+  padding-left: 115px;
+
+  border-radius: 20px;
+  border: 1px solid var(--text-color);
+  outline: transparent;
+
+  @include mq(tablet) {
+    width: 213px;
+  }
+  @include mq(desktop) {
+    width: 288px;
+  }
+}
+
+.search-form > svg {
+  position: absolute;
+  left: 12px;
+  top: 7px;
+}
+
+.search-form > label {
+  position: absolute;
+  left: 48;
+  top: 8px;
+
+  font-family: 'Poppins';
+  font-size: 12px;
+  line-height: 1.29;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+  opacity: 0.4;
+
+  border-right: 1px solid var(--text-color);
+  padding-right: 8px;
+
+  @include mq(tablet) {
+    font-size: 14px;
+    top: 7;
+  }
+}
