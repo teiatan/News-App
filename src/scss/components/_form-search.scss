@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.search-form > input {
+.search-form__input {
   width: 173px;
   height: 31px;
 
@@ -25,13 +25,7 @@
   }
 }
 
-.search-form > svg {
-  position: absolute;
-  left: 12px;
-  top: 7px;
-}
-
-.search-form > label {
+.search-form__label {
   position: absolute;
   left: 48;
   top: 8px;
@@ -50,4 +44,20 @@
     font-size: 14px;
     top: 7;
   }
+}
+
+.search-form__btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 42px;
+  height: 31px;
+
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
