@@ -1,4 +1,4 @@
-<header>
+<header class="header">
     <div class="container">
         <include src="partials/components/logo.html"></include>
         <include src="partials/components/navigation.html"></include>
@@ -7,4 +7,56 @@
         <include src="partials/components/switcher-theme.html"></include>
         <include src="partials/components/auth-btns-header.html"></include>
     </div>
+    <button type="button" class="mobile-button js-open-menu" aria-expanded="false">
+        <svg class="icon" width="24" height="24">
+          <use href="./img/sprite.svg#icon-menu"></use>
+        </svg>
+    </button>
 </header>
+<div class="mobile-menu js-menu-container">
+    <div class="mobile-menu__container">
+      <div class="mobile-menu__wrapper">
+        <a href="./index.html" class="logo">News</a>
+        <button type="button" class="close-btn js-close-menu">
+          <svg width="24" height="24">
+            <use href="./img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+      <ul class="nav-mobile">
+        <li class="nav-mobile__item">
+          <a href="./index.html" >
+            <div>
+              <svg width="18" height="18" class="navbar-mobile__icon">
+                <use href="./img/sprite.svg#icon-home"></use>
+              </svg>
+            </div>
+            Home
+            <svg width="24" height="12" class="current-page__icon">
+              <use href="./img/sprite.svg#icon-arrow-down"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="nav-mobile__item">
+          <a href="./favorite.html" class="nav-mobile__link">
+            <div>
+              <svg width="18" height="18" class="navbar-mobile__icon">
+                <use href="./img/sprite.svg#icon-favorite"></use>
+              </svg>
+            </div>
+            Favorite
+          </a>
+        </li>
+        <li class="nav-mobile__item">
+          <a href="./read.html" class="nav-mobile__link">
+            <div>
+              <svg width="18" height="18" class="nav-mobile__icon">
+                <use href="./img/sprite.svg#icon-read"></use>
+              </svg>
+            </div>
+            Read
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
