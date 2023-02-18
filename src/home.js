@@ -6,6 +6,8 @@ import { getMostViewedNews } from './js/API/getMostViewedNews';
 import { showMostViewedNews } from './js/render-functions/renderMostViewedNews';
 import { getNewsByFormInput } from './js/API/getNewsByFormInput';
 import { showNewsByFormInput } from './js/render-functions/renderNewsByFormInput';
+import {developers} from './developers';
+
 
 Notiflix.Loading.pulse();
 defaultLocalStorage();
