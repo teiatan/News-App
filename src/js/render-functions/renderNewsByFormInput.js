@@ -1,6 +1,7 @@
 import { refs } from '../refs';
 import { weatherMarkup } from '../API/getWeather';
 
+
 export async function showNewsByFormInput(apiFetch) {
     renderNewsByFormInput(await apiFetch);
 };
@@ -8,7 +9,7 @@ export async function showNewsByFormInput(apiFetch) {
 export async function renderNewsByFormInput(results) {
   refs.renderContainerHome.innerHTML = '';
   let imgSrc = '';
-  console.log(results.response.docs);
+  //console.log(results.response.docs);
   const newsMarkup = results.response.docs
   .map(
     ({
@@ -20,11 +21,12 @@ export async function renderNewsByFormInput(results) {
         pub_date,
         multimedia,
 
+
     }) => {
-      if(multimedia.length === 0) {
-        imgSrc = '/assets/actions-config-step-1.png';
+      if(multimedia.length !== 0) {
+        imgSrc = `https://static01.nyt.com/${multimedia[0].url}`;
       } else {
-        imgSrc = multimedia[31].url;
+        imgSrc = 'https://wellesleysocietyofartists.org/wp-content/uploads/2015/11/image-not-found.jpg'
       }
 
       return `

@@ -14,6 +14,6 @@ defaultLocalStorage();
 addModalOpenListeners();
 headerLogic();
 showMostViewedNews(getMostViewedNews());
-//showNewsByFormInput(getNewsByFormInput());
+showNewsByFormInput(getNewsByFormInput());
 window.setTimeout(Notiflix.Loading.remove(), 5000);
 
