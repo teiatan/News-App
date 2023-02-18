@@ -8,6 +8,8 @@ export async function showMostViewedNews(apiFetch) {
 export async function renderMostViewedNews({results}) {
   refs.renderContainerHome.innerHTML = '';
   let imgSrc = '/assets/actions-config-step-1.png';
+  let mediaMetaData = 2;
+  
   const newsMarkup = results
   .map(
     ({
@@ -23,19 +25,24 @@ export async function renderMostViewedNews({results}) {
       if(media.length === 0) {
         imgSrc = '/assets/actions-config-step-1.png';
       } else {
-        imgSrc = media[0]["media-metadata"][1].url;
+        imgSrc = media[0]["media-metadata"][`${mediaMetaData}`].url
       }
 
       return `
           <li class="news__item card" data-id=${id}>
-              <span class="news__category">${subsection}</span>
+              <span class="news__category is-hidden">${subsection}</span>
               <span class="news__read is-hidden"></span>
+              <div class="news__container-img">
+              
               <button class="news__favorite">Add to favorite</button>
               <img src="${imgSrc}" alt="" class="news__img"/>
+              </div>
               <h3 class="news__title">${title}</h3>
               <p class="news__abstract">${abstract}</p>
-              <span class="news__date">${published_date}</span>
-              <a href="${url}" class="news__link">Read more</a>
+              
+              <span class="news__date">${published_date.replaceAll('-' , '/')}</span>
+              <a href="${url}" class="news__link" target = "_blank">Read more</a>
+              
           </li>
       `;
     }
