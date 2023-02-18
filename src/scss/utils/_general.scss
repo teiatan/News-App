@@ -172,5 +172,16 @@ body {
   @include mq(desktop) {
     gap: 31px;
   }
-  
+}
+
+.header {
+  border-bottom: 1px solid var(--border);
+}
+
+.header__container {
+  display: flex;
+
+  @include mq(tablet) {
+    align-items: baseline;
+  }
 }

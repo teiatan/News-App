@@ -1,10 +1,16 @@
-@import './utils/variables';
 @import './utils/mixins';
 @import './utils/general';
+@import './utils/variables';
+
+
 @import './utils/fonts';
+@import './utils/colors-dark-theme';
+@import './utils/colors-light-theme';
 
 @import './layouts/modal-auth';
 @import './components/calendar';
+@import './components/logo';
+@import './components/navigation';
 
 @import './components/form-search';
 
