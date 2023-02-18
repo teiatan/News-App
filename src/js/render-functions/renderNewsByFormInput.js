@@ -7,7 +7,7 @@ export async function showNewsByFormInput(apiFetch) {
 
 export async function renderNewsByFormInput(results) {
   refs.renderContainerHome.innerHTML = '';
-  let imgSrc = '/assets/actions-config-step-1.png';
+  let imgSrc = '';
   console.log(results.response.docs);
   const newsMarkup = results.response.docs
   .map(
