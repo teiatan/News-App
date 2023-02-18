@@ -32,7 +32,7 @@ export async function renderMostViewedNews({results}) {
       return `
           <li class="news__item card" data-id=${id}>
               <span class="news__category is-hidden">${subsection}</span>
-              <span class="news__read"></span>
+              <span class="news__read is-hidden"></span>
               <div class="news__container-img">
               
               <button class="news__favorite">Add to favorite</button>
