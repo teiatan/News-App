@@ -1,26 +1,33 @@
 <div class="theme-btn">
-
-  <button class="theme-btn__ligth">
-      <svg class="theme-btn__icon theme-btn__icon--side">
-          <use></use>
-      </svg>
-      <svg class="theme-btn__icon theme-btn__icon--side theme-btn__icon--dark is-hidden">
-        <use></use>
-      </svg>
+  <button class="theme-btn__ligth" type="button"><span class="theme-btn__dark__text">Light</span>
+    Light
+    <svg class="theme-btn__icon theme-btn__icon--side" width: 18.67px height: 18.67px>
+      <use href="/src/img/sprite.svg#icon-sun-color"></use>
+    </svg>
+    <svg
+      class="theme-btn__icon theme-btn__icon--side theme-btn__icon--dark is-hidden"
+    width: 18.67px height: 18.67px>
+      <use href="/src/img/sprite.svg#icon-sun-black"></use>
+    </svg>
   </button>
 
-  <span class="theme-btn__toggle">
-    <input id="checkbox" class="theme-btn__checkbox" type="checkbox" />
-    <label for="checkbox"></label>
-  </span>
+  <div class="theme-btn__toggle">
+    <span></span><svg class="theme-btn__light__toggler">
+        <use href="/src/img/sprite.svg#icon-toggle-light"></use></svg></span>
+    <span
+      ><svg class="theme-btn__dark__toggler">
+        <use href="/src/img/sprite.svg#icon-toggle-dark"></use></svg></span>
+  </div>
 
-  <button class="theme-btn__dark">
-      <svg class="theme-btn__icon theme-btn__icon--side">
-          <use></use>
-      </svg>
-      <svg class="theme-btn__icon theme-btn__icon--side theme-btn__icon--dark is-hidden">
-        <use></use>
-      </svg>
+  <button class="theme-btn__dark" type="button">
+    <span class="theme-btn__dark__text">Dark</span>
+    <svg class="theme-btn__icon theme-btn__icon--side" width: 18.67px height: 18.67px>
+      <use href="/src/img/sprite.svg#icon-moon-black"></use>
+    </svg>
+    <svg
+      class="theme-btn__icon theme-btn__icon--side theme-btn__icon--dark is-hidden"
+    width: 18.67px height: 18.67px>
+      <use href="/src/img/sprite.svg#icon-moon-color"></use>
+    </svg>
   </button>
-
 </div>
