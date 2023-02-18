@@ -1,4 +1,4 @@
-mport { nytApiSettings } from './nytApiSettings';
+import { nytApiSettings } from './nytApiSettings';
 
 export const getCategories = () => {
   return fetch(
@@ -12,9 +12,11 @@ export const getCategories = () => {
     });
 };
 
+export { getCategories };
+
 async function getArticleByCategory(value) {
   const response = await fetch(
-   `https://api.nytimes.com/svc/news/v3/content/all/${value}.json?api-key=${nytApiSettings.apiKey}`
+    `https://api.nytimes.com/svc/news/v3/content/all/${value}.json?api-key=${nytApiSettings.apiKey}`
   );
   const data = await response.json();
   return data;
