@@ -1,11 +1,11 @@
 export const developers = [
-    { fullName: "Protas Tanya",
+    { fullName: "Tanya Protas",
 linkedIn: "linkedin.com/in/tetiana-protas",
 gitHub: "https://github.com/teiatan",
 mail: "protas.tb@gmail.com",
 telegram: "https://t.me/protastb",
 photo: "",
-role: "Team lead",
+role: "Team lead & Scrum master",
 doneTasks: ""},
 
 
@@ -16,20 +16,20 @@ mail: "work.haldavaroman@gmail.com",
 telegram: "",
 photo: "",
 role: "developer",
-doneTasks: ""},
+doneTasks: "фавікон, розмітка формиполя пошуку новин по ключовому слову"},
 
 
-{ fullName: "Herusova Anastasiia",
+{ fullName: "Anastasiia Herusova",
 linkedIn: "https://www.linkedin.com/in/anastasiia-herusova/",
 gitHub: "https://github.com/Anastasiia2302",
 mail: "nastia.herusova@gmail.com",
 telegram: "https://t.me/asyagermany",
 photo: "",
 role: "developer",
-doneTasks: ""},
+doneTasks: "спрайт з іконками, картинки заглушки"},
 
 
-{ fullName: "Zhuk Nikita",
+{ fullName: "Nikita Zhuk",
 linkedIn: "",
 gitHub: "https://github.com/NVZ1994",
 mail: "nikita.zhuk.1994@gmail.com",
@@ -56,7 +56,7 @@ mail: "bakumenkoanastasia2@gmail.com",
 telegram: "https://t.me/nastyshka15",
 photo: "",
 role: "developer",
-doneTasks: ""},
+doneTasks: "календар"},
 
 
 { fullName: "Pavlo Shyshko",
@@ -75,7 +75,7 @@ mail: "tkachuknazarii15@gmail.com",
 telegram: "https://t.me/Nazzik15",
 photo: "",
 role: "developer",
-doneTasks: ""},
+doneTasks: "розмітка хедеру як сукупності розміток"},
 
 
 {fullName: "Olena Serbinenko",
@@ -85,7 +85,7 @@ mail: "serbinenkoifbb@gmail.com",
 telegram: "https://t.me/dr_serbinenko",
 photo: "",
 role: "developer",
-doneTasks: ""},
+doneTasks: "функція отримання даних з бекенду погоди"},
 
 
 {fullName: "Evlahova Taisa",
@@ -95,7 +95,7 @@ mail: "taiska1488@gmail.com",
 telegram: "",
 photo: "",
 role: "developer",
-doneTasks: ""},
+doneTasks: "файли зі змінними кольорів для двох тем"},
 
 
 {fullName: "Roman Tiazhkorob",
@@ -105,7 +105,7 @@ mail: "Romeenice@gmail.com",
 telegram: "",
 photo: "",
 role: "developer",
-doneTasks: ""},
+doneTasks: "загальні стилі"},
 
 
 { fullName: "Yaroslava Pletsys",
@@ -115,7 +115,7 @@ mail: "yaroslava.plt@gmail.com",
 telegram: "https://t.me/yaroslava_plt",
 photo: "",
 role: "developer",
-doneTasks: ""},
+doneTasks: "розмітка для пагінації,"},
 
 
 { fullName: "Andrew Sulymka",
@@ -125,7 +125,7 @@ mail: "andreysulymka5@gmail.com",
 telegram: "https://t.me/andreySulymka",
 photo: "",
 role: "developer",
-doneTasks: ""},
+doneTasks: "змінні окрім кольорів"},
 
 {fullName: "Yaroslav Velichko",
 linkedIn: "",
