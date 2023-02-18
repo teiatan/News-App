@@ -6,7 +6,7 @@ mail: "protas.tb@gmail.com",
 telegram: "https://t.me/protastb",
 photo: "",
 role: "Team lead & Scrum master",
-doneTasks: ""},
+doneTasks: "розмітка футера"},
 
 
 { fullName: "Roman Haldava",
@@ -26,7 +26,7 @@ mail: "nastia.herusova@gmail.com",
 telegram: "https://t.me/asyagermany",
 photo: "",
 role: "developer",
-doneTasks: "спрайт з іконками, картинки заглушки"},
+doneTasks: "спрайт з іконками, картинки заглушки, початок розмітки футера"},
 
 
 { fullName: "Nikita Zhuk",
