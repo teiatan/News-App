@@ -1,7 +1,16 @@
-/text-color
+ /text-color
 {
+   
 $main--text-color: #111321;
-$additional--text-color: #a8a8a8;
-$calendar--text-color: #ffffff;
-$accent-color: #4440f6;
+$additional--text-color: #ffffff;
+$weather--text-color: #ffffff;
+$accent--text-color: #4440f6;
+$text--grey-color:#a8a8a8;
+
+//background-color
+
+$main--background-color: #f4f4f4;
+$additional--background-color: #2e2e2e;
+$weather--background-color: #4b48db;
+
 }
