@@ -1,9 +1,8 @@
 .search-form {
-  display: none;
   position: relative;
   margin-left: auto;
   @include mq(tablet) {
-    display: block;
+    // display: block;
   }
   
 }
@@ -71,7 +70,7 @@
 .header__search-form-opening-btn {
   margin-left: auto;
   @include mq(tablet) {
-    display: none;
+    
   }
 }
 
@@ -79,6 +78,6 @@
   margin-left: 14px;
   
     @include mq(tablet) {
-      display: none;
+      
     }
 }
