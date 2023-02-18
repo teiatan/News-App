@@ -6,6 +6,7 @@ const ENDPOINT = 'https://api.openweathermap.org/data/2.5/weather?';
 
 
 createDefaultWeatherMarkup(); 
+// getGeoposition();
 
 async function fetchDefaultWeather() {
   const url = `${ENDPOINT}q=Kyiv&units=metric&appid=${API_KEY}`;
@@ -16,10 +17,9 @@ async function fetchDefaultWeather() {
     console.log(error);
   }
 }
-
 // fetchDefaultWeather();
 
-// async function getGeoposition() {
+// function getGeoposition() {
 //   if (navigator.geolocation) {
 //     // if browser support geolocation api
 //     navigator.geolocation.getCurrentPosition(onSuccess);
@@ -27,25 +27,26 @@ async function fetchDefaultWeather() {
 //     alert('Your browser not support geolocation api');
 //   }
 // }
-// function onSuccess(position) {
+
+// async function onSuccess(position) {
 //   const { latitude, longitude } = position.coords; // getting lat and lon of the user device from coords obj
-//   fetchWeatherByGeo(latitude, longitude);
+//   await fetchWeatherByGeo(latitude, longitude).then(data => createMarkup(data));
 // }
 
 // async function fetchWeatherByGeo(lat, lon) {
 //   const url = `${ENDPOINT}lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
 //   try {
-//     return (data = await axios.get(url));
+//     return await axios.get(url);
 //   } catch (error) {
 //     console.log(error);
 //   }
 // }
-// getGeoposition();
 
 async function createDefaultWeatherMarkup() {
   const data = await fetchDefaultWeather();
-  createMarkup(data);
+  await createMarkup(data);
  }
+
 
  function createMarkup(data){
 const { temp } = data.data.main;
