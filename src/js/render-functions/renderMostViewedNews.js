@@ -7,7 +7,7 @@ export async function showMostViewedNews(apiFetch) {
 
 export async function renderMostViewedNews({results}) {
   refs.renderContainerHome.innerHTML = '';
-  let imgSrc = '/assets/actions-config-step-1.png';
+  let imgSrc = '';
   const newsMarkup = results
   .map(
     ({
