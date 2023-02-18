@@ -7,10 +7,8 @@ import { showMostViewedNews } from './js/render-functions/renderMostViewedNews';
 import { getNewsByFormInput } from './js/API/getNewsByFormInput';
 import { showNewsByFormInput } from './js/render-functions/renderNewsByFormInput';
 import { developers } from './developers';
-import { getCategoryRender } from './js/render-functions/renderCategories';
 
 Notiflix.Loading.pulse();
-getCategoryRender();
 defaultLocalStorage();
 addModalOpenListeners();
 headerLogic();
