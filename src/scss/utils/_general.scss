@@ -107,12 +107,13 @@ body {
 }
 
 .card {
-  height: 469px;
+  min-height: 469px;
   margin: 28px 0;
   
   /* ПРИБРАТИ РОБЛЯЧИ СТИЛІ КАРТКИ НОВИНИ */
   background-color: var(--additional-accent--text-color);
   /* ПРИБРАТИ РОБЛЯЧИ СТИЛІ КАРТКИ НОВИНИ */
+
 
   &:first-child {
     margin-top: 0;
@@ -124,6 +125,8 @@ body {
 
   @include mq(mobile) {
     width: 288px;
+    height: 640px;
+    
     }
 
   @include mq(tablet) {
