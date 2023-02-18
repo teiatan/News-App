@@ -37,7 +37,7 @@ export async function renderNewsByFormInput(results) {
               <img src="${imgSrc}" alt="" class="news__img"/>
               <h3 class="news__title">${headline.main}</h3>
               <p class="news__abstract">${abstract}</p>
-              <span class="news__date">${pub_date}</span>
+              <span class="news__date">${pub_date.split('').splice(0, 10).join('').replaceAll('-', '/')}</span>
               <a href="${web_url}" class="news__link">Read more</a>
           </li>
       `;
