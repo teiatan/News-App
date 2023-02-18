@@ -180,8 +180,9 @@ body {
 
 .header__container {
   display: flex;
+  align-items: baseline;
 
   @include mq(tablet) {
-    align-items: baseline;
+    
   }
 }
