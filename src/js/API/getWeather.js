@@ -1,39 +1,15 @@
 import axios from "axios";
-import { format } from 'date-fns';
 
 const API_KEY = '91d751a02dafc0c836af10d6250528cb';
 const ENDPOINT = 'https://api.openweathermap.org/data/2.5/weather?';
 
-export let weather = {
-  markup: `<li class="weather-item card">
-  <div class="weather-header">
-    <p>${Math.floor(temp)}</p>
-    <div>
-      <p>${weather.main}</p>
-      <p>${data.data.name}</p>
-    </div>
 
-  </div>
-  <img class="weather-img"
-        // src="https://openweathermap.org/img/wn/${icon}@4x.png"
-        alt="Weather icon"
-        width="165"
-        height="156"/>
-  <p class="weather-day">${format(new Date(), 'eee')}</p>
-  <p class="weather-date">${format(new Date(), 'dd LLL y')}</p>
-  <a class="weather-link" href="https://sinoptik.ua" target="_blank">weather for week</a>
-</li>`,
-};
 
 // getGeoposition();
-createDefaultWeatherMarkup();
 
-async function createDefaultWeatherMarkup() {
-  const data = await fetchDefaultWeather();
-  await createMarkup(data);
-}
 
-async function fetchDefaultWeather() {
+
+export async function fetchDefaultWeather() {
   const url = `${ENDPOINT}q=Kyiv&units=metric&appid=${API_KEY}`;
   try {
     return data = await axios.get(url);
@@ -42,17 +18,6 @@ async function fetchDefaultWeather() {
     console.log(error);
   }
 }
-
-
-function createMarkup(data) {
-  const { temp } = data.data.main;
-  const weather = data.data.weather[0];
-  const { icon } = data.data.weather[0];
-
-  weatherMarkup = `${JSON.parse(localStorage.weather.markup)}`;
-  return weatherMarkup;
-}
-
   // fetchDefaultWeather();
 
 
@@ -79,25 +44,6 @@ function createMarkup(data) {
   //   }
   // }
 
-  // `<li class="weather-item card">
-  //   <div class="weather-header">
-  //     <p>${Math.floor(temp)}</p>
-  //     <div>
-  //       <p>${weather.main}</p>
-  //       <p>${data.data.name}</p>
-  //     </div>
 
-  //   </div>
-  //   <img class="weather-img"
-  //         // src="https://openweathermap.org/img/wn/${icon}@4x.png"
-  //         alt="Weather icon"
-  //         width="165"
-  //         height="156"/>
-  //   <p class="weather-day">${format(new Date(), 'eee')}</p>
-  //   <p class="weather-date">${format(new Date(), 'dd LLL y')}</p>
-  //   <a class="weather-link" href="https://sinoptik.ua" target="_blank">weather for week</a>
-  // </li>`;
-
-  // return weatherMarkup;
 
 
