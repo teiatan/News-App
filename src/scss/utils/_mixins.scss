@@ -1,8 +1,8 @@
-@mixin font($fw, $fs, $lh, $ls) {
-    font-weight: $fw;
-    font-size: $fs;
-    line-height: $lh;
-    letter-spacing: $ls;
+@mixin font($fw: 400, $fs: 16, $lh: 21.86, $ls) {
+font-weight: #{$fw};
+    font-size: #{$fs}px;
+    line-height: (calc($lh/ $fs));
+    letter-spacing: #{$ls}em;
 }
 
 @mixin flex($df, $jc, $ai) {
