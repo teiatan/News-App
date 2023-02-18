@@ -1,4 +1,4 @@
-<div class="theme-btn">
+<!-- <div class="theme-btn">
   <button class="theme-btn__ligth" type="button"><span class="theme-btn__text theme-btn__light__text">Light</span>
     <svg class="theme-btn__icon theme-btn__icon--side">
       <use href="/src/img/sprite.svg#icon-sun-color"></use>
@@ -18,6 +18,8 @@
         <use href="/src/img/sprite.svg#icon-toggle-dark"></use></svg></span>
   </button>
 
+  
+
   <button class="theme-btn__dark" type="button">
     <span class="theme-btn__text theme-btn__dark__text">Dark</span>
     <svg class="theme-btn__icon theme-btn__icon--side" >
@@ -29,4 +31,34 @@
       <use href="/src/img/sprite.svg#icon-moon-color"></use>
     </svg>
   </button>
+</div> -->
+
+<div class="theme-btn">
+  
+  <div class="theme-btn__container">
+    <span class="theme-btn__text theme-btn__light__text">Light</span>
+    <div class="theme-btn__icon"><svg class="theme-btn__icon--light" width="18.67px" height="18.67px">
+      <use href="/src/img/sprite.svg#icon-sun-color"></use>
+    </svg></div>
+  </div>
+      
+  <div class="theme-btn__toggle">
+    <input type="checkbox" class="checkbox" id="chk" />
+    <label class="label" for="chk">
+      <!-- <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i> -->
+      <div class="ball"></div>
+    </label>
+  </div>
+  
+
+  <div class="theme-btn__container">
+    <span class="theme-btn__text theme-btn__dark__text">Dark</span>
+    <div class="theme-btn__icon"><svg class="theme-btn__icon--dark" width="15.72px" height="15.72px">
+      <use href="/src/img/sprite.svg#icon-moon-black"></use>
+    </svg></div>
+  </div>
+    
+    
+    
 </div>
