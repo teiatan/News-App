@@ -1,25 +1,45 @@
-<nav class="navigation">
+<div class="navigation-wrapper ">
+    <nav class="navigation">
 
-    <ul class="navigation__list">
+        <ul class="navigation__list">
 
-        <li class="navigation__item navigation__item--home">
-            <a href="./index.html" class="navigation__link">
-                Home
-            </a>
-        </li>
+            <li class="navigation__item navigation__item--home ">
+                <a href="./index.html" class="navigation__link navigation__item--current">
+                    <svg class="icon navigation__icon" width="32px" height="32px">
+                        <use href="/src/img/sprite.svg#icon-home"></use>
+                    </svg>
+                    Home
+                    <svg class="icon navigation__icon--after" width="32px" height="32px">
+                        <use href="/src/img/sprite.svg#icon-arrow-right"></use>
+                    </svg>
+                </a>
+            </li>
 
-        <li class="navigation__item navigation__item--favorite js__my-lirbary-link is-hidden">
-            <a href="./favorite.html" class="navigation__link">
-                Favorite
-            </a>
-        </li>
+            <li class="navigation__item navigation__item--favorite js__my-lirbary-link ">
+                <a href="./favorite.html" class="navigation__link">
+                    <svg class="icon navigation__icon" width="32px" height="32px">
+                        <use href="/src/img/sprite.svg#icon-favorite"></use>
+                    </svg>
+                    Favorite
+                    <svg class="icon navigation__icon--after" width="32px" height="32px">
+                        <use href="/src/img/sprite.svg#icon-arrow-right"></use>
+                    </svg>
+                </a>
+            </li>
 
-        <li class="navigation__item navigation__item--read js__my-lirbary-link is-hidden">
-            <a href="./read.html" class="navigation__link">
-                Read
-            </a>
-        </li>
+            <li class="navigation__item navigation__item--read js__my-lirbary-link ">
+                <a href="./read.html" class="navigation__link">
+                    <svg class="icon navigation__icon" width="32px" height="32px">
+                        <use href="/src/img/sprite.svg#icon-read"></use>
+                    </svg>
+                    Read
+                    <svg class="icon navigation__icon--after" width="32px" height="32px">
+                        <use href="/src/img/sprite.svg#icon-arrow-right"></use>
+                    </svg>
+                </a>
+            </li>
 
-    </ul>
+        </ul>
 
-</nav>
+    </nav>
+</div>
