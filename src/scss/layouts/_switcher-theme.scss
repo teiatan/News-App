@@ -1,4 +1,4 @@
-.header-toggler {
+.theme-toggler {
     display: flex;
     margin-left: auto;
     margin-right: 16px;
@@ -67,12 +67,12 @@ input[type="checkbox"].checkbox:checked+label {
     left: 27px;
 }
 
-.toggle-text{
+.theme-toggler__text{
     @media screen and (max-width: 1200px) {
            display: none;
         }
 }
-.toggle-icon{
+.theme-toggler__icon{
     @media screen and (min-width: 1199px) {
         display: none;
     }}
