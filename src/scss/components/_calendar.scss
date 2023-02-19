@@ -12,13 +12,18 @@
   
   .calendar-input.isActive {
     background-color: var(--accent-color);
+    opacity: 1;
     color: var(--white-color);
     border-color: var(--accent-color);
     border: 1px solid #4440f7;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
   }
+
+
+
   
+
   // ---------
   
   .calendar-wrapper.is-hidden-wrapper {
@@ -34,8 +39,8 @@
   }
   
   .calendar-form__text {
-    display: none;
-
+   
+    @include mq(desktop){
       display: inline;
       font-family: 'Manrope';
       font-style: normal;
@@ -43,6 +48,8 @@
       font-size: 18px;
       line-height: 1.38;
       color: var(--text-color);
+    }
+    display: none;
     }
 
   
@@ -61,7 +68,7 @@
     align-items: center;
     gap: 13px;
   
-    width: 152px;
+    width: 151px;
     height: 31px;
     padding: 5px 12px;
     border: 1px solid var(--accent-color);
@@ -83,16 +90,23 @@
   
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include mq(tablet){
       width: 168px;
       height: 31px;
       font-size: 14px;
       line-height: 1.5;
-      gap: 18px;
+      gap: 18px;}
+  }
+
+  .datepicker-here{
+    color: var(--text-color);
+    opacity: 0.4;
+    border-color: var(--text-color);
   }
   
   .calendar__button-calendar {
     position: absolute;
-    fill: #4440f6;
+    fill: #4440F6;
     margin-left: 12px;
   
     cursor: pointer;
@@ -102,9 +116,8 @@
   }
   
   .calendar__button-calendar.switchedColor {
-    z-index: 1;
-    fill: #ffffff;
-  
+    z-index: 10;
+    fill: var(--white-color);
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   
@@ -118,7 +131,6 @@
   }
   
   .calendar__button-arrow {
-    margin-left: 12px;
     display: flex;
     position: absolute;
     z-index: 1;
@@ -129,6 +141,9 @@
   
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include mq(tablet){
+      margin-left: 12px;
+    }
   }
   
   .calendar__button-arrow-icon {
