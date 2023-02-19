@@ -6,22 +6,19 @@ import { getMostViewedNews } from './js/API/getMostViewedNews';
 import { showMostViewedNews } from './js/render-functions/renderMostViewedNews';
 import { onSubmitSearchForm } from './js/API/getNewsByFormInput';
 import { showNewsByFormInput } from './js/render-functions/renderNewsByFormInput';
-
+import { renderCategories } from './js/render-functions/renderCategories';
+import { categoriesButtonModalClick } from './js/categoriesButtonModalClick';
 import { developers } from './developers';
 import { changeTheme, addDarkClass } from './js/changeTheme';
-
 import { fetchDefaultWeather } from './js/API/getWeather';
 
-
-
 Notiflix.Loading.pulse();
+renderCategories();
 defaultLocalStorage();
 addModalOpenListeners();
 headerLogic();
 showMostViewedNews(getMostViewedNews());
 showNewsByFormInput(onSubmitSearchForm());
 window.setTimeout(Notiflix.Loading.remove(), 5000);
-
 changeTheme();
 addDarkClass();
-

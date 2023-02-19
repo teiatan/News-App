@@ -1,4 +1,14 @@
 export const refs = {
+
+  renderContainerCategories: document.querySelector(
+    '.categories-render-container__list'
+  ),
+  renderContainerCategoriesTheme: document.querySelector(
+    '.other--categories__filters-list'
+  ),
+  modalContainerOpen: document.querySelector('.other--categories__filters'),
+  modalButtonOpen: document.querySelector('.other-categories__button'),
+
     navHome: document.querySelector('.navigation__item--home'),
     navFavorite: document.querySelector('.navigation__item--favorite'),
     navRead: document.querySelector('.navigation__item--read'),
@@ -15,12 +25,16 @@ export const refs = {
     modalOpenBtns:document.querySelectorAll('[data-modal-open]'),
     modalCloseBtns:document.querySelectorAll('[data-modal-close]'),
 
-// авторизація
+
+  // авторизація
 
     authEmailInput: document.querySelector('.js-auth__email-input'),
     authPasswordInput: document.querySelector('.js-auth__password-input'),
     authEntranceBtn: document.querySelector('.js-auth__entrance-btn'),
     authRegistrationBtn: document.querySelector('.js-auth__registration-btn'),
     authModal: document.querySelector('.modal-auth'),
+    
+    
     favouriteNewsContainer: document.querySelector('.render-container'),
 };
+
