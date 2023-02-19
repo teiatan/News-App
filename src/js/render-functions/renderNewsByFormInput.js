@@ -11,7 +11,7 @@ export async function renderNewsByFormInput(results) {
   let imgSrc = '';
   //console.log(results.response.docs);
   
-  if( results.response.docs.length == 0) {
+  if( results.response.docs.length === 0) {
    refs.renderContainerHome.classList.add('is-hidden');
    refs.negativeSearch.classList.remove('is-hidden');
   }
