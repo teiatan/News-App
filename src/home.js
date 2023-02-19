@@ -6,6 +6,7 @@ import { getMostViewedNews } from './js/API/getMostViewedNews';
 import { showMostViewedNews } from './js/render-functions/renderMostViewedNews';
 import { getNewsByFormInput } from './js/API/getNewsByFormInput';
 import { showNewsByFormInput } from './js/render-functions/renderNewsByFormInput';
+import { fetchDefaultWeather } from './js/API/getWeather';
 
 Notiflix.Loading.pulse();
 defaultLocalStorage();
@@ -15,3 +16,16 @@ showMostViewedNews(getMostViewedNews());
 //showNewsByFormInput(getNewsByFormInput());
 window.setTimeout(Notiflix.Loading.remove(), 5000);
 
+async function ggg() {
+    const results = await fetchDefaultWeather();
+    localStorage.city = results.data.name;
+    localStorage.temperature = results.data.main.temp;
+    localStorage.dateOfWeather = results.data.main.temp;
+    window.setTimeout(document.querySelector('.weather-item').innerHTML = `<li class="weather-item card">Temperature in ${localStorage.city} ${localStorage.temperature}</li>`, 5000);
+    //window.setTimeout(document.querySelector('.weather-item').insertAdjacentHTML('afterbegin', `<h1>header</h1>`));
+    
+};
+ggg();
+function aaa() {
+    console.log(document.querySelector('.weather-item'));
+}

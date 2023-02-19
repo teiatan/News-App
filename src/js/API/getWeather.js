@@ -47,3 +47,4 @@ export async function fetchDefaultWeather() {
 
 
 
+  export let weatherMarkup = `<li class="weather-item card">Temperature in Nowhere is -100C </li>`;

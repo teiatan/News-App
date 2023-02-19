@@ -11,6 +11,8 @@ export function defaultLocalStorage() {
         localStorage.auth = 'no';
         localStorage.favorite = [];
         localStorage.read = [];
+        localStorage.temperature = '20C';
+        localStorage.city = 'Kyiv';
     };
     if(localStorage.auth === 'no') {
         localStorage.removeItem('authId');
