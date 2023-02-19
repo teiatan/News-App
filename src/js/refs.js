@@ -21,4 +21,9 @@ export const refs = {
     searchFormOpeningButton: document.querySelector('.header__search-form-opening-btn'),
     searchForm: document.querySelector('.search-form'),
     searchFormInput: document.querySelector('.search-form__input'),
+
+    navFavoriteLink: document.querySelector('a[data-link="favorite"]'),
+    navReadLink: document.querySelector('a[data-link="read"]'),
+    navHomeLink: document.querySelector('a[data-link="home"]'),
+
 };
