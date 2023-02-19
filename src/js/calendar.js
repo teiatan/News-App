@@ -95,11 +95,11 @@ const renderCalendar = number => {
     }
     let month = (currMonth + 1).toString();
     document.getElementById('input-picker').value =
-      currYear +
+    newValueDay.padStart(2, '0')+
       '/' +
       month.padStart(2, '0') +
       '/' +
-      newValueDay.padStart(2, '0');
+      currYear ;
 
     localStorage.setItem('VALUE', JSON.stringify(newValueDay));
 
