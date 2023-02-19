@@ -14,6 +14,7 @@ export const refs = {
   renderContainerCategoriesTheme: document.querySelector(
     '.filter-category__container__others'
   ),
+  modalContainerOpen: document.querySelector('.filter-category__container'),
   modalButtonOpen: document.querySelector('.filter-category__others-button'),
   // відкриття/закриття модалок
   modalOpenBtns: document.querySelectorAll('[data-modal-open]'),

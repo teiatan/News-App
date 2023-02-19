@@ -86,7 +86,6 @@
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
-  overflow: hidden;
 }
 
 .filter-category__container__others {
@@ -97,8 +96,16 @@
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
-  transform: translateY(-100%);
   text-align: start;
+  position: absolute;
+  top: 20px;
+  right: -90px;
+  pointer-events: all;
+  display: none;
+
+  &.is-hidden {
+    display: block;
+  }
 }
 
 .filter-category__item + .filter-category__item {
