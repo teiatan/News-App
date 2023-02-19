@@ -62,7 +62,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 13px;
-  
+  outline: none;
     width: 151px;
     height: 31px;
     padding: 5px 12px;
@@ -95,6 +95,8 @@
   
   .calendar__button-calendar {
     position: absolute;
+    width: 17px;
+    height: 19px;
     fill: var(--accent--text-color);
     margin-left: 12px;
   
