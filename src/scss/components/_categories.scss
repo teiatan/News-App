@@ -19,6 +19,14 @@
 }
 
 .categories__item {
+  @include mq(tablet-only) {
+    &:nth-child(6) {
+      display: none;
+    }
+  }
+}
+
+.categories__link {
   text-align: center;
   border-radius: 20px;
   padding: 7.5px 13px;
@@ -33,13 +41,7 @@
 
   &:hover {
     background-color: var(--second-additional--text-color);
-    color: var(--weather--text-color);
-  }
-
-  @include mq(tablet-only) {
-    &:nth-child(6) {
-      display: none;
-    }
+    color: var(--main--background-color);
   }
 }
 
