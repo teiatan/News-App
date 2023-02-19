@@ -39,9 +39,9 @@ const news = [
 ];
 localStorage.setItem("news", JSON.stringify(news));
   
-    const savedSettings = localStorage.getItem("news");
-    const parsedSettings = JSON.parse(savedSettings);
-export function addFavouriteNews(){
+const savedSettings = localStorage.getItem("news");
+
+export function showFavouriteNews(){
     const newsMarkup = news.map(
         ({
     id,
@@ -56,8 +56,8 @@ export function addFavouriteNews(){
     link
  }) => {
     
-    if(!localStorage.getItem('news')){
-            alert("Not found news");
+    if(!localStorage.getItem("news")){
+           return  alert("Not found news");
         }
 
         return`
@@ -76,7 +76,7 @@ export function addFavouriteNews(){
         <a href="${link}" class="news__link" target = "_blank">Read more</a>
     </li>
 ` }).join('');
-refs.favouriteNews.innerHTML = addFavouriteNews();
+refs.favouriteNewsContainer.innerHTML = newsMarkup;
 }
 
   
