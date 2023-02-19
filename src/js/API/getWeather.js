@@ -16,7 +16,7 @@ export async function fetchDefaultWeather() {
 }
   // fetchDefaultWeather();
 
-getGeoposition(); 
+// getGeoposition(); 
 
 
 export  async function getGeoposition() {
