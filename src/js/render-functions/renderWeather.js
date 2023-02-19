@@ -1,12 +1,12 @@
 import { format } from 'date-fns';
 import { fetchDefaultWeather, getGeoposition, fetchWeatherByGeo} from '../API/getWeather';
 
-createDefaultWeatherMarkup();
+
 async function createDefaultWeatherMarkup() {
   const data = await fetchDefaultWeather();
   createMarkup(data);
 }
-
+createDefaultWeatherMarkup();
 
 export function createMarkup(data) {
     const { temp } = data.data.main;
