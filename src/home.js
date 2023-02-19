@@ -8,6 +8,7 @@ import { onSubmitSearchForm } from './js/API/getNewsByFormInput';
 import { showNewsByFormInput } from './js/render-functions/renderNewsByFormInput';
 import { developers } from './developers';
 import { renderCategories } from './js/render-functions/renderCategories';
+import { categoriesButtonModalClick } from './js/categoriesButtonModalClick';
 
 Notiflix.Loading.pulse();
 renderCategories();
