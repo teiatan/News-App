@@ -12,6 +12,7 @@ refs.formSearch.addEventListener("submit", onSubmitSearchForm);
 export async function onSubmitSearchForm (e) {
     let page = 1;
     e.preventDefault();
+    refs.negativeSearch.classList.add('is-hidden');
     const value = refs.formSearchInput.value;
 if (value === '') {
     Notiflix.Notify.info('Ooops. Please, enter something to search');

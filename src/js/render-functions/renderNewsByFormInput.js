@@ -12,13 +12,11 @@ export async function renderNewsByFormInput(results) {
   //console.log(results.response.docs);
   
   if( results.response.docs.length == 0) {
-    const foundErrorMarkup = `<div>
-    <p>We haven't found news from this category</p>
-    <img src="./img/plug-Desc.jpg" alt="Картинка">
-   </div>`;
-    refs.renderContainerHome.innerHTML += foundErrorMarkup;
+   refs.renderContainerHome.classList.add('is-hidden');
+   refs.negativeSearch.classList.remove('is-hidden');
   }
   else {
+    
     const newsMarkup = results.response.docs.map(
     ({
         web_url,
