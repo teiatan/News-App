@@ -1,16 +1,12 @@
-import { geCategories } from '../API/getCategories.js';
+import { getCategories } from '../API/getCategories.js';
 import { refs } from '../refs.js';
 
 export async function renderCategories() {
-  console.log(2344);
-  const categories = await geCategories();
-
-  const markup = categories
-    .map(category => {
-      return `<li class="categories__item">
-            <a href="#" class="categories__link">${category}</a>
-        </li>`;
-    })
-    .join('');
-  refs.renderContainerCategories.insertAdjacentHTML('afterbegin', markup);
+  const categories = await getCategories();
+  const categoriesList = categories.map(category => {
+    return `<li class="categories__item">
+    <a href="#${category.name}" class="categories__link">${category.name}</a>
+    </li>`;
+  });
+  refs.categoriesList.insertAdjacentHTML('beforeend', categoriesList.join(''));
 }

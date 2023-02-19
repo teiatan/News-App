@@ -3,8 +3,14 @@ import axios from 'axios';
 
 async function getCategories() {
   const url = `${nytApiSettings.BASIC_URL}news/v3/content/section-list.json?api-key=${nytApiSettings.apiKey}`;
-  const response = await axios.get(url);
-  return response.data.results;
+  try {
+    return await axios.get(url).then(response => {
+      if (!response) {
+        throw new Error(response.status);
+      }
+      return response.data.results;
+    });
+  }
 }
 
-export default getCategories;
+export { getCategories };
