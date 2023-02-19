@@ -2,7 +2,7 @@ import { refs } from './refs';
 import { addIsHidden, removeIsHidden } from './isHidden';
 import { openAuthModal, closeAuthModal } from './modalOpening';
 import { signOutBtnHandler } from './auth';
-import { weather } from './API/getWeather';
+
 
 export function defaultLocalStorage() {
     if(localStorage.length === 0) {
@@ -18,7 +18,6 @@ export function defaultLocalStorage() {
         localStorage.removeItem('authId');
         localStorage.favorite = [];
         localStorage.read = [];
-        localStorage.weather = JSON.stringify(weather);
     };
 };
 
