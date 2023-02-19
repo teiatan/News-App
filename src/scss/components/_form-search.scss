@@ -1,5 +1,11 @@
 .search-form {
   position: relative;
+  margin-left: auto;
+
+  @include mq(tablet) {
+    display: block;
+  }
+
 }
 
 .search-form__btn {
@@ -70,4 +76,20 @@
 
 .search-form__input:not(:placeholder-shown) + .search-form__label {
   opacity: 0;
+}
+
+.header__search-form-opening-btn {
+  margin-left: auto;
+
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+.menu-button {
+  margin-left: 14px;
+
+  @include mq(tablet) {
+    
+  }
 }
