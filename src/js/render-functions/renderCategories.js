@@ -3,7 +3,9 @@ import { refs } from '../refs.js';
 
 export async function renderCategories() {
   const categories = await getCategories();
-  const categoriesMarkup = categories
+  const categoriesNew = categories.slice(0, 5);
+  const categoriesNew2 = categories.slice(5, 20);
+  const categoriesMarkup = categoriesNew
     .map(({ display_name, name }) => {
       return `
         <li class="categories__item">
