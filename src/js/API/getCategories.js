@@ -30,7 +30,7 @@ async function getCategoryList() {
   );
   const data = await categoryList.json();
   const results = data.results;
-
+  console.log(results);
   return results;
 }
 
