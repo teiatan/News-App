@@ -73,3 +73,36 @@
 .icon-arrow {
   margin-left: 5px;
 }
+
+.filter-category__container {
+  z-index: 2;
+  pointer-events: none;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  overflow: hidden;
+}
+
+.filter-category__container__others {
+  width: 148px;
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  padding: 14px;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  transform: translateY(-100%);
+  text-align: start;
+}
+
+.filter-category__item + .filter-category__item {
+  margin-top: 12px;
+}
+
+.categories__link {
+  letter-spacing: 0.01em;
+  color: #4440f7;
+  background-color: #f8f8f8;
+  font-size: 12px;
+  line-height: 1.33333;
+}

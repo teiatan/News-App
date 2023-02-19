@@ -11,6 +11,9 @@ export const refs = {
   renderContainerCategories: document.querySelector(
     '.render-containet--categories__li'
   ),
+  renderContainerCategoriesTheme: document.querySelector(
+    '.filter-category__container__others'
+  ),
   // відкриття/закриття модалок
   modalOpenBtns: document.querySelectorAll('[data-modal-open]'),
   modalCloseBtns: document.querySelectorAll('[data-modal-close]'),
