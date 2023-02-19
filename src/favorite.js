@@ -12,3 +12,4 @@ window.setTimeout(Notiflix.Loading.remove(), 5000);
 
 addFavouriteNews();
 
+
