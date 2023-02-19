@@ -9,13 +9,13 @@ export const refs = {
   formSearchInput: document.querySelector('.search-form__input'),
   negativeSearch: document.querySelector('.negative-search'),
   renderContainerCategories: document.querySelector(
-    '.render-containet--categories__li'
+    '.categories-render-container__list'
   ),
   renderContainerCategoriesTheme: document.querySelector(
-    '.filter-category__container__others'
+    '.other--categories__filters-list'
   ),
-  modalContainerOpen: document.querySelector('.filter-category__container'),
-  modalButtonOpen: document.querySelector('.filter-category__others-button'),
+  modalContainerOpen: document.querySelector('.other--categories__filters'),
+  modalButtonOpen: document.querySelector('.other-categories__button'),
   // відкриття/закриття модалок
   modalOpenBtns: document.querySelectorAll('[data-modal-open]'),
   modalCloseBtns: document.querySelectorAll('[data-modal-close]'),
