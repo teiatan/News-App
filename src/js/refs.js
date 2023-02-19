@@ -9,7 +9,7 @@ export const refs = {
   formSearchInput: document.querySelector('.search-form__input'),
   negativeSearch: document.querySelector('.negative-search'),
   renderContainerCategories: document.querySelector(
-    '.render-container--categories'
+    '.render-containet--categories__li'
   ),
   // відкриття/закриття модалок
   modalOpenBtns: document.querySelectorAll('[data-modal-open]'),

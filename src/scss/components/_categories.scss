@@ -4,9 +4,12 @@
 
 .render-container--categories {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 -10px;
+  flex-direction: row;
+}
+
+.render-containet--categories__li {
+  display: flex;
+  flex-direction: row;
 }
 
 .top-container {
