@@ -44,4 +44,24 @@ export  async function fetchWeatherByGeo(lat, lon) {
     }
   }
 
-  export let weatherMarkup = `<li class="weather-item card">Temperature in Nowhere is -100C </li>`;
+  export let weatherMarkup = `  <li class="weather-item card">
+    <div class="weather-header">
+     <p class="weather-degrees">23&#176c</p>
+    <div>
+       <p class="weather-condition">Sunny</p>
+        <!-- <svg class="weather-geo-icon" width="24px">
+                <use href="./images/icons.svg#icon-geo"></use>
+              </svg> -->
+       <p class="weather-town">Saugus</p>
+     </div>
+  </div>
+
+   <img class="weather-img"
+         src=""
+        alt="Weather icon"
+         width="165"
+         height="156"/>
+   <p class="weather-date">Monday</p>
+   <p class="weather-date">20 Feb 2023</p>
+   <a class="weather-link" href="https://sinoptik.ua" target="_blank">weather for week</a>
+ </li>`;
