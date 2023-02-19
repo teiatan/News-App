@@ -20,8 +20,8 @@ async function renderCategories() {
   const markup = categories
     .map(category => {
       return `<li class="category-item">
-            <a href="#" class="category-link" data-category="${category}">${category}</a>
-        </li>`;
+        <a href="#" class="category-link" data-category="${category.section}">${category.section}</a>
+    </li>`;
     })
     .join('');
   refs.categoriesList.insertAdjacentHTML('beforeend', markup);
