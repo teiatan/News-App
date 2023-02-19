@@ -5,7 +5,9 @@ export const refs = {
     headerSignInBtn: document.querySelector('.auth-btn__sign-in'),
     headerSignOutBtn: document.querySelector('.auth-btn__sign-out'),
     renderContainerHome: document.querySelector('.render-container--home'),
-
+    formSearch: document.querySelector('.search-form'),
+    formSearchInput: document.querySelector('.search-form__input'),
+    negativeSearch: document.querySelector('.negative-search'),
 // відкриття/закриття модалок
     modalOpenBtns:document.querySelectorAll('[data-modal-open]'),
     modalCloseBtns:document.querySelectorAll('[data-modal-close]'),

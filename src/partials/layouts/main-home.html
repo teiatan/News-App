@@ -6,9 +6,33 @@
         </div>
         <include src="partials/components/slider.html"></include>
         <div class="bottom-container">
+            <div class="negative-search is-hidden">
+                <p>We haven't found news from this category</p>
+                <img src="./img/plug-Desc.jpg" alt="Картинка">
+               </div>
             <ul class="render-container render-container--home">
-
+               
             </ul>
         </div>
+
+    <div class="page-container pagination">
+        <div class="pagin">
+            <button class="prev-page btn-prev">
+                <svg class="icon-prew" width="8" height="13">
+                    <use href="./img/sprite.svg#prew-arrow"></use>
+                </svg>
+                <span class="s_prew btn-prev">Prew</span>
+            </button>
+            <div id="paginatiob"></div>
+            <button class="next-page btn-next">
+                <span class="s_prew btn-prev">Next</span>
+                <svg class="icon-next" width="6" height="9">
+                    <use href="./img/sprite.svg#next-arrow"></use>
+                </svg>
+            </button>
+        </div>
+
+        <!-- ещё две пагинашки -->
+    </div>
     </div>
 </main>

@@ -58,28 +58,11 @@ button {
   }
 }
 
-:root {
-  --bg-color: #f4f4f4;
-  --text-color: #111321;
-  --white-color: #ffffff;
-  --accent-color: #4440f6;
-  --gray-color: #a8a8a8;
-  --footer-color: #7a7a7a;
-  --switcher-gray: #5f6775;
-  --switcher-accent: #4b48db;
-}
-:root body.darkMode {
-  --bg-color: #2e2e2e;
-  --text-color: #f4f4f4;
-  --switcher-gray: #f4f4f4;
-  --switcher-accent: #4440f7;
-}
-
 body {
   font-family: 'Manrope';
   height: 100vh;
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  background-color: var(--main--background-color);
+  color: var(--main--text-color);
 }
 
 @font-face {
@@ -124,9 +107,13 @@ body {
 }
 
 .card {
-  height: 469px;
+  min-height: 469px;
   margin: 28px 0;
-  background-color:#f4f4f4;
+  
+  /* ПРИБРАТИ РОБЛЯЧИ СТИЛІ КАРТКИ НОВИНИ */
+  background-color: var(--additional-accent--text-color);
+  /* ПРИБРАТИ РОБЛЯЧИ СТИЛІ КАРТКИ НОВИНИ */
+
 
   &:first-child {
     margin-top: 0;
@@ -138,6 +125,8 @@ body {
 
   @include mq(mobile) {
     width: 288px;
+    height: 640px;
+    
     }
 
   @include mq(tablet) {
