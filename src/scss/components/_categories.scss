@@ -9,3 +9,10 @@
   color: var(--second-additional--text-color);
   background-color: var(--main--background-color);
 }
+
+.render-container--categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -10px;
+}
