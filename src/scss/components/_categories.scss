@@ -108,12 +108,17 @@
   font-size: 12px;
   line-height: 1.33333;
   color: var(--second-additional--text-color);
+  text-decoration: none;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
 .render-containet--categories__li {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 
   @include mq(mobile-only) {
     display: none;
