@@ -21,8 +21,8 @@ async function renderCategories() {
   const markup = categories
     .map(category => {
       return `<li class="category-item">
-            <a href="#" class="category-link" data-category="${category.name}">${category.name}</a>
-        </li>`;
+        <a href="#" class="category-link" data-category="${category.name}">${category.name}</a>
+    </li>`;
     })
     .join('');
   refs.categoriesList.insertAdjacentHTML('beforeend', markup);
@@ -30,19 +30,19 @@ async function renderCategories() {
 
 export { renderCategories };
 
-async function renderArticlesByCategory(category) {
-  const articles = await getArticleByCategory(category);
-  const markup = articles.results
-    .map(article => {
-      return `<li class="article-item">
-            <a href="${article.url}" class="article-link" target="_blank">
-                <h2 class="article-title">${article.title}</h2>
-                <p class="article-description">${article.abstract}</p>
-            </a>
-        </li>`;
-    })
-    .join('');
-  refs.articlesList.insertAdjacentHTML('beforeend', markup);
-}
+// async function renderArticlesByCategory(category) {
+//   const articles = await getArticleByCategory(category);
+//   const markup = articles.results
+//     .map(article => {
+//       return `<li class="article-item">
+//             <a href="${article.url}" class="article-link" target="_blank">
+//                 <h2 class="article-title">${article.title}</h2>
+//                 <p class="article-description">${article.abstract}</p>
+//             </a>
+//         </li>`;
+//     })
+//     .join('');
+//   refs.articlesList.insertAdjacentHTML('beforeend', markup);
+// }
 
-export { renderArticlesByCategory };
+// export { renderArticlesByCategory };
