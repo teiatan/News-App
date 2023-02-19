@@ -45,7 +45,7 @@ export  async function fetchWeatherByGeo(lat, lon) {
     }
   }
 
-  export const weatherMarkup = `  <li class="weather-item card">
+  export let weatherMarkup = `  <li class="weather-item card">
     <div class="weather-header">
      <p class="weather-degrees">23&#176c</p>
     <div>
