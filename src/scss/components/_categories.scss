@@ -11,6 +11,9 @@
 
 .top-container {
   align-items: center;
+  display: flex;
+  margin-top: 28px;
+  margin-bottom: 60px;
 }
 
 .categories__item + .categories__item {
@@ -34,6 +37,7 @@
 }
 
 .filter-category__others-button {
+  display: flex;
   color: var(--second-additional--text-color);
   background-color: var(--main--background-color);
   border: 1px solid var(--second-additional--text-color);
@@ -41,17 +45,28 @@
   padding: 7.5px 13px;
   font-size: 12px;
   line-height: 16px;
-  margin-left: 16px;
+  width: 100%;
+  height: 100%;
+
   cursor: pointer;
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
+
   &:hover {
     background-color: var(--second-additional--text-color);
     color: var(--main--background-color);
   }
+}
+
+.filter-category__others-container {
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 111px;
+}
+
+.icon-arrow {
+  margin-left: 5px;
 }
