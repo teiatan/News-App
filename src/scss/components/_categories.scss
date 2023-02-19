@@ -1,2 +1,11 @@
 .categories__link {
+  cutrsor: pointer;
+  text-align: center;
+  border-radius: 20px;
+  padding: 7.5px 13px;
+  font-size: 12px;
+  line-height: 16px;
+  border: 1px solid var(--second-additional--text-color);
+  color: var(--second-additional--text-color);
+  background-color: var(--main--background-color);
 }

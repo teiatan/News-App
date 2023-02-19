@@ -13,6 +13,12 @@ ul {
   margin: 0;
 }
 
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -109,11 +115,10 @@ body {
 .card {
   min-height: 469px;
   margin: 28px 0;
-  
+
   /* ПРИБРАТИ РОБЛЯЧИ СТИЛІ КАРТКИ НОВИНИ */
   background-color: var(--additional-accent--text-color);
   /* ПРИБРАТИ РОБЛЯЧИ СТИЛІ КАРТКИ НОВИНИ */
-
 
   &:first-child {
     margin-top: 0;
@@ -126,8 +131,7 @@ body {
   @include mq(mobile) {
     width: 288px;
     height: 640px;
-    
-    }
+  }
 
   @include mq(tablet) {
     width: 353px;
@@ -146,9 +150,8 @@ body {
   justify-content: center;
 }
 
-
 .render-container {
-  @include mq(mobile) {   
+  @include mq(mobile) {
   }
 
   @include mq(tablet) {
@@ -161,5 +164,4 @@ body {
   @include mq(desktop) {
     gap: 31px;
   }
-  
 }
