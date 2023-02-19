@@ -4,10 +4,13 @@ export const refs = {
     navRead: document.querySelector('.navigation__item--read'),
     headerSignInBtn: document.querySelector('.auth-btn__sign-in'),
     headerSignOutBtn: document.querySelector('.auth-btn__sign-out'),
+    
     renderContainerHome: document.querySelector('.render-container--home'),
     formSearch: document.querySelector('.search-form'),
     formSearchInput: document.querySelector('.search-form__input'),
     negativeSearch: document.querySelector('.negative-search'),
+    
+   
 // відкриття/закриття модалок
     modalOpenBtns:document.querySelectorAll('[data-modal-open]'),
     modalCloseBtns:document.querySelectorAll('[data-modal-close]'),
@@ -18,6 +21,6 @@ export const refs = {
     authPasswordInput: document.querySelector('.js-auth__password-input'),
     authEntranceBtn: document.querySelector('.js-auth__entrance-btn'),
     authRegistrationBtn: document.querySelector('.js-auth__registration-btn'),
-    authModal: document.querySelector('.modal-auth')
-
+    authModal: document.querySelector('.modal-auth'),
+    favouriteNewsContainer: document.querySelector('.render-container'),
 };
