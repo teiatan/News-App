@@ -1,6 +1,6 @@
 import Notiflix from 'notiflix';
 import { headerLogic, defaultLocalStorage } from './js/logicFor3pages';
-import { onSearchBtnClick, onSearchFormFocusLose } from './js/headerSearchForm';
+import { addListenersForMobileHeader } from './js/headerSearchForm';
 import { addModalOpenListeners } from './js/modalOpening';
 import { refs } from './js/refs';
 import { getMostViewedNews } from './js/API/getMostViewedNews';
@@ -18,5 +18,4 @@ headerLogic();
 showMostViewedNews(getMostViewedNews());
 //showNewsByFormInput(getNewsByFormInput());
 window.setTimeout(Notiflix.Loading.remove(), 5000);
-refs.searchFormOpeningButton.addEventListener('click', onSearchBtnClick);
-refs.searchFormInput.addEventListener('blur', onSearchFormFocusLose);
+addListenersForMobileHeader();
