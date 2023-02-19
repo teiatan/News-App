@@ -1,18 +1,12 @@
 import { format } from 'date-fns';
-  getGeoposition()
-import { fetchDefaultWeather, getGeoposition} from '../API/getWeather';
+import { fetchDefaultWeather, getGeoposition, fetchWeatherByGeo} from '../API/getWeather';
 
-// createDefaultWeatherMarkup()
+createDefaultWeatherMarkup();
 async function createDefaultWeatherMarkup() {
   const data = await fetchDefaultWeather();
   await createMarkup(data);
 }
 
-getGeoposition();
-async function createWeatherMarkupByGeo() {
-  const data = await fetchWeatherByGeo();
-  await createMarkup(data);
-}
 
 export function createMarkup(data) {
     const { temp } = data.data.main;
@@ -38,7 +32,7 @@ export function createMarkup(data) {
   <a class="weather-link" href="https://sinoptik.ua" target="_blank">weather for week</a>
 </li>`;
 
-  // console.log(weatherMarkup);
+  console.log(weatherMarkup);
     return weatherMarkup;
 }
 
