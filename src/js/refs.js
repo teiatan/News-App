@@ -18,7 +18,7 @@ export const refs = {
     authRegistrationBtn: document.querySelector('.js-auth__registration-btn'),
     authModal: document.querySelector('.modal-auth'),
 
-    searchButton: document.querySelector('.header__search-form-opening-btn'),
+    searchFormOpeningButton: document.querySelector('.header__search-form-opening-btn'),
     searchForm: document.querySelector('.search-form'),
     searchFormInput: document.querySelector('.search-form__input'),
 };
