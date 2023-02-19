@@ -1,0 +1,29 @@
+.weather-item{
+    font-family: 'Roboto';
+    color: var(--weather--text-color);
+    background-color: var(--weather--background-color);
+}
+
+.weather-degrees{
+    font-size: 64px;
+    line-height: 1.17;
+}
+.weather-condition{
+    font-size: 36px;
+    line-height: 1.17;
+}
+.weather-town{
+    font-size: 20px;
+    line-height: 1.15;
+}
+.weather-date{
+font-size: 36px;
+line-height: 1.17;
+text-align: center
+}
+.weather-link{
+    font-size: 20px;
+line-height: 23px;
+background: rgba(254, 254, 255, 0.3);
+border-radius: 10px;
+}

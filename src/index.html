@@ -6,6 +6,29 @@
   </head>
   <body>
 
+  <li class="weather-item card">
+    <div class="weather-header">
+     <p class="weather-degrees">23c</p>
+    <div>
+       <p class="weather-condition">Sunny</p>
+        <!-- <svg class="weather-geo-icon" width="24px">
+                <use href="./images/icons.svg#icon-geo"></use>
+              </svg> -->
+       <p class="weather-town">Saugus</p>
+     </div>
+  </div>
+
+   <img class="weather-img"
+         src="https://openweathermap.org/img/wn/${icon}@4x.png"
+        alt="Weather icon"
+         width="165"
+         height="156"/>
+   <p class="weather-date">Monday</p>
+   <p class="weather-date">${format(new Date(), 'dd LLL y')}</p>
+   <a class="weather-link" href="https://sinoptik.ua" target="_blank">weather for week</a>
+ </li>
+
+
       <include src="partials/layouts/header.html"></include>
       <h1 class="is-hidden">Source for searching news</h1>
       <include src="partials/layouts/main-home.html"></include>
