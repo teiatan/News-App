@@ -3,10 +3,18 @@ import { refs } from '../refs.js';
 
 export async function renderCategories() {
   const categories = await getCategories();
-  const categoriesList = categories.map(category => {
-    return `<li class="categories__item">
-    <a href="#${category.name}" class="categories__link">${category.name}</a>
-    </li>`;
-  });
-  refs.categoriesList.insertAdjacentHTML('beforeend', categoriesList.join(''));
+  console.log(categories);
+  const categoriesMarkup = categories
+    .map(({ display_name, name }) => {
+      return `
+        <li class="categories__item">
+          <a href="#${name}" class="categories__link">${display_name}</a>
+        </li>
+      `;
+    })
+    .join('');
+  refs.renderContainerCategories.insertAdjacentHTML(
+    'afterbegin',
+    categoriesMarkup
+  );
 }

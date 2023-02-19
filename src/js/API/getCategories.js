@@ -14,3 +14,7 @@ async function getCategories() {
 }
 
 export { getCategories };
+
+
+
+
