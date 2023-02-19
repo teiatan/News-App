@@ -3,7 +3,6 @@ import { refs } from '../refs.js';
 
 export async function renderCategories() {
   const categories = await getCategories();
-  console.log(categories);
   const categoriesMarkup = categories
     .map(({ display_name, name }) => {
       return `
