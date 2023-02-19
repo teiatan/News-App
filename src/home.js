@@ -1,6 +1,6 @@
 import Notiflix from 'notiflix';
 import { headerLogic, defaultLocalStorage } from './js/logicFor3pages';
-import { addListenersForMobileHeader } from './js/headerSearchForm';
+import { addListenersForMobileHeader, viewportWidthCheck } from './js/headerSearchForm';
 import { addModalOpenListeners } from './js/modalOpening';
 import { currentLinkUnderline } from './js/currentLinkUnderline';
 import { getMostViewedNews } from './js/API/getMostViewedNews';

@@ -13,8 +13,7 @@
 
 .navigation-wrapper {
     min-width: 190px;
-    position: absolute;
-
+    
     @include mq(tablet) {
         position: relative;
     }
@@ -85,10 +84,7 @@
     }
 }
 
-.header__form-wrap {
-    display: flex;
-    align-items: center;
-}
+
 
 .auth-btn__sign-in {
     margin-left: auto;
