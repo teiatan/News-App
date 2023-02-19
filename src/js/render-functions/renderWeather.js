@@ -4,7 +4,7 @@ import { fetchDefaultWeather, getGeoposition, fetchWeatherByGeo} from '../API/ge
 createDefaultWeatherMarkup();
 async function createDefaultWeatherMarkup() {
   const data = await fetchDefaultWeather();
-  await createMarkup(data);
+  createMarkup(data);
 }
 
 

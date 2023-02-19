@@ -19,28 +19,28 @@ export async function fetchDefaultWeather() {
 // getGeoposition(); 
 
 
-export  async function getGeoposition() {
-    if (navigator.geolocation) {
-      // if browser support geolocation api
-   return await navigator.geolocation.getCurrentPosition(onSuccess);
-    } else {
-      alert('Your browser not support geolocation api');
-    }
-}
+// export  async function getGeoposition() {
+//     if (navigator.geolocation) {
+//       // if browser support geolocation api
+//    return await navigator.geolocation.getCurrentPosition(onSuccess);
+//     } else {
+//       alert('Your browser not support geolocation api');
+//     }
+// }
 
-export  async function onSuccess(position) {
-    const { latitude, longitude } = position.coords; // getting lat and lon of the user device from coords obj
-    return await fetchWeatherByGeo(latitude, longitude).then(data => createMarkup(data))
-  }
+// export  async function onSuccess(position) {
+//     const { latitude, longitude } = position.coords; // getting lat and lon of the user device from coords obj
+//     return await fetchWeatherByGeo(latitude, longitude).then(data => createMarkup(data))
+//   }
 
-export  async function fetchWeatherByGeo(lat, lon) {
-    const url = `${ENDPOINT}lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
-    try {
-      return data = await axios.get(url);
-      // console.log(data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
+// export  async function fetchWeatherByGeo(lat, lon) {
+//     const url = `${ENDPOINT}lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+//     try {
+//       return data = await axios.get(url);
+//       // console.log(data);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   }
 
   export let weatherMarkup = `<li class="weather-item card">Temperature in Nowhere is -100C </li>`;
