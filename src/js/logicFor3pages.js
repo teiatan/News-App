@@ -3,6 +3,7 @@ import { addIsHidden, removeIsHidden } from './isHidden';
 import { openAuthModal, closeAuthModal } from './modalOpening';
 import { signOutBtnHandler } from './auth';
 
+
 export function defaultLocalStorage() {
     if(localStorage.length === 0) {
         localStorage.lang = 'en';
@@ -10,6 +11,8 @@ export function defaultLocalStorage() {
         localStorage.auth = 'no';
         localStorage.favorite = [];
         localStorage.read = [];
+        localStorage.temperature = '20C';
+        localStorage.city = 'Kyiv';
     };
     if(localStorage.auth === 'no') {
         localStorage.removeItem('authId');
