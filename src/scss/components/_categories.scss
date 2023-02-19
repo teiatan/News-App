@@ -27,10 +27,13 @@
   border: 1px solid var(--second-additional--text-color);
   color: var(--second-additional--text-color);
   background-color: var(--main--background-color);
+  cursor: pointer;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
     background-color: var(--second-additional--text-color);
-    color: var(--main--background-color);
+    color: var(--weather--text-color);
   }
 
   @include mq(tablet-only) {
@@ -58,7 +61,7 @@
 
   &:hover {
     background-color: var(--second-additional--text-color);
-    color: var(--main--background-color);
+    color: var(--weather--text-color);
   }
 }
 
@@ -102,15 +105,15 @@
 
 .categories__link {
   letter-spacing: 0.01em;
-  color: #4440f7;
-  background-color: #f8f8f8;
   font-size: 12px;
   line-height: 1.33333;
+  color: var(--second-additional--text-color);
 }
 
 .render-containet--categories__li {
   display: flex;
   flex-direction: row;
+  align-items: center;
 
   @include mq(mobile-only) {
     display: none;
