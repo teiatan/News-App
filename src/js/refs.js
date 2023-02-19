@@ -22,5 +22,5 @@ export const refs = {
     authEntranceBtn: document.querySelector('.js-auth__entrance-btn'),
     authRegistrationBtn: document.querySelector('.js-auth__registration-btn'),
     authModal: document.querySelector('.modal-auth'),
-    favouriteNews: document.querySelector('.render-container--favorite'),
+    favouriteNews: document.querySelector('.render-container'),
 };
