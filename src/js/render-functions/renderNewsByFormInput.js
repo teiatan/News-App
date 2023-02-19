@@ -10,8 +10,16 @@ export async function renderNewsByFormInput(results) {
   refs.renderContainerHome.innerHTML = '';
   let imgSrc = '';
   //console.log(results.response.docs);
-  const newsMarkup = results.response.docs
-  .map(
+  
+  if( results.response.docs.length == 0) {
+    const foundErrorMarkup = `<div>
+    <p>We haven't found news from this category</p>
+    <img src="./img/plug-Desc.jpg" alt="Картинка">
+   </div>`;
+    refs.renderContainerHome.innerHTML += foundErrorMarkup;
+  }
+  else {
+    const newsMarkup = results.response.docs.map(
     ({
         web_url,
         _id,
@@ -22,7 +30,9 @@ export async function renderNewsByFormInput(results) {
         multimedia,
 
 
-    }) => {
+    }) => 
+  
+    {
       if(multimedia.length !== 0) {
         imgSrc = `https://static01.nyt.com/${multimedia[0].url}`;
       } else {
@@ -46,4 +56,6 @@ export async function renderNewsByFormInput(results) {
   .join('');
   const markup = weatherMarkup.concat(newsMarkup);
   refs.renderContainerHome.insertAdjacentHTML('afterbegin', markup);
+  
+}
 }
