@@ -170,7 +170,9 @@ body {
 
 .header__container {
   display: flex;
-  align-items: baseline;
+  align-items: center;
 
-  @include mq(tablet) {}
+  @include mq(tablet) {
+    align-items: baseline;
+  }
 }

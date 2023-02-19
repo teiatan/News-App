@@ -1,18 +1,18 @@
-.header__mobile-menu-container {
-    position: relative;
-    min-width: 190px;
+.header__mobile-menu-container {    
     
     @include mq(tablet) {
         margin-left: auto;
-        display: block;
+        display: flex;
+        gap: 12px;        
     }
 
     @include mq(desktop) {
-        margin-left: auto;
+        gap: 100px;
     }
 }
 
 .navigation-wrapper {
+    min-width: 190px;
     position: absolute;
 
     @include mq(tablet) {
@@ -30,7 +30,7 @@
         flex-direction: row;
         display: flex;
         align-items: center;
-        gap: 44px;
+        gap: 34px;
     }
 
     @include mq(desktop) {
@@ -85,6 +85,11 @@
     }
 }
 
+.header__form-wrap {
+    display: flex;
+    align-items: center;
+}
+
 .auth-btn__sign-in {
     margin-left: auto;
     align-items: center;
@@ -105,4 +110,8 @@
     line-height: 1.375;
     color: var(--main--text-color);
     padding: 30px 0 30px 0;
+}
+
+.is-opened {
+
 }
