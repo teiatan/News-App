@@ -16,4 +16,5 @@ headerLogic();
 showMostViewedNews(getMostViewedNews());
 //showNewsByFormInput(getNewsByFormInput());
 window.setTimeout(Notiflix.Loading.remove(), 5000);
-
+refs.searchButton.addEventListener('click', onSearchBtnClick);
+refs.searchFormInput.addEventListener('blur', onSearchFormFocusLose);
