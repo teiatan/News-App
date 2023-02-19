@@ -1,6 +1,7 @@
 import { refs } from '../refs';
 import { weatherMarkup } from '../API/getWeather';
 
+
 export async function showNewsByFormInput(apiFetch) {
     renderNewsByFormInput(await apiFetch);
 };
@@ -8,9 +9,15 @@ export async function showNewsByFormInput(apiFetch) {
 export async function renderNewsByFormInput(results) {
   refs.renderContainerHome.innerHTML = '';
   let imgSrc = '';
-  console.log(results.response.docs);
-  const newsMarkup = results.response.docs
-  .map(
+  //console.log(results.response.docs);
+  
+  if( results.response.docs.length === 0) {
+   refs.renderContainerHome.classList.add('is-hidden');
+   refs.negativeSearch.classList.remove('is-hidden');
+  }
+  else {
+    
+    const newsMarkup = results.response.docs.map(
     ({
         web_url,
         _id,
@@ -20,11 +27,14 @@ export async function renderNewsByFormInput(results) {
         pub_date,
         multimedia,
 
-    }) => {
-      if(multimedia.length === 0) {
-        imgSrc = '/assets/actions-config-step-1.png';
+
+    }) => 
+  
+    {
+      if(multimedia.length !== 0) {
+        imgSrc = `https://static01.nyt.com/${multimedia[0].url}`;
       } else {
-        imgSrc = multimedia[31].url;
+        imgSrc = 'https://wellesleysocietyofartists.org/wp-content/uploads/2015/11/image-not-found.jpg'
       }
 
       return `
@@ -35,7 +45,7 @@ export async function renderNewsByFormInput(results) {
               <img src="${imgSrc}" alt="" class="news__img"/>
               <h3 class="news__title">${headline.main}</h3>
               <p class="news__abstract">${abstract}</p>
-              <span class="news__date">${pub_date}</span>
+              <span class="news__date">${pub_date.split('').splice(0, 10).join('').replaceAll('-', '/')}</span>
               <a href="${web_url}" class="news__link">Read more</a>
           </li>
       `;
@@ -44,4 +54,6 @@ export async function renderNewsByFormInput(results) {
   .join('');
   const markup = weatherMarkup.concat(newsMarkup);
   refs.renderContainerHome.insertAdjacentHTML('afterbegin', markup);
+  
+}
 }
