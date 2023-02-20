@@ -18,9 +18,9 @@
 .modal-auth__form {
     width: 400px;
     padding: 20px;
-    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--main--background-color);
 }
 
 .modal-auth__title {
@@ -28,12 +28,6 @@
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-}
-
-.modal-auth__label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
 }
 
 .modal-auth__input {
@@ -107,7 +101,6 @@
 .modal-auth__button-register,
 .modal-auth__button-confirm {
     background-color: #4caf50;
-    color: #fff;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -154,7 +147,6 @@
     transform: rotate(-45deg);
 }
 
-/* Изменения при наведении курсора на кнопку */
 .modal__close-btn:hover::before,
 .modal__close-btn:hover::after {
     background-color: red;
