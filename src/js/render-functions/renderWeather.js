@@ -1,5 +1,9 @@
 import { format } from 'date-fns';
-import { fetchDefaultWeather, getGeoposition, fetchWeatherByGeo} from '../API/getWeather';
+import {
+  fetchDefaultWeather,
+  getGeoposition,
+  fetchWeatherByGeo,
+} from '../API/getWeather';
 export let weatherMarkup;
 
 async function createDefaultWeatherMarkup() {
@@ -9,11 +13,11 @@ async function createDefaultWeatherMarkup() {
 createDefaultWeatherMarkup();
 
 export function createMarkup(data) {
-    const { temp } = data.data.main;
-    const weather = data.data.weather[0];
-    const { icon } = data.data.weather[0];
+  const { temp } = data.data.main;
+  const weather = data.data.weather[0];
+  const { icon } = data.data.weather[0];
 
-    const weatherMarkup = `<li class="weather-item card">
+  const weatherMarkup = `<li class="weather-item card">
   <div class="weather-header">
     <p>${Math.floor(temp)}</p>
     <div>
@@ -33,6 +37,5 @@ export function createMarkup(data) {
 </li>`;
 
   console.log(weatherMarkup);
-    return weatherMarkup;
+  return weatherMarkup;
 }
-
