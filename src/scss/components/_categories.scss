@@ -15,7 +15,7 @@
 
   @include mq(mobile-only) {
     justify-content: space-around;
-    align-items: baseline;
+    align-items: flex-start;
   }
 }
 
