@@ -96,7 +96,7 @@
   .calendar__button-calendar {
     position: absolute;
     width: 17px;
-    height: 19px;
+    height: 17px;
     fill: var(--accent--text-color);
     margin-left: 12px;
   
@@ -203,7 +203,7 @@
     line-height: 1.38;
     letter-spacing: -0.408px;
     font-feature-settings: 'case' on;
-    color: var(--main--text-color);
+    color: var(--calendar--color);
   }
   
   .calendar-icons {
@@ -258,7 +258,7 @@
     font-size: 14px;
     line-height: 1.79;
     letter-spacing: 0.38px;
-    color: var(--main--text-color);
+    color: var(--calendar--color);
     z-index: 1;
     cursor: pointer;
     position: relative;
