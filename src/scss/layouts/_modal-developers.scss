@@ -1,0 +1,43 @@
+.modal-developer {position: fixed;
+    top:0;
+    left:0;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: scroll;
+    @media screen and (max-width: 479px)
+    {
+        padding: 93px 15px;} }
+    
+    .modal-developer.is-hidden {opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    
+    
+    }
+    .modal-developer.is-hidden .modal-footer 
+    {transform: translate(-50%, -50%) scale(0.9);}
+    
+    .modal-footer {
+      position: relative;
+      max-width: 450px;
+      width: 100%;
+     
+      padding: 40px;
+      background-color: #fff;
+      box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
+      border-radius: 4px;
+      
+      @media screen and (min-width:480px) {position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);}
+      @media screen and (min-width:1200px) {
+        max-width: 528px;
+        height: 581px;
+      }
+   
+    }
