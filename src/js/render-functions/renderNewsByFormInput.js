@@ -1,5 +1,5 @@
 import { refs } from '../refs';
-import { weatherMarkup } from '../API/getWeather';
+import { weatherMarkup } from '../render-functions/renderWeather';
 
 
 export async function showNewsByFormInput(apiFetch) {
