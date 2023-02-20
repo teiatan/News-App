@@ -1,6 +1,6 @@
 import { refs } from './refs.js';
 
-refs.modalButtonOpen.addEventListener('click', categoriesButtonModalClick);
+refs.modalOtherBtns.addEventListener('click', categoriesButtonModalClick);
 
 export default function categoriesButtonModalClick() {
   refs.renderContainerCategoriesTheme.classList.toggle('is-hidden');
