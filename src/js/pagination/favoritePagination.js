@@ -5,6 +5,7 @@ const perPage = 3;
 let pages = Math.ceil(favorite / perPage);
 // let page = 1;
 let paginationMarkUp = "";
+
 // const paginationButon = "<button></button>";
 
 
@@ -15,9 +16,12 @@ export function showFavoritePagination() {
  } else {
 
     for(let i = 1; i < pages; i += 1) {
-      paginationMarkUp + `<div><a class="page-nmb" href="#">${i}</a></div>`;
+      const onePaginationBtnMarkup = `<div><a class="page-nmb" page="${i}" href="#">${i}</a></div>`;
+      let gghhj = paginationMarkUp.concat(onePaginationBtnMarkup);
     } 
+    paginConteinBtn.innerHTML = paginationMarkUp;
+    paginConteinBtn.insertAdjacentHTML('beforeend', markup);
  }
 
- paginConteinBtn.innerHTML = paginationMarkUp;
+ 
 }
