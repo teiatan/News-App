@@ -52,7 +52,6 @@
     display: flex;
     position: relative;
     margin-left: 52px;
-    padding-bottom: 15px;
     }
   
   
@@ -203,7 +202,7 @@
     line-height: 1.38;
     letter-spacing: -0.408px;
     font-feature-settings: 'case' on;
-    color: var(--calendar--color);
+    color: var(--calendar--text-color);
   }
   
   .calendar-icons {
@@ -258,7 +257,7 @@
     font-size: 14px;
     line-height: 1.79;
     letter-spacing: 0.38px;
-    color: var(--calendar--color);
+    color: var(--calendar--text-color);
     z-index: 1;
     cursor: pointer;
     position: relative;
