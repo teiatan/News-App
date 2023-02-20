@@ -26,53 +26,11 @@ function addDarkClass() {
     } else {
         document.body.removeAttribute('dark');
         swapThemeBtn.style.background = "#fff";
-        swapThemeBtn.style.border = "1px solid #000";
+        swapThemeBtn.style.border = "0.604701px solid #4B48DB";
         swapThemeBtn.style.borderRadius = "20px";
-        ballRef.style.backgroundColor = "#000";
-        ballRef.style.transform = "translate(-20px)";
+        ballRef.style.backgroundColor = "#4B48DB";
+        ballRef.style.transform = "translate(0px)";
           }
     } catch (err) { }
 }
 
-export function addStylesForDarkThemeBtn() {
- 
-    if (localStorage.theme === 'dark') {
-        console.log(ballRef);
-        //swapThemeBtn.setAttribute(style = "background:#4b48db; border: 1px solid #fff; border-radius: 20px;");
-        //ballRef.setAttribute(style = "background-color: #fff; transform: translate(20px);");
-
-        swapThemeBtn.style.background = "#4b48db";
-        swapThemeBtn.style.border = "1px solid #fff";
-        swapThemeBtn.style.borderRadius = "20px";
-        ballRef.style.backgroundColor = "#fff";
-        ballRef.style.transform = "translate(20px)";
-                }
-}
-   
-
-// if (localStorage.getItem('theme') === 'dark') {
-// 			swapThemeBtn.checked = true;
-// 			setDarkTheme();
-// };
-// swapThemeBtn.addEventListener('click', onClick)
-// function onClick() {
-//     if (this.checked) {
-//         setDarkTheme();
-//     } else {
-//         setLightTheme();
-//     }
-// };
-// localStorage.setItem('theme', themeSwitch.checked ? 'dark' : 'light');
-
-// function setLightTheme() {
-// 			localStorage.setItem('light', '');
-// 		}
-
-// 		// функція для встановлення темної теми стилю
-// 		function setDarkTheme() {
-// 			 document.body.setAttribute('dark', '');
-// 		}
-
-
-
-// ======================================================
