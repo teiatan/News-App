@@ -1,5 +1,6 @@
 export const refs = {
 
+    body: document.body,
     renderContainerCategories: document.querySelector('.categories-render-container__list'),
     renderContainerCategoriesTheme: document.querySelector('.other--categories__filters-list'),
     modalContainerOpen: document.querySelector('.other--categories__filters'),
@@ -39,6 +40,8 @@ export const refs = {
     navFavoriteLink: document.querySelector('a[data-link="favorite"]'),
     navReadLink: document.querySelector('a[data-link="read"]'),
     navHomeLink: document.querySelector('a[data-link="home"]'),
+    header: document.querySelector('.header'),
+    burgerBtn: document.querySelector('.menu-button-burger'),
 
     
     

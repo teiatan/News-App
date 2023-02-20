@@ -176,3 +176,52 @@ body {
     align-items: baseline;
   }
 }
+
+.header.is-opened {
+  .header__container{
+  height: 100%;
+  width: 100%;
+  background-color: var(--main--background-color);
+  z-index: 9999;
+  flex-direction: column;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  }
+
+  .logo {
+    width: max-content;
+  }
+  .header__mobile-menu-container{
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding-bottom: 16px;
+  }
+  .header__form-wrap {
+    position: absolute;
+    top: 27px;
+    right: 30px;
+  }
+  .mobile-buttons-wrapper {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+  .auth-btn__sign-in {
+    width: max-content;
+  }
+  .auth-btn__sign-out {
+    width: max-content;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}

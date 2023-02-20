@@ -1,4 +1,5 @@
 import Notiflix from 'notiflix';
+import { addEventListenerForBurgerBtn } from './js/mobileMenu';
 import { headerLogic, defaultLocalStorage } from './js/logicFor3pages';
 import { addListenersForMobileHeader, viewportWidthCheck } from './js/headerSearchForm';
 import { addModalOpenListeners } from './js/modalOpening';
@@ -30,8 +31,7 @@ window.setTimeout(Notiflix.Loading.remove(), 5000);
 addListenersForMobileHeader();
 currentLinkUnderline();
 viewportWidthCheck();
-
-
+addEventListenerForBurgerBtn();
 
 
 
