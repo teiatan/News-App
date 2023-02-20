@@ -10,19 +10,20 @@ import {renderNewsByFormInput} from '../render-functions/renderNewsByFormInput';
 refs.formSearch.addEventListener("submit", onSubmitSearchForm);
 
 export async function onSubmitSearchForm (e) {
-    let page = 1;
     e.preventDefault();
+    let page = 1;
     refs.negativeSearch.classList.add('is-hidden');
     const value = refs.formSearchInput.value;
 if (value === '') {
     Notiflix.Notify.failure('Ooops. Please, enter something to search');
     return;
-}
-/* if (value !== 'Eng') {
+} 
+ if (value !== value.replace(/[А-Яа-яЁёІі]/, '')) {
     Notiflix.Notify.info('News only English! Please send it again in English.');
-    return;
-}  */
-    const result = await getNewsByFormInput(value, page);
+    return
+}  
+
+  const result = await getNewsByFormInput(value, page);
   
   renderNewsByFormInput(result);
 

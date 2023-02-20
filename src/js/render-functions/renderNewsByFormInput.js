@@ -9,7 +9,6 @@ export async function showNewsByFormInput(apiFetch) {
 export async function renderNewsByFormInput(results) {
   refs.renderContainerHome.innerHTML = '';
   let imgSrc = '';
-  //console.log(results.response.docs);
   
   if( results.response.docs.length === 0) {
    refs.renderContainerHome.classList.add('is-hidden');
