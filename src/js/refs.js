@@ -1,6 +1,6 @@
 export const refs = {
-  renderContainerCategories: document.querySelector(
-    '.categories-render-container__list'
+  renderContainerCategoriesDesktop: document.querySelector(
+    '.categories-render-container__list-desktop'
   ),
   renderContainerCategoriesTheme: document.querySelector(
     '.other--categories__filters-list'
