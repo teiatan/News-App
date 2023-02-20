@@ -1,6 +1,7 @@
 const paginConteinBtn = document.getElementById('pagination');
 //const favorite = localStorage.favorite;
 const favorite = [ 1, 1, 1, 1, 1, 1, 1, 1, 1];
+const favorite = test;
 const perPage = 3;
 let pages = Math.ceil(favorite.length / perPage);
 // let page = 1;
@@ -25,3 +26,9 @@ export function showFavoritePagination() {
 }
 
 showFavoritePagination();
+
+function paginationBtnHandler() {
+   //номер страницы currentPage
+   const markupOfNewsForShowingByPagination = favorite.slice((page-1), (page-1+perPage));
+}
+export news
