@@ -23,7 +23,7 @@
     justify-content: center;
 }
 
-.weather-degrees{
+.weather-header__degrees{
     border-right: 1px solid var(--weather--text-color);
     padding-right: 8px;
     font-size: 55px;
@@ -34,7 +34,7 @@
   }
 }
 
-.weather-condition{
+.weather-header__condition{
 
     padding-left: 8px;
     font-size: 24px;
@@ -44,7 +44,7 @@
     font-size: 36px;
   }
 }
-.weather-geo-wrap{
+.weather-header__geowrap{
 display: flex;
 align-items: center;
 background: var(--weather-buttons--background-color);
@@ -53,7 +53,7 @@ margin-left: 8px;
 padding: 8px 17px 8px 7px;
 }
 
-.weather-geo-icon{
+.weather-header__geoicon{
     height: 18px;
     width: 18px;
 
@@ -62,7 +62,7 @@ padding: 8px 17px 8px 7px;
     width: 27px;
     }
 }
-.weather-town{
+.weather-header__town{
     font-size: 14px;
     line-height: 1.15;
 
@@ -78,7 +78,7 @@ padding: 8px 17px 8px 7px;
         margin: 40px auto;
 
         @include mq(tablet) {  
-        height: 165px;
+        height: 156px;
         width: 165px; 
         margin: 90px auto;
   }
@@ -94,7 +94,7 @@ padding: 8px 17px 8px 7px;
   }
 }
 
-.weather-link-wrap{
+.weather-linkwrap{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,7 +105,7 @@ padding: 8px 17px 8px 7px;
     }
 }
 
-.weather-link{
+.weather-linkwrap__link{
 font-size: 16px;
 line-height: 1.15;
 background: var(--weather-buttons--background-color);
