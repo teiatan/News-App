@@ -148,4 +148,36 @@
   @include mq(mobile-only) {
     display: none;
   }
+
+  @include mq(tablet-only) {
+    display: none;
+  }
+}
+
+.categories-render-container__list-mobile {
+  display: none;
+  @include mq(mobile-only) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include mq(tablet-only) {
+    display: none;
+  }
+}
+
+.categories-render-container__list-tablet {
+  display: none;
+  @include mq(mobile-only) {
+    display: none;
+  }
+
+  @include mq(tablet-only) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 }
