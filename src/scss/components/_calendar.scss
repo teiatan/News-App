@@ -62,7 +62,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 13px;
-  outline: none;
+    outline: none;
     width: 151px;
     height: 31px;
     padding: 5px 12px;
@@ -126,7 +126,6 @@
   .calendar__button-arrow {
     display: flex;
     position: absolute;
-    z-index: 1;
     fill: var(--accent--text-color);
     left: 130px;
   
