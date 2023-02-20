@@ -2,6 +2,12 @@ export const refs = {
   renderContainerCategoriesDesktop: document.querySelector(
     '.categories-render-container__list-desktop'
   ),
+  renderContainerCategoriesMobile: document.querySelector(
+    '.categories-render-container__list-mobile'
+  ),
+  renderContainerCategoriesTablet: document.querySelector(
+    '.categories-render-container__list-tablet'
+  ),
   renderContainerCategoriesTheme: document.querySelector(
     '.other--categories__filters-list'
   ),
