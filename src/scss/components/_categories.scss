@@ -12,6 +12,11 @@
   display: flex;
   margin-top: 28px;
   margin-bottom: 60px;
+
+  @include mq(mobile-only) {
+    justify-content: space-around;
+    align-items: baseline;
+  }
 }
 
 .categories__item + .categories__item {
@@ -85,6 +90,10 @@
   justify-content: center;
 
   margin-right: 111px;
+
+  @include mq(mobile-only) {
+    margin-right: 0px;
+  }
 }
 
 .other-categories__icon-arrow {
@@ -127,6 +136,10 @@
 
   &.is-hidden {
     display: block;
+  }
+
+  @include mq(mobile-only) {
+    right: -100px;
   }
 }
 
