@@ -49,20 +49,20 @@
     margin-left: auto;
     justify-content: flex-end;
     align-items: center;
-    @media screen and(min-width:1199px) {
+    @media screen and (min-width:1199px) {
            width: 98px;
         }
 }
 .theme-btn__text {
     
-    @media screen and(max-width:1200px) {
+    @media screen and (max-width:1200px) {
         display: none;
     }
 }
 
 .theme-btn__icon{
     
-    @media screen and(min-width:1199px) {
+    @media screen and (min-width:1199px) {
         display: none;
     }
 }

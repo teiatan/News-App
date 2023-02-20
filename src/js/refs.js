@@ -1,13 +1,9 @@
 export const refs = {
 
-  renderContainerCategories: document.querySelector(
-    '.categories-render-container__list'
-  ),
-  renderContainerCategoriesTheme: document.querySelector(
-    '.other--categories__filters-list'
-  ),
-  modalContainerOpen: document.querySelector('.other--categories__filters'),
-  modalButtonOpen: document.querySelector('.other-categories__button'),
+    renderContainerCategories: document.querySelector('.categories-render-container__list'),
+    renderContainerCategoriesTheme: document.querySelector('.other--categories__filters-list'),
+    modalContainerOpen: document.querySelector('.other--categories__filters'),
+    modalButtonOpen: document.querySelector('.other-categories__button'),
 
     navHome: document.querySelector('.navigation__item--home'),
     navFavorite: document.querySelector('.navigation__item--favorite'),

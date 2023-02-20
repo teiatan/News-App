@@ -32,7 +32,7 @@ export function createMarkup(data) {
   <a class="weather-link" href="https://sinoptik.ua" target="_blank">weather for week</a>
 </li>`;
 
-  console.log(weatherMarkup);
+  //console.log(weatherMarkup);
     return weatherMarkup;
 }
 
