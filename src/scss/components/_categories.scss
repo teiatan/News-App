@@ -23,14 +23,6 @@
   margin-left: 16px;
 }
 
-.categories__item {
-  @include mq(tablet-only) {
-    &:nth-child(6) {
-      display: none;
-    }
-  }
-}
-
 .categories__link {
   text-align: center;
   border-radius: 20px;
