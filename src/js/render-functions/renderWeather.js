@@ -33,6 +33,7 @@ export function createMarkup(data) {
 </li>`;
 
   // console.log(weatherMarkup);
+
     return weatherMarkup;
 }
 

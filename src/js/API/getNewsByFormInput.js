@@ -15,9 +15,13 @@ export async function onSubmitSearchForm (e) {
     refs.negativeSearch.classList.add('is-hidden');
     const value = refs.formSearchInput.value;
 if (value === '') {
-    Notiflix.Notify.info('Ooops. Please, enter something to search');
+    Notiflix.Notify.failure('Ooops. Please, enter something to search');
     return;
 }
+/* if (value !== 'Eng') {
+    Notiflix.Notify.info('News only English! Please send it again in English.');
+    return;
+}  */
     const result = await getNewsByFormInput(value, page);
   
   renderNewsByFormInput(result);
@@ -25,7 +29,6 @@ if (value === '') {
 
    async function getNewsByFormInput() {
     let formInput = refs.formSearchInput.value;
-    console.log(formInput)
     let page = 1;
     const url = `${nytApiSettings.BASIC_URL}search/v2/articlesearch.json?api-key=${nytApiSettings.apiKey}&page=${page}&q=${formInput}`;
     try {
