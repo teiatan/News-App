@@ -6,7 +6,7 @@ export const refs = {
     '.other--categories__filters-list'
   ),
   modalOtherBtns: document.querySelector('.other-categories__button'),
-
+  modalOtherArrow: document.querySelector('.other-categories__icon-arrow'),
   navHome: document.querySelector('.navigation__item--home'),
   navFavorite: document.querySelector('.navigation__item--favorite'),
   navRead: document.querySelector('.navigation__item--read'),

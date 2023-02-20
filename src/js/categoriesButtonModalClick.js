@@ -4,4 +4,5 @@ refs.modalOtherBtns.addEventListener('click', categoriesButtonModalClick);
 
 export default function categoriesButtonModalClick() {
   refs.renderContainerCategoriesTheme.classList.toggle('is-hidden');
+  refs.modalOtherArrow.classList.toggle('switched');
 }
