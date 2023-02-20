@@ -1,6 +1,161 @@
+
+.modal-auth.is-hidden {
+    display: none;
+}
+
 .modal-auth {
     position: absolute;
     top: 0;
-    right: 0;
-    background-color: white;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-auth__form {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-auth__title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.modal-auth__label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.modal-auth__input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.modal-auth__wrap-password {
+    margin: 20px 0;
+    position: relative;
+}
+
+.modal-auth__wrap-password {
+    position: relative;
+}
+
+.modal-auth__label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.modal-auth__input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.modal-auth__button-show-password {
+    position: absolute;
+    top: 45%;
+    right: 10px;
+    border: none;
+    width: 25px;
+    height: 25px;
+    background: url(/src/img/eye-icon.png) no-repeat center;
+    background-size: cover;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.modal-auth__button-show-password:hover {
+    animation: button-pulse 0.5s ease-in-out infinite;
+}
+
+@keyframes button-pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.modal-auth__buttons-wrap {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-auth__button-register,
+.modal-auth__button-confirm {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.modal-auth__button-register:hover,
+.modal-auth__button-confirm:hover {
+    background-color: #3e8e41;
+}
+
+.modal-auth__error {
+    color: red;
+    margin-top: 10px;
+}
+.modal__close-btn {
+    position: relative;
+    bottom: 70px;
+    left: 340px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.modal__close-btn::before,
+.modal__close-btn::after {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 24px;
+    background-color: #333;
+}
+
+.modal__close-btn::before {
+    transform: rotate(45deg);
+}
+
+.modal__close-btn::after {
+    transform: rotate(-45deg);
+}
+
+/* Изменения при наведении курсора на кнопку */
+.modal__close-btn:hover::before,
+.modal__close-btn:hover::after {
+    background-color: red;
 }
