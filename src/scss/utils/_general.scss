@@ -163,3 +163,16 @@ body {
     gap: 31px;
   }
 }
+
+.header {
+  border-bottom: 1px solid var(--border);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+
+  @include mq(tablet) {
+    align-items: baseline;
+  }
+}

@@ -8,6 +8,7 @@ export const refs = {
     navHome: document.querySelector('.navigation__item--home'),
     navFavorite: document.querySelector('.navigation__item--favorite'),
     navRead: document.querySelector('.navigation__item--read'),
+    navWrapper: document.querySelector('.navigation-wrapper'),   
     headerSignInBtn: document.querySelector('.auth-btn__sign-in'),
     headerSignOutBtn: document.querySelector('.auth-btn__sign-out'),
     
@@ -29,8 +30,19 @@ export const refs = {
     authEntranceBtn: document.querySelector('.js-auth__entrance-btn'),
     authRegistrationBtn: document.querySelector('.js-auth__registration-btn'),
     authModal: document.querySelector('.modal-auth'),
+
+
+    searchFormOpeningButton: document.querySelector('.header__search-form-opening-btn'),
+    searchForm: document.querySelector('.search-form'),
+    searchFormInput: document.querySelector('.search-form__input'),
+
+    navFavoriteLink: document.querySelector('a[data-link="favorite"]'),
+    navReadLink: document.querySelector('a[data-link="read"]'),
+    navHomeLink: document.querySelector('a[data-link="home"]'),
+
     
     
     favouriteNewsContainer: document.querySelector('.render-container'),
 };
+
 
