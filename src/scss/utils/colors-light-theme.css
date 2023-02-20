@@ -10,6 +10,7 @@
   --accent--text-color: #4440f6; /* for hover,focus,accent */
   --additional-accent--text-color: #ffffff; /* for hover,focus,accent */
   --categories-text-color: #4440f7;
+  --categories-text-color-hover: #ffffff;
 
   /* background-color */
   --main--background-color: #f4f4f4;
@@ -19,6 +20,7 @@
   --already-read-news--background-color: rgba(244, 244, 244, 0.4);
   --accent--background-color: #4b48db; /* for hover,focus,accent */
   --categories-background-color: #ffffff;
+  --categories--background-color-hover: #4440f6;
 
   /* border-color */
   --main--border-color: #111321;
@@ -38,6 +40,7 @@
   --categories-text-color: #4440f7;
   /* for hover,focus,accent */
   --additional-accent--text-color: #ffffff;
+  --categories-text-color-hover: #ffffff;
   /* for hover,focus,accent */
 
   /* background-color */
@@ -48,6 +51,7 @@
   --already-read-news--background-color: rgba(244, 244, 244, 0.4);
   --accent--background-color: #4b48db;
   --categories-background-color: #ffffff;
+  --categories--background-color-hover: #4440f6;
   /* for hover,focus,accent */
 
   /* border-color */

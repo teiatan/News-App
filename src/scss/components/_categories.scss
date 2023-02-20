@@ -33,8 +33,8 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    background-color: var(--second-additional--text-color);
-    color: var(--main--background-color);
+    background-color: var(--categories--background-color-hover);
+    color: var(--categories-text-color-hover);
   }
 }
 
@@ -42,7 +42,7 @@
   letter-spacing: 0.01em;
   font-size: 12px;
   line-height: 1.33333;
-  color: var(--second-additional--text-color);
+  color: var(--categories-text-color);
   text-decoration: none;
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -51,9 +51,9 @@
 
 .other-categories__button {
   display: flex;
-  color: var(--second-additional--text-color);
-  background-color: var(--main--background-color);
-  border: 1px solid var(--second-additional--text-color);
+  color: var(--categories-text-color);
+  background-color: var(--categories-background-color);
+  border: 1px solid var(--categories-border-color);
   border-radius: 20px;
   padding: 7.5px 13px;
   font-size: 12px;
@@ -66,8 +66,8 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    background-color: var(--second-additional--text-color);
-    color: var(--weather--text-color);
+    background-color: var(--categories--background-color-hover);
+    color: var(--categories-text-color-hover);
   }
 }
 
@@ -86,6 +86,7 @@
 
 .other-categories__icon-arrow {
   margin-left: 5px;
+  fill: var(--categories-text-color);
   &.switched {
     fill: var(--additional-accent--text-color);
     transition-duration: 0.25s;
