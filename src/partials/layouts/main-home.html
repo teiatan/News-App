@@ -19,11 +19,22 @@
     </div>
     <include src="partials/components/slider.html"></include>
     <div class="bottom-container">
-      <div class="negative-search is-hidden">
-        <p>We haven't found news from this category</p>
-        <img src="./img/plug-Desc.jpg" alt="Картинка" />
-      </div>
-      <ul class="render-container render-container--home"></ul>
+            <div class="negative negative-search is-hidden">
+                <p class="negative___title">We haven't found news from this search</p>
+                <img
+                class="negative___picture"
+                src="./img/plug-Mob.png"
+                alt="underfined-picture"
+                sizes="(min-width: 1280px) 601px, (min-width: 768px) 560px, (max-width: 767px) 248px"
+                srcset="
+                   ./img/plug-Mob.png 248w,
+                   ./img/plug-Tab.png  560w,
+                   ./img/plug-Desc.png   601w,
+                   ./img/plug-Mob2x.png  496w,
+                   ./img/plug-Tab2x.png  1120w,
+                   ./img/plug-Desc2х.png  1202w
+                "
+              />
     </div>
 
     <div class="page-container pagination">
