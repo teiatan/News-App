@@ -1,6 +1,6 @@
-// import { format } from 'date-fns';
-// import { fetchDefaultWeather, getGeoposition, fetchWeatherByGeo} from '../API/getWeather';
-// export let weatherMarkup;
+import { format } from 'date-fns';
+import { fetchDefaultWeather, getGeoposition, fetchWeatherByGeo} from '../API/getWeather';
+export let weatherMarkup;
 
 async function createDefaultWeatherMarkup() {
   const data = await fetchDefaultWeather();
