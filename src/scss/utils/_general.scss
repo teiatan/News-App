@@ -63,8 +63,9 @@ button {
 }
 
 body {
+ 
   font-family: 'Manrope';
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--main--background-color);
   color: var(--main--text-color);
 }
