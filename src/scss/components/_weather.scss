@@ -1,0 +1,118 @@
+.weather-item.card{
+    height: 469px;
+
+     @include mq(tablet) {
+    height: 675px;
+    }
+}
+.weather-item{
+    padding: 32px 0px;
+    font-family: 'Roboto';
+    color: var(--weather--text-color);
+    background-color: var(--weather--background-color);
+
+     @include mq(tablet) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}
+
+.weather-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-header__degrees{
+    border-right: 1px solid var(--weather--text-color);
+    padding-right: 8px;
+    font-size: 55px;
+    line-height: 1.17;
+
+    @include mq(tablet) {
+    font-size: 64px;
+  }
+}
+
+.weather-header__condition{
+
+    padding-left: 8px;
+    font-size: 24px;
+    line-height: 1.17;
+
+    @include mq(tablet) {
+    font-size: 36px;
+  }
+}
+.weather-header__geowrap{
+display: flex;
+align-items: center;
+background: var(--weather-buttons--background-color);
+border-radius: 10px;
+margin-left: 8px;
+padding: 8px 17px 8px 7px;
+}
+
+.weather-header__geoicon{
+    height: 18px;
+    width: 18px;
+
+    @include mq(tablet) {
+    height: 27px;
+    width: 27px;
+    }
+}
+.weather-header__town{
+    font-size: 14px;
+    line-height: 1.15;
+
+    @include mq(tablet) {
+    font-size: 20px;
+  }
+}
+
+.weather-img{
+        height: 128px;
+        width: 121px;
+        display: block;
+        margin: 40px auto;
+
+        @include mq(tablet) {  
+        height: 156px;
+        width: 165px; 
+        margin: 90px auto;
+  }
+}
+
+.weather-date{
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+
+    @include mq(tablet) {   
+    font-size: 36px;
+  }
+}
+
+.weather-linkwrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 28px ;
+
+    @include mq(tablet) {   
+    margin-top: 18px ;
+    }
+}
+
+.weather-linkwrap__link{
+font-size: 16px;
+line-height: 1.15;
+background: var(--weather-buttons--background-color);
+border-radius: 10px;
+padding: 9px 12px;
+
+@include mq(tablet) {   
+font-size: 20px;
+  }
+}

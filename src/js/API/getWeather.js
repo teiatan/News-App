@@ -1,44 +1,69 @@
-export const weatherMarkup = '<li class="weather-item card"><h3>ПОГОДА</h3></li>';
-import axios from 'axios';
 
-const API_KEY = '91d751a02dafc0c836af10d6250528cb';
-const ENDPOINT = 'https://api.openweathermap.org/data/2.5/weather?';
+import axios from "axios";
+import { createMarkup } from "../render-functions/renderWeather";
 
-
-async function fetchDefaultWeather() {
+export async function fetchDefaultWeather() {
+  const ENDPOINT = 'https://api.openweathermap.org/data/2.5/weather?';
+  const API_KEY = '91d751a02dafc0c836af10d6250528cb';
   const url = `${ENDPOINT}q=Kyiv&units=metric&appid=${API_KEY}`;
   try {
-    return data = await axios.get(url);
+    const data = await axios.get(url);
+    return data;
     //  console.log(data);
   } catch (error) {
-     console.log(error);
+    console.log(error);
   }
 }
-fetchDefaultWeather(); 
+  // fetchDefaultWeather();
 
-async function getGeoposition() {
-  if (navigator.geolocation) {
-    // if browser support geolocation api
-    navigator.geolocation.getCurrentPosition(onSuccess);
-  } else {
-    alert('Your browser not support geolocation api');
+getGeoposition(); 
+
+
+export  async function getGeoposition() {
+    if (navigator.geolocation) {
+      // if browser support geolocation api
+   return await navigator.geolocation.getCurrentPosition(onSuccess);
+    } else {
+      alert('Your browser not support geolocation api');
+    }
+}
+
+export  async function onSuccess(position) {
+    const { latitude, longitude } = position.coords; // getting lat and lon of the user device from coords obj
+    return await fetchWeatherByGeo(latitude, longitude).then(data => createMarkup(data))
   }
-}
-function onSuccess(position) {
-  const { latitude, longitude } = position.coords; // getting lat and lon of the user device from coords obj
-  fetchWeatherByGeo( latitude, longitude );
-}
 
-
-            
-
-async function fetchWeatherByGeo(lat, lon) {
-  const url = `${ENDPOINT}lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
-  try {
-    return data = await axios.get(url);
-  } catch (error) {
-     console.log(error);
+export  async function fetchWeatherByGeo(lat, lon) {
+    const ENDPOINT = 'https://api.openweathermap.org/data/2.5/weather?';
+    const API_KEY = '91d751a02dafc0c836af10d6250528cb';
+    const url = `${ENDPOINT}lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+    try {
+      return data = await axios.get(url);
+      // console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
   }
-}
-getGeoposition();
 
+  export let weatherMarkup = `<li class="weather-item card">
+    <div class="weather-header">
+     <p class="weather-header__degrees">23&#176</p>
+    <div>
+       <p class="weather-header__condition">Sunny</p>
+       <div class="weather-header__geowrap">
+  <svg class="weather-header__geoicon">
+                <use href="./img/sprite.svg#icon-geo"></use>
+              </svg>
+       <p class="weather-header__town">Kyiv</p>
+       </div>
+     </div>
+  </div>
+   <img class="weather-img"
+         src="./img/weather-icon-temp.png"
+        alt="Weather icon"/>
+   <p class="weather-date">Mon</p>
+   <p class="weather-date">20 Feb 2023</p>
+   <div class="weather-linkwrap">
+    <a class="weather-linkwrap__link" href="https://sinoptik.ua" target="_blank">weather for week</a>
+   </div> 
+ </li>`;

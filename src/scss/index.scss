@@ -2,18 +2,23 @@
 @import './utils/mixins';
 @import './utils/general';
 @import './utils/fonts';
+@import './utils/colors-dark-theme';
+@import './utils/colors-light-theme';
 
 @import './layouts/modal-auth';
+
 
 @import './layouts/switcher-theme';
 
 @import './components/calendar';
-
+@import './components/logo';
+@import './components/navigation';
 @import './components/form-search';
 
-
 @import './components/news';
+@import './components/weather';
 
+@import './components/categories';
 /* 
 @import '';
 @import ''; */

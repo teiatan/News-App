@@ -1,5 +1,11 @@
+.header__form-wrap {
+  display: flex;
+  align-items: center;
+}
+
 .search-form {
   position: relative;
+  margin-left: auto;
 }
 
 .search-form__btn {
@@ -19,7 +25,7 @@
 }
 
 .search-form__input {
-  width: 173px;
+  
   height: 31px;
 
   font-size: 12px;
@@ -34,11 +40,12 @@
   outline: transparent;
 
   @include mq(tablet) {
-    width: 213px;
+    
     font-size: 14px;
   }
+
   @include mq(desktop) {
-    width: 288px;
+    
   }
 }
 
@@ -64,10 +71,82 @@
   }
 }
 
-.search-form__input:focus + .search-form__label {
+.search-form__input:focus+.search-form__label {
   opacity: 0;
 }
 
-.search-form__input:not(:placeholder-shown) + .search-form__label {
+.search-form__input:not(:placeholder-shown)+.search-form__label {
   opacity: 0;
 }
+
+.header__search-form-opening-btn {
+  margin-left: auto;
+
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+.menu-button-burger {
+  margin-left: 14px;
+
+  @include mq(tablet) {
+    display: none;
+  }
+}
+
+
+.negative {
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  margin-bottom: 59px;
+
+  @include mq(tablet-only) {
+    margin-top: 48px;
+    margin-bottom: 101px;
+  }
+
+  @include mq(desktop) {
+    margin-top: 15px;
+    margin-bottom: 60px;
+  }
+}
+
+.negative___title {
+  font-family: Manrope;
+  font-weight: 700;
+  color: var(--text-color);
+  font-size: 20px;
+  line-height: 27px;
+  width: 276px;
+  @include mq(tablet-only) {
+    width: 548px;
+    font-size: 40px;
+    line-height: 55px;
+  }
+  @include mq(desktop) {
+    width: 548px;
+    font-size: 40px;
+    line-height: 55px;
+  }
+}
+
+.negative___picture {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 248px;
+  height: auto;
+  @include mq(tablet-only) {
+    width: 100%;
+  }
+
+  @include mq(desktop) {
+    width: 100%;
+  }
+}
+

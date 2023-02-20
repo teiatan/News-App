@@ -2,18 +2,18 @@
   display: flex;
 }
 .days li .inactive{
-  color: #aaa;
+  color: var(--first-additional--text-color);
 }
 .calendar-input.isActive::placeholder {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    color: var(--white-color);
+    color: var(--additional-accent--text-color);
   }
   
   .calendar-input.isActive {
-    background-color: var(--accent-color);
-    color: var(--white-color);
-    border-color: var(--accent-color);
+    background-color: var(--accent--text-color);
+    color: var(--additional-accent--text-color);
+    border-color: var(--accent--text-color);
     border: 1px solid #4440f7;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
@@ -34,16 +34,18 @@
   }
   
   .calendar-form__text {
-    display: none;
-
+   
+    @include mq(desktop){
       display: inline;
       font-family: 'Manrope';
       font-style: normal;
       font-weight: 700;
       font-size: 18px;
       line-height: 1.38;
-      color: var(--text-color);
+      color: var(--main--text-color);
     }
+    display: none;
+  }
 
   
   .calendar-form {
@@ -60,11 +62,11 @@
     justify-content: space-between;
     align-items: center;
     gap: 13px;
-  
-    width: 152px;
+  outline: none;
+    width: 151px;
     height: 31px;
     padding: 5px 12px;
-    border: 1px solid var(--accent-color);
+    border: 1px solid var(--main--border-color);
     border-radius: 20px;
   
     text-align: center;
@@ -76,23 +78,26 @@
     line-height: 1.75;
     letter-spacing: 0.02em;
   
-    color: var(--text-color);
+    color: var(--main--text-color);
     background-color: transparent;
   
     cursor: pointer;
   
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include mq(tablet){
       width: 168px;
       height: 31px;
       font-size: 14px;
       line-height: 1.5;
       gap: 18px;
-  }
+  }}
   
   .calendar__button-calendar {
     position: absolute;
-    fill: #4440f6;
+    width: 17px;
+    height: 19px;
+    fill: var(--accent--text-color);
     margin-left: 12px;
   
     cursor: pointer;
@@ -101,9 +106,10 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   
+  
   .calendar__button-calendar.switchedColor {
     z-index: 1;
-    fill: #ffffff;
+    fill: var(--additional-accent--text-color);
   
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -118,17 +124,19 @@
   }
   
   .calendar__button-arrow {
-    margin-left: 12px;
     display: flex;
     position: absolute;
     z-index: 1;
-    fill: var(--accent-color);
+    fill: var(--accent--text-color);
     left: 130px;
   
     cursor: pointer;
   
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include mq(tablet){
+      margin-left: 12px;
+    }
   }
   
   .calendar__button-arrow-icon {
@@ -136,7 +144,7 @@
   }
   
   .calendar__button-arrow.switched {
-    fill: var(--white-color);
+    fill: var(--additional-accent--text-color);
     transform: rotateX(180deg);
   
     transition-duration: 250ms;
@@ -144,7 +152,7 @@
   }
   
   .calendar__button-back {
-    fill: var(--accent-color);
+    fill: var(--accent--text-color);
   }
   
   .calendar-wrapper {
@@ -171,7 +179,7 @@
     width: 250px;
     // height: 500px;
     right: 0px;
-    background: var(--white-color);
+    background: var(--weather--text-color);
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
   
@@ -196,12 +204,12 @@
     line-height: 1.38;
     letter-spacing: -0.408px;
     font-feature-settings: 'case' on;
-    color: #000000;
+    color: var(--main--text-color);
   }
   
   .calendar-icons {
     display: flex;
-    color: var(--accent-color);
+    color: var(--accent--text-color);
   }
   
   .calendar-icons span {
@@ -212,7 +220,7 @@
     font-size: 1.9rem;
     user-select: none;
     border-radius: 50%;
-    fill: var(--accent-color);
+    fill: var(--accent--text-color);
     display: flex;
   }
   
@@ -221,7 +229,7 @@
   }
   
   .calendar-icons span:hover {
-    background: var(--white-color);
+    background: var(--weather--text-color);
   }
   
   .calendar ul {
@@ -251,7 +259,7 @@
     font-size: 14px;
     line-height: 1.79;
     letter-spacing: 0.38px;
-    color: #000000;
+    color: var(--main--text-color);
     z-index: 1;
     cursor: pointer;
     position: relative;
@@ -262,10 +270,10 @@
     margin-bottom: 0;
   }
   .days li.active {
-    color: var(--white-color);
+    color: var(--weather--text-color);
   }
   .days li.inactive {
-    color: #aaa;
+    color: var(--first-additional--text-color);
   }
   
   .days li::before {
@@ -281,8 +289,11 @@
   }
   
   .days li.active::before {
-    background: var(--accent-color);
+    background: var(--accent--text-color);
   }
   .days li:not(.active):hover::before{
     background: #f2f2f2;
+  }
+  .datepicker-here{
+    color:var(--first-additional--text-color);
   }

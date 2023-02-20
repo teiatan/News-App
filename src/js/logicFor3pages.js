@@ -3,6 +3,7 @@ import { addIsHidden, removeIsHidden } from './isHidden';
 import { openAuthModal, closeAuthModal } from './modalOpening';
 import { signOutBtnHandler } from './auth';
 
+
 export function defaultLocalStorage() {
     if(localStorage.length === 0) {
         localStorage.lang = 'en';
@@ -10,6 +11,8 @@ export function defaultLocalStorage() {
         localStorage.auth = 'no';
         localStorage.favorite = [];
         localStorage.read = [];
+        localStorage.temperature = '20C';
+        localStorage.city = 'Kyiv';
     };
     if(localStorage.auth === 'no') {
         localStorage.removeItem('authId');
@@ -24,7 +27,7 @@ export function headerLogic() {
         defaultLocalStorage();
     } else if(localStorage.auth === 'yes') {
         addIsHidden([refs.headerSignInBtn, refs.authModal]);
-        removeIsHidden([refs.navFavorite, refs.navRead, refs.headerSignOutBtn]);
+        removeIsHidden([refs.navWrapper, refs.navFavorite, refs.navRead, refs.headerSignOutBtn]);
         refs.headerSignInBtn.removeEventListener('click', openAuthModal);
         refs.headerSignOutBtn.addEventListener('click', signOutBtnHandler);
         return;
@@ -35,4 +38,3 @@ export function headerLogic() {
         refs.headerSignOutBtn.removeEventListener('click', signOutBtnHandler);
     };
 };
-
