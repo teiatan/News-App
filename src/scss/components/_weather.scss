@@ -65,11 +65,11 @@ width: 27px;
         height: 128px;
         width: 121px;
         display: block;
-        margin: 89px auto 90px auto;
-              @include mq(tablet) {  
+        margin: 40px auto;
+        @include mq(tablet) {  
         height: 165px;
         width: 165px; 
-        margin: 40px auto;
+        margin: 90px auto;
   }
 }
 
