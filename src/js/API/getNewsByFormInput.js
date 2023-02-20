@@ -21,7 +21,7 @@ if (value === '') {
 /* if (value !== 'Eng') {
     Notiflix.Notify.info('News only English! Please send it again in English.');
     return;
-}  */
+}  */ 
     const result = await getNewsByFormInput(value, page);
   
   renderNewsByFormInput(result);
