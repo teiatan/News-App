@@ -96,6 +96,7 @@
 
 .other--categories__filters-list {
   width: 148px;
+  height: 380px;
   background-color: #f8f8f8;
   border-radius: 20px;
   padding: 14px;
@@ -108,6 +109,10 @@
   right: -90px;
   pointer-events: all;
   display: none;
+  scroll-snap-type: x proximity;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  overflow: scroll;
 
   &.is-hidden {
     display: block;
