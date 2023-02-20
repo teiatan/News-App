@@ -16,8 +16,9 @@ import { categoriesButtonModalClick } from './js/categoriesButtonModalClick';
 
 import { changeTheme, addDarkClass } from './js/changeTheme';
 import { fetchDefaultWeather } from './js/API/getWeather';
+import { addStylesForDarkThemeBtn } from './js/changeTheme';
 
-
+addStylesForDarkThemeBtn();
 Notiflix.Loading.pulse();
 renderCategories();
 defaultLocalStorage();
