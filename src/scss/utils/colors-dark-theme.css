@@ -8,7 +8,6 @@
   --already-read--text-color: #00dd73;
   --accent--text-color: #4440f6; /* for hover,focus,accent */
   --additional-accent--text-color: #ffffff; /* for hover,focus,accent */
-  --theme-text-color: #4b48db;
 
   /* background-color */
   --main--background-color: #111321;
@@ -17,10 +16,8 @@
   --category-on-news--background-color: rgba(68, 64, 247, 0.7);
   --already-read-news--background-color: rgba(244, 244, 244, 0.4);
   --accent--background-color: #4b48db; /* for hover,focus,accent */
-  --theme-background-color: ##ffffff;
 
   /* border-color */
   --main--border-color: #f4f4f4;
   --aditional--border-color: #4440f7;
-  --theme-border-color: #4440f7;
 }
