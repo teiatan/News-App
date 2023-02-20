@@ -67,17 +67,17 @@ export async function renderMostViewedNews({results}) {
   const already = document.querySelector(".news__Already-read");
 
   
-  console.log(links);
+  //console.log(links);
 
-  links.forEach(link => {
-    link.addEventListener("click", function (){
-      if ('click') {
-        wasRead.classList.add('news__was-read');
-        already.classList.add('visible');   
+  //links.forEach(link => {
+  //  link.addEventListener("click", function (){
+  //    if ('click') {
+  //      wasRead.classList.add('news__was-read');
+  //      already.classList.add('visible');   
         
-       }
-    })
-  });
+  //     }
+  //  })
+  //});
 
   // const handleClick = () => {
   //   if ('click') {
