@@ -199,3 +199,16 @@
     display: none;
   }
 }
+
+.filter-category__item-mobile {
+  & + .filter-category__item-mobile {
+    margin-top: 16px;
+  }
+  @include mq(mobile-only) {
+    display: block;
+  }
+
+  @include mq(tablet-only) {
+    display: none;
+  }
+}

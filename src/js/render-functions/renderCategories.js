@@ -72,4 +72,19 @@ export async function renderCategories() {
     'beforeend',
     categorieMarkup2Tablet
   );
+
+  // рендер категорій на мобілці для модалки
+  const categorieMarkup2Mobile = categoriesNewMobile
+    .map(({ display_name, name }) => {
+      return `
+        <li class="filter-category__item-mobile">
+          <button class="categories__link_other">${display_name}</button>
+        </li>
+      `;
+    })
+    .join('');
+  refs.renderContainerCategoriesTheme.insertAdjacentHTML(
+    'beforeend',
+    categorieMarkup2Mobile
+  );
 }
