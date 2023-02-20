@@ -11,6 +11,7 @@ export const refs = {
   renderContainerCategoriesTheme: document.querySelector(
     '.other--categories__filters-list'
   ),
+  modalText: document.querySelector('.other-categories__button-text'),
   modalOtherBtns: document.querySelector('.other-categories__button'),
   modalOtherArrow: document.querySelector('.other-categories__icon-arrow'),
   navHome: document.querySelector('.navigation__item--home'),
