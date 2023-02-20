@@ -196,6 +196,7 @@ body {
   .logo {
     width: max-content;
   }
+
   .header__mobile-menu-container{
     order: 2;
     display: flex;
@@ -213,6 +214,10 @@ body {
     position: absolute;
     top: 30px;
     right: 20px;
+    
+    .header__search-form-opening-btn {
+        display: none;
+      }
   }
   .auth-btn__sign-in {
     width: max-content;
