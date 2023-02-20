@@ -25,9 +25,9 @@
   padding: 7.5px 13px;
   font-size: 12px;
   line-height: 16px;
-  border: 1px solid var(--second-additional--text-color);
-  color: var(--second-additional--text-color);
-  background-color: var(--main--background-color);
+  border: 1px solid var(--theme-border-color);
+  color: var(--theme-text-color);
+  background-color: var(--theme-background-color);
   cursor: pointer;
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
