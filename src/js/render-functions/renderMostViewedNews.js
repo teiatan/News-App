@@ -39,7 +39,6 @@ export async function renderMostViewedNews({results}) {
               </svg>
             </p>
             <div class="news__container">
-              <span class="news__category">${subsection}</span>
               <span class="news__read is-hidden"></span>
               <div class="news__container-img">
               <button class="news__favorite">Add to favorite</button>

@@ -44,7 +44,6 @@ export async function renderNewsByFormInput(results) {
           </svg>
       </p>
       <div class="news__container">
-        <span class="news__category is-hidden">${type_of_material}</span>
         <span class="news__read is-hidden"></span>
         <div class="news__container-img">
          <button class="news__favorite">Add to favorite</button>
@@ -54,7 +53,7 @@ export async function renderNewsByFormInput(results) {
       <p class="news__abstract">${abstract}</p>
         
       <span class="news__date">${pub_date.split('').splice(0, 10).join('').replaceAll('-', '/')}</span>
-      <p class="news__marker-search">${type_of_material}</p>
+      <p class="news__category news__marker-search">${type_of_material}</p>
       <a href="${web_url}" class="news__link" target = "_blank">Read more</a></div>
   </li>
       `;
