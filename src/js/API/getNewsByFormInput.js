@@ -23,9 +23,9 @@ if (value === '') {
     return
 }  
 
-  const result = await getNewsByFormInput(value, page);
+  const results = await getNewsByFormInput(value, page);
   
-  renderNewsByFormInput(result);
+  renderNewsByFormInput(results);
 
 
    async function getNewsByFormInput() {
