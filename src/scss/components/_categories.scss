@@ -45,6 +45,17 @@
   }
 }
 
+.categories__link_other {
+  letter-spacing: 0.01em;
+  font-size: 12px;
+  line-height: 1.33333;
+  color: var(--second-additional--text-color);
+  text-decoration: none;
+  transition-duration: 0.25s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
 .other-categories__button {
   display: flex;
   color: var(--second-additional--text-color);
@@ -121,17 +132,6 @@
 
 .filter-category__item + .filter-category__item {
   margin-top: 12px;
-}
-
-.categories__link {
-  letter-spacing: 0.01em;
-  font-size: 12px;
-  line-height: 1.33333;
-  color: var(--second-additional--text-color);
-  text-decoration: none;
-  transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
 }
 
 .categories-render-container__list {

@@ -23,7 +23,7 @@ export async function renderCategories() {
     .map(({ display_name, name }) => {
       return `
         <li class="filter-category__item">
-          <button class="categories__link">${display_name}</button>
+          <button class="categories__link_other">${display_name}</button>
         </li>
       `;
     })
