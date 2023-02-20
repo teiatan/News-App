@@ -22,6 +22,9 @@
     /* border-color */
     --main--border-color: #111321;
     --aditional--border-color: #4440F7;
+    
+    /* svg-color*/
+    --calendar--button-arrow:#A2A2A2;
 }
 
 [dark] {
@@ -51,4 +54,7 @@
     /* border-color */
     --main--border-color: #F4F4F4;
     --aditional--border-color: #4440F7;
+
+     /* svg-color*/
+     --calendar--button-arrow:#A2A2A2;
 }
