@@ -63,12 +63,16 @@ button {
 }
 
 body {
+ display: flex;
+ flex-direction: column;
   font-family: 'Manrope';
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--main--background-color);
   color: var(--main--text-color);
 }
-
+main {
+  flex-grow: 1;
+}
 @font-face {
   font-family: 'Manrope';
   src: url(../fonts/Manrope-Regular.woff) format('woff'),
