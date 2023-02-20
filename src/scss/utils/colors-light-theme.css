@@ -1,7 +1,7 @@
 :root {
     /* text-color  */ 
     --main--text-color: #111321;
-    --border: rgba(0, 0, 0, 0.2);
+    --header-border: rgba(0, 0, 0, 0.2);
     --first-additional--text-color: #a8a8a8;
     --second-additional--text-color: #4440F6;
     --weather--text-color: #ffffff;
@@ -26,6 +26,7 @@
 [dark] {
     /* text-color   */
     --main--text-color: #F4F4F4;
+    --header-border: rgba(244, 244, 244, 0.2);
     --first-additional--text-color: #F4F4F4;
     --second-additional--text-color: #4440F6;
     --weather--text-color: #ffffff;
