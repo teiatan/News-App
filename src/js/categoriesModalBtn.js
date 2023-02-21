@@ -10,7 +10,7 @@ export default function categoriesButtonModalClick() {
 // refs.modalText.
 window.addEventListener('resize', handleResize);
 
-
+/* 
 export default function handleResize() {
   if(window.innerWidth >= 768) {
     refs.modalText.textContent = 'Others';
@@ -19,4 +19,4 @@ export default function handleResize() {
     refs.modalText.textContent = 'Categories';
   }
 }
-  handleResize();
+  handleResize(); */
