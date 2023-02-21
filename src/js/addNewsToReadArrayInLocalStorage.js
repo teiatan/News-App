@@ -14,13 +14,27 @@ export function addNewsToReadArrayInLocalStorage() {
 
 function addNewsToReadArray(event) {
 
-    
+    //записування в масив read
     if (event.target.getAttribute('class') === "news__link") {
         //додавання класу для стилю
         const box = event.target.closest('li');
         box.classList.add('was-read');
         //витягування об'єкту
-        const newsObject = {};
+        getDataFromNewsCard();
+        addToRead();
+      } else if(event.target.getAttribute('class') === "news__link" /* для кнопки add to favorite */) {
+        //записування в масив favorite
+        getDataFromNewsCard();
+        addToFavorite();
+      }
+
+    
+    
+}
+
+
+function getDataFromNewsCard(){
+    const newsObject = {};
         newsObject.id = box.dataset.id;
         newsObject.category = box.news__category;
         newsObject.wasRead = box.wasRead;
@@ -33,9 +47,23 @@ function addNewsToReadArray(event) {
             newsObject.link = box.news__link;
         console.log(box);
         console.log(box.childNotes);
-      }
-    
 }
+
+
+function addToRead(){
+    //первірка чи є такий об'єкт в масиві
+    //отримати поточну дату
+    //перевірити чи є така дата в масиві
+    //в об'єкті дати перевірити чи є ця новина
+    //додати новину якщо немає
+    //localStorage.read.push(newsObject);
+};
+
+function addToFavorite() {
+    //первірка чи є такий об'єкт в масиві
+    //додати якщо немає
+    //localStorage.read.push(newsObject);
+};
 
 /* {
     id: "100000008772688",
