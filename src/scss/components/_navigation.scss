@@ -17,6 +17,7 @@
     
     @include mq(tablet) {
         position: relative;
+        display: block;
     }
 }
 
@@ -51,6 +52,7 @@
 }
 
 .navigation__item--current {
+
     @include mq(tablet) {
         position: relative;
     }
@@ -102,6 +104,7 @@
         display: flex;
     }
 }
+
 
 .auth-btn__sign-out {
     display: none;
