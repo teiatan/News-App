@@ -8,7 +8,7 @@ export default function categoriesButtonModalClick() {
 }
 
 // refs.modalText.
-window.addEventListener('resize', handleResize);
+/* window.addEventListener('resize', handleResize);
 
 
 export default function handleResize() {
@@ -19,4 +19,4 @@ export default function handleResize() {
     refs.modalText.textContent = 'Categories';
   }
 }
-  handleResize();
+  handleResize(); */

@@ -55,5 +55,5 @@ export const refs = {
   modalText: document.querySelector('.other-categories__button-text'),
   modalOtherBtns: document.querySelector('.other-categories__button'),
   modalOtherArrow: document.querySelector('.other-categories__icon-arrow'),
-
+  renderContainerReadPage: document.querySelector('.render-container--read'),
 };
