@@ -57,20 +57,13 @@ export function closeAuthModal() {
     document.removeEventListener( 'keyup', authWithEnter);
 };
 
-export function openNewsModal() {
-    
-};
-
-export function closeNewsModal() {
-    
-};
-
 export function openDevelopersModal() {
-    
+    refs.developerModal.addEventListener('click', closeDeveloperModalOnMouse);
+    refs.developerModal.classList.remove('is-hidden')
 };
 
 export function closeDevelopersModal() {
-    
+    refs.developerModal.classList.add('is-hidden')
 };
 
 function authWithEnter(e) {
@@ -80,4 +73,12 @@ function authWithEnter(e) {
             document.removeEventListener('keyup', authWithEnter);
         }
     };
-}
+};
+
+function closeDeveloperModalOnMouse(e) {
+    console.log("close");
+        if(e.target === e.currentTarget) {
+            closeDevelopersModal();
+        }
+
+    };

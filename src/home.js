@@ -1,7 +1,10 @@
 import Notiflix from 'notiflix';
 import { addEventListenerForBurgerBtn } from './js/mobileMenu';
 import { headerLogic, defaultLocalStorage } from './js/logicFor3pages';
-import { addListenersForMobileHeader, viewportWidthCheck } from './js/headerSearchForm';
+import {
+  addListenersForMobileHeader,
+  viewportWidthCheck,
+} from './js/headerSearchForm';
 import { addModalOpenListeners } from './js/modalOpening';
 import { currentLinkUnderline } from './js/currentLinkUnderline';
 import { getMostViewedNews } from './js/API/getMostViewedNews';
@@ -11,9 +14,8 @@ import { showNewsByFormInput } from './js/render-functions/renderNewsByFormInput
 
 import { developers } from './developers';
 
-
 import { renderCategories } from './js/render-functions/renderCategories';
-import { categoriesButtonModalClick } from './js/categoriesButtonModalClick';
+import { categoriesModalBtn } from './js/categoriesModalBtn';
 
 import { changeTheme, addDarkClass } from './js/changeTheme';
 import { fetchDefaultWeather } from './js/API/getWeather';
@@ -30,13 +32,10 @@ window.setTimeout(Notiflix.Loading.remove(), 5000);
 
 addListenersForMobileHeader();
 currentLinkUnderline();
+
 viewportWidthCheck();
 addEventListenerForBurgerBtn();
 
 
-
-
-
 changeTheme();
 addDarkClass();
-
