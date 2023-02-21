@@ -14,7 +14,7 @@ export async function onSubmitSearchForm (e) {
     let page = 1;
     refs.negativeSearch.classList.add('is-hidden');
     const value = refs.formSearchInput.value;
-if (value === '') {
+if (value.trim() === '') {
     Notiflix.Notify.failure('Ooops. Please, enter something to search');
     return;
 } 
