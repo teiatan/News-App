@@ -92,7 +92,9 @@ export function showReadNews() {
         return`
         <li class="date__item">
             <h3 date__title>${dateOfReading}</h3>
-            //додати свг
+            <svg class="read-btn__icon--pointer" width="9px" height="15px">
+        <use href="/src/img/sprite.svg#icon-arrow-down"></use>
+         </svg>
             <ul class="date__news-list">${readNews.map(
                 ({
             id,
