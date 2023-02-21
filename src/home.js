@@ -37,5 +37,5 @@ viewportWidthCheck();
 addEventListenerForBurgerBtn();
 
 
-changeTheme();
+//changeTheme();
 addDarkClass();

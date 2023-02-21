@@ -11,7 +11,7 @@ function changeTheme() {
         swapThemeBtn.checked = false;
     }
     addDarkClass();
-    }
+    };
 
 function addDarkClass() {
     try {
