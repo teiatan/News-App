@@ -93,10 +93,12 @@ export function showReadNews() {
         <li class="date__item">
             <h3 date__title>${dateOfReading}</h3>
             <svg class="read-btn__icon--pointer" width="9px" height="15px">
-        <use href="./src/img/sprite.svg#icon-arrow-down"></use>
-        <use href="./src/img/sprite.svg#icon-arrow-up"></use>
-         </svg>
-            <ul class="date__news-list">${readNews.map(
+                <use href="/src/img/sprite.svg#icon-arrow-down"></use>
+            </svg>
+            <svg class="read-btn__icon--pointer" width="9px" height="15px">
+                <use href="/src/img/sprite.svg#icon-arrow-up"></use>
+            </svg>
+            <ul class="date__news-list render-container">${readNews.map(
                 ({
             id,
             category,
