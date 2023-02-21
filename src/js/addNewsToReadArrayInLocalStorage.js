@@ -21,9 +21,18 @@ function addNewsToReadArray(event) {
         box.classList.add('was-read');
         //витягування об'єкту
         const newsObject = {};
-        //new.id=box
+        newsObject.id = box.dataset.id;
+        newsObject.category = box.news__category;
+        newsObject.wasRead = box.wasRead;
+        newsObject.img = box.news__img;
+        // newsObject.imgAlt = box.news__img.img.alt;
+            newsObject.title = box.news__title;
+        newsObject.description = box.news__abstract;
+        newsObject.date = box.news__date;
+            newsObject.favorite =
+            newsObject.link = box.news__link;
         console.log(box);
-        
+        console.log(box.childNotes);
       }
     
 }
