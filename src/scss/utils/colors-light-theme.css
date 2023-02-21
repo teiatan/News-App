@@ -35,7 +35,7 @@
     
     
     /* svg-color*/
-    --calendar--button-arrow:#A2A2A2;
+    --calendar-button-arrow--svg-color:#A2A2A2;
 }
 
 [dark] {
@@ -75,5 +75,7 @@
     --categories-border-color: #4440f7;
 
      /* svg-color*/
-     --calendar--button-arrow:#A2A2A2;
+
+     ----calendar-button-arrow--svg-color:#A2A2A2;
 }
+
