@@ -1,4 +1,7 @@
 export const refs = {
+  body: document.body,
+  header: document.querySelector('.header'),
+  burgerBtn: document.querySelector('.menu-button-burger'),
   navHome: document.querySelector('.navigation__item--home'),
   navFavorite: document.querySelector('.navigation__item--favorite'),
   navRead: document.querySelector('.navigation__item--read'),
@@ -50,4 +53,5 @@ export const refs = {
   modalText: document.querySelector('.other-categories__button-text'),
   modalOtherBtns: document.querySelector('.other-categories__button'),
   modalOtherArrow: document.querySelector('.other-categories__icon-arrow'),
+
 };
