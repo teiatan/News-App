@@ -5,7 +5,7 @@ const favorite = test;
 const perPage = 3;
 const pages = Math.ceil(favorite.length / perPage);
 
-export const news = [];
+ let news = [];
 const paginationMarkUp = [];
 
 paginConteinBtn.addEventListener('click', onPaginBtnClick);
@@ -37,12 +37,13 @@ function onPaginBtnClick(evt) {
    const start = (pageNum - 1) * perPage;
    const end = start + perPage;
 
-   const markupOfNewsForShowingByPagination = favorite.slice(start, end);
-   news = [...markupOfNewsForShowingByPagination];
-   showFavouriteNews(news);
+   news = favorite.slice(start, end);
+   
+   console.log(news);
+   showFavouriteNews();
 }
 
-showFavoritePagination();
+// showFavoritePagination();
 
 
 // export news

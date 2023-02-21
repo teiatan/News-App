@@ -9,6 +9,8 @@ import { currentLinkUnderline } from './js/currentLinkUnderline';
 
 import {showFavouriteNews} from './js/render-functions/renderFavoriteNews';
 
+import { showFavoritePagination } from './js/pagination/favoritePagination.js';
+
 
 Notiflix.Loading.pulse();
 defaultLocalStorage();
@@ -18,9 +20,12 @@ headerLogic();
 window.setTimeout(Notiflix.Loading.remove(), 5000);
 
 showFavouriteNews();
+showFavoritePagination();
 
 window.setTimeout(Notiflix.Loading.remove(), 5000);
 addListenersForMobileHeader();
 viewportWidthCheck();
 currentLinkUnderline();
+
+
 
