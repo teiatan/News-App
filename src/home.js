@@ -27,12 +27,12 @@ defaultLocalStorage();
 addModalOpenListeners();
 headerLogic();
 showMostViewedNews(getMostViewedNews());
-showNewsByFormInput(onSubmitSearchForm());
+//showNewsByFormInput(onSubmitSearchForm());
 window.setTimeout(Notiflix.Loading.remove(), 5000);
 
 addListenersForMobileHeader();
-currentLinkUnderline();
 
+currentLinkUnderline();
 viewportWidthCheck();
 addEventListenerForBurgerBtn();
 
