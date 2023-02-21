@@ -1,83 +1,148 @@
 .page-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 60px;
-    margin-top: 40px;
-    font-family: Manrope;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 19px;
-    text-align: left;
-    background-color: var(--bg-color);
-      @media screen and (min-width: 768px) and (max-width: 1279.98px) {
-        height: 31px;
-        margin-bottom: 100px;
-        margin-top: 48px;
-      }
-      @media screen and (min-width: 1280px) {
-        margin-bottom: 150px;
-        margin-top: 60px;
-      }
-}
-
-.pagin {
-    display: flex;
-    justify-content: center;
-    height: 28px;
-    width: 288px;
-    @media screen and (min-width: 768px) {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 60px;
+  margin-top: 40px;
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  text-align: left;
+  background-color: var(--main--background-color);
+    @media screen and (min-width: 768px) and (max-width: 1280px) {
       height: 31px;
-      width: 415px;
+      margin-bottom: 100px;
+      margin-top: 48px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 150px;
+      margin-top: 60px;
     }
 }
 
+.pagin {
+  display: flex;
+  justify-content: center;
+  height: 28px;
+  width: 288px;
+  @media screen and (min-width: 768px) {
+    height: 31px;
+    width: 415px;
+  }
+}
+
 .page-container span {
-    padding: 4px 12px;
-    font-family: Manrope;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--text-color);
-  }
+  padding: 4px 12px;
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--main--text-color);
+}
 
-  .page-container button {
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-  }
-  button.prev-page,
-  button.next-page {
-    width: 72px;
-    font-family: Manrope;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 19px;
-    letter-spacing: 0em;
-    text-align: left;
-    border: 1px solid var(--accent-color);
+button.page-nmb {
+    border: 1px solid var(--second-additional--text-color);
     border-radius: 2px;
-  }
-  button.prev-page{
-    margin-right: 6px;
-  }
-  button.next-page{
-    margin-left: 6px;
-  }
+}
 
-  .page-container button:disabled span {
-    color: var(--text-color);
-    font-family: Manrope;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 19px;
-    letter-spacing: 0em;
-    text-align: left;
-  }
+button.page-nmb:hover,
+button.page-nmb:focus {
+  color: var(--weather--text-color);
+  background-color: var(--second-additional--text-color);
+}
 
-  #pagination {
-    display: flex;
-    align-items: center;
-  }
+.page-container button {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  background-color: transparent;
+  // border: none;
+
+  padding: 4px 12px;
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--main--text-color);
+}
+
+.page-container button:hover {
+  color: var(--weather--text-color);
+  background-color: var(--second-additional--text-color);
+  // display: flex;
+  // justify-content: center;
+  // cursor: pointer;
+  // background-color: transparent;
+  // border: none;
+
+  // padding: 4px 12px;
+  // font-family: Manrope;
+  // font-size: 14px;
+  // font-weight: 500;
+  // color: var(--main--text-color);
+}
+
+
+button.prev-page,
+button.next-page {
+  width: 72px;
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  border: 1px solid var(--second-additional--text-color);
+  border-radius: 2px;
+}
+
+button.prev-page{
+  margin-right: 6px;
+}
+
+button.next-page{
+  margin-left: 6px;
+}
+
+.page-container button:disabled {
+  color: var(--main--text-color);
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+#pagination {
+  display: flex;
+  align-items: center;
+}
+
+#pagination button {
+  cursor: pointer;
+  overflow: hidden;
+  margin: 0 4px;
+
+  padding: 4px auto;
+  display: inline-block;
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  // pointer-events: none;
+  color: var(--main--text-color);
+}
+
+#pagination button.active {
+  background-color: var(--second-additional--text-color);
+  color: var(--additional-accent--text-color);
+}
+
+#pagination button:hover {
+  background-color: var(--second-additional--text-color);
+  color: var(--additional-accent--text-color);
+}
+
