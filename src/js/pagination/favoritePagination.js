@@ -1,9 +1,9 @@
+import {test} from '../render-functions/renderFavoriteNews';
 const paginConteinBtn = document.getElementById('pagination');
-//const favorite = localStorage.favorite;
-// const favorite = [ 1, 1, 1, 1, 1, 1, 1, 1, 1];
 const favorite = test;
 const perPage = 3;
 let pages = Math.ceil(favorite.length / perPage);
+
 export const news = [];
 let paginationMarkUp = [];
 
