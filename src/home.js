@@ -38,4 +38,4 @@ addEventListenerForBurgerBtn();
 
 
 //changeTheme();
-addDarkClass();
+//addDarkClass();

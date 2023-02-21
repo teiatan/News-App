@@ -24,6 +24,6 @@ currentLinkUnderline();
 
 addEventListenerForBurgerBtn();
 
-changeTheme();
-addDarkClass();
+//changeTheme();
+//addDarkClass();
 
