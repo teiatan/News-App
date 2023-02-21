@@ -13,11 +13,13 @@ export const refs = {
   formSearch: document.querySelector('.search-form'),
   formSearchInput: document.querySelector('.search-form__input'),
   negativeSearch: document.querySelector('.negative-search'),
+  developerModal: document.querySelector('.modal-developer'),
+  developerModalBtnClose: document.querySelector(".modal__btn--close"),
+  authModalBtnClose: document.querySelector('.modal__close-btn'),
 
   // відкриття/закриття модалок
   modalOpenBtns: document.querySelectorAll('[data-modal-open]'),
   modalCloseBtns: document.querySelectorAll('[data-modal-close]'),
-
   // авторизація
 
   authEmailInput: document.querySelector('.js-auth__email-input'),
