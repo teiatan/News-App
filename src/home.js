@@ -20,6 +20,8 @@ import { categoriesModalBtn } from './js/categoriesModalBtn';
 import { changeTheme, addDarkClass } from './js/changeTheme';
 import { fetchDefaultWeather } from './js/API/getWeather';
 
+import {addNewsToReadArrayInLocalStorage} from './js/addNewsToReadArrayInLocalStorage';
+import {addNewsToFavoriteArrayInLocalStorage} from './js/addNewstoFavoriteLocalStorige';
 
 Notiflix.Loading.pulse();
 renderCategories();
@@ -36,6 +38,8 @@ currentLinkUnderline();
 viewportWidthCheck();
 addEventListenerForBurgerBtn();
 
+//addNewsToReadArrayInLocalStorage();
+addNewsToFavoriteArrayInLocalStorage();
 
 //changeTheme();
 //addDarkClass();

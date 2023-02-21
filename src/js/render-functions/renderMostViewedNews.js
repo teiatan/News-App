@@ -1,6 +1,7 @@
 import { refs } from '../refs';
 import { weatherMarkup } from '../API/getWeather';
 import { fillAbsentDataInNewsCard } from './newsCardSample';
+import { addNewsToReadArrayInLocalStorage } from '../addNewsToReadArrayInLocalStorage';
 export async function showMostViewedNews(apiFetch) {
     renderMostViewedNews(await apiFetch);
 };
@@ -41,6 +42,7 @@ export async function renderMostViewedNews({results}) {
             <div class="news__container">
               <span class="news__read is-hidden"></span>
               <div class="news__container-img">
+
               <button class="news__favorite">Add to favorite
               <svg class="news__svg news__svg-heart">
                   <use href="/sprite.e70822e0.svg#heartDisable"></use>
@@ -49,6 +51,7 @@ export async function renderMostViewedNews({results}) {
                   <use href="/sprite.e70822e0.svg#heartActive"></use>
               </svg>
               </button>
+
               <img src="${imgSrc}" alt="${alt}" class="news__img"/>
             </div>
 
@@ -67,6 +70,7 @@ export async function renderMostViewedNews({results}) {
   const markup = weatherMarkup.concat(newsMarkup);
   refs.renderContainerHome.insertAdjacentHTML('afterbegin', markup);
   //fillAbsentDataInNewsCard();
+  addNewsToReadArrayInLocalStorage();
   
   const wasRead = document.querySelector(".news__container");
   const links = document.querySelectorAll(".news__link");
