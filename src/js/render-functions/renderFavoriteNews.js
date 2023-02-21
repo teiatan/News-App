@@ -1,4 +1,5 @@
 import {refs} from '../refs';
+import { news } from '../pagination/favoritePagination';
 export const test = [
     {
         id: "100000008772688",
