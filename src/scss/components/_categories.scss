@@ -104,18 +104,20 @@
 }
 
 .other--categories__filters-list {
-  width: 148px;
+  width: 168px;
   height: 380px;
   background-color: #f8f8f8;
   border-radius: 20px;
-  padding: 14px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 14px;
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
   text-align: start;
   position: absolute;
-  top: 20px;
-  right: -90px;
+  top: 17px;
+  right: -125px;
   pointer-events: all;
   display: none;
   scroll-snap-type: x proximity;
@@ -128,7 +130,13 @@
   }
 
   @include mq(mobile-only) {
-    right: -100px;
+    right: -70px;
+    top: 18px;
+    width: 120px;
+    height: 576px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 14px;
   }
 }
 
@@ -186,7 +194,7 @@
 
 .filter-category__item-desktop {
   & + .filter-category__item-desktop {
-    margin-top: 16px;
+    margin-top: 12px;
   }
   @include mq(mobile-only) {
     display: none;
@@ -199,7 +207,7 @@
 
 .filter-category__item-mobile {
   & + .filter-category__item-mobile {
-    margin-top: 16px;
+    margin-top: 12px;
   }
   @include mq(mobile-only) {
     display: block;
