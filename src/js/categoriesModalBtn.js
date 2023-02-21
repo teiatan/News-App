@@ -8,15 +8,15 @@ export default function categoriesButtonModalClick() {
 }
 
 // refs.modalText.
-window.addEventListener('resize', handleResize);
+/* window.addEventListener('resize', handleResize);
 
 
 export default function handleResize() {
-  /* if(window.innerWidth >= 768) {
+  if(window.innerWidth >= 768) {
     refs.modalText.textContent = 'Others';
   }
   else {
     refs.modalText.textContent = 'Categories';
-  } */
+  }
 }
-  handleResize();
+  handleResize(); */
