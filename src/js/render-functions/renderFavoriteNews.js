@@ -42,7 +42,10 @@ localStorage.setItem("news", JSON.stringify(news));
 const savedSettings = localStorage.getItem("news");
 
 export function showFavouriteNews(){
-    const newsMarkup = news.map(
+    if(localStorage.favorite === "" || localStorage.favorite === undefined || localStorage.favorite === null) {
+      return;
+    } else {
+      const newsMarkup = news.map(
         ({
     id,
     category,
@@ -77,6 +80,8 @@ export function showFavouriteNews(){
     </li>
 ` }).join('');
 refs.favouriteNewsContainer.innerHTML = newsMarkup;
+    }
+
 }
 
   
