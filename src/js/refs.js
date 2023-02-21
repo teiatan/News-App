@@ -43,6 +43,7 @@ export const refs = {
     
     
     favouriteNewsContainer: document.querySelector('.render-container'),
+    
 };
 
 

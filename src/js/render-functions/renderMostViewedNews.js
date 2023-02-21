@@ -42,7 +42,7 @@ export async function renderMostViewedNews({results}) {
             <div class="news__container">
               <span class="news__read is-hidden"></span>
               <div class="news__container-img">
-              <button class="news__favorite">Add to favorite</button>
+              <button  class="news__favorite">Add to favorite</button>
               <img src="${imgSrc}" alt="${alt}" class="news__img"/>
             </div>
 

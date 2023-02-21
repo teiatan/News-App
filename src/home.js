@@ -17,6 +17,8 @@ import { categoriesButtonModalClick } from './js/categoriesButtonModalClick';
 import { changeTheme, addDarkClass } from './js/changeTheme';
 import { fetchDefaultWeather } from './js/API/getWeather';
 
+import {addNewsToReadArrayInLocalStorage} from './js/addNewsToReadArrayInLocalStorage';
+import {addNewsToFavoriteArrayInLocalStorage} from './js/addNewstoFavoriteLocalStorige';
 
 Notiflix.Loading.pulse();
 renderCategories();
@@ -30,6 +32,8 @@ window.setTimeout(Notiflix.Loading.remove(), 5000);
 addListenersForMobileHeader();
 currentLinkUnderline();
 
+//addNewsToReadArrayInLocalStorage();
+addNewsToFavoriteArrayInLocalStorage();
 
 
 
