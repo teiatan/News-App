@@ -224,3 +224,16 @@
     display: none;
   }
 }
+
+.other-categories__button-text {
+  @include mq(mobile-only) {
+    display: none;
+  }
+}
+
+.other-categories__button-text-categories {
+  display: none;
+  @include mq(mobile-only) {
+    display: block;
+  }
+}
