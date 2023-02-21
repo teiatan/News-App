@@ -1,11 +1,12 @@
-import {test} from '../render-functions/renderFavoriteNews';
+import {test} from '../render-functions/renderFavoriteNews.js';
+import { showFavouriteNews } from '../render-functions/renderFavoriteNews.js';
 const paginConteinBtn = document.getElementById('pagination');
 const favorite = test;
 const perPage = 3;
-let pages = Math.ceil(favorite.length / perPage);
+const pages = Math.ceil(favorite.length / perPage);
 
 export const news = [];
-let paginationMarkUp = [];
+const paginationMarkUp = [];
 
 paginConteinBtn.addEventListener('click', onPaginBtnClick);
 
@@ -16,7 +17,7 @@ export function showFavoritePagination() {
    } 
 
    for(let i = 1; i <= pages; i += 1) {
-      const onePaginationBtnMarkup = `<button class="page-nmb" page="${i}">${i}</button>`;
+      const onePaginationBtnMarkup = `<button class="page-nmb" data-page="${i}">${i}</button>`;
       paginationMarkUp.push(onePaginationBtnMarkup);
    } 
 
@@ -32,9 +33,13 @@ function onPaginBtnClick(evt) {
        return;
    }
 
-   const pageNum = evt.target.textContent;
-   const markupOfNewsForShowingByPagination = favorite.slice((pageNum-1), (pageNum-1+perPage));
+   const pageNum = evt.target.dataset.page;
+   const start = (pageNum - 1) * perPage;
+   const end = start + perPage;
+
+   const markupOfNewsForShowingByPagination = favorite.slice(start, end);
    news = [...markupOfNewsForShowingByPagination];
+   showFavouriteNews(news);
 }
 
 showFavoritePagination();

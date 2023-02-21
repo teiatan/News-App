@@ -1,5 +1,5 @@
 import {refs} from '../refs';
-import { news } from '../pagination/favoritePagination';
+
 export const test = [
     {
         id: "100000008772688",
@@ -123,6 +123,7 @@ export const test = [
         link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
       }
 ];
+
 localStorage.setItem("news", JSON.stringify(news));
   
 const savedSettings = localStorage.getItem("news");
