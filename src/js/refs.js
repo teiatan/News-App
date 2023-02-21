@@ -56,4 +56,6 @@ export const refs = {
   modalOtherBtns: document.querySelector('.other-categories__button'),
   modalOtherArrow: document.querySelector('.other-categories__icon-arrow'),
   renderContainerReadPage: document.querySelector('.render-container--read'),
+
+  navHomeLink: document.querySelector('.render-container--read'),
 };
