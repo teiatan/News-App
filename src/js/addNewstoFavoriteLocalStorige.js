@@ -30,6 +30,14 @@ function addNewsToFavoriteArray(event) {
    
     // getDataFromNewsCard();
     // addToFavorite();
+    const readparse = localStorage.parse
+    if(readparse.map.id === newsObject.id) {
+      return;
+    } else {
+
+      localStorage.setItem("read", JSON.stringify(readparse.push(newsObject)));
+    }
+
   }
 }
 
