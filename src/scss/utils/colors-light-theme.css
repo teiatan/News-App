@@ -24,7 +24,7 @@
     --aditional--border-color: #4440F7;
     
     /* svg-color*/
-    --calendar--button-arrow:#A2A2A2;
+    --calendar-button-arrow--svg-color:#A2A2A2;
 }
 
 [dark] {
@@ -56,5 +56,5 @@
     --aditional--border-color: #4440F7;
 
      /* svg-color*/
-     --calendar--button-arrow:#A2A2A2;
+     ----calendar-button-arrow--svg-color:#A2A2A2;
 }
