@@ -1,6 +1,11 @@
 //розмітка 1 картки новини 
 //Використовуємо для всіх рендерів новин
+//нижче два варіанти, використовуємо new thread
+//якщо використовували olg thread - перероблюємо
+
+
 //olg thread
+/*
 `<li class="news__item card" data-id=${id}>
     <p class="news__Already-read is-hidden">Already read 
         <svg style="display:inline" width="17px" height="13px">
@@ -21,9 +26,16 @@
     <p class="news__marker-search">${section}</p>
     <a href="${url}" class="news__link" target = "_blank">Read more</a></div>
 </li>`
+*/
+
+
+
+
+
+
 
 //new thread
-
+/*
 `
           <li class="news__item card" data-id=${id}>
             <p class="news__Already-read is-hidden">Already read 
@@ -53,7 +65,7 @@
             <a href="${url}" class="news__link" target = "_blank">Read more</a></div>
           </li>
       `
-
+*/
 // універсальна функція заглушки, яка перевіряє, 
 // що в текст контенті тегів, які можуть прийти з бекенду і якщо 
 // там пусто (продумати логіку), то виводити заглушку
