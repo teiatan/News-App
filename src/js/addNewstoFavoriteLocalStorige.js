@@ -6,12 +6,12 @@ export function addNewsToFavoriteArrayInLocalStorage() {
 
  
 }
-let NewLocalStorige = []
+let newLocalStorage = []
  
 function addNewsToFavoriteArray(event) {
   if (event.target.nodeName === 'BUTTON') {
     const FavoriteBox = event.target.closest('li');
-    console.log(FavoriteBox);
+   
 
     const newsObject = {
         id: FavoriteBox.dataset.id,
@@ -26,18 +26,24 @@ function addNewsToFavoriteArray(event) {
 
     }
   
-    localStorage.setItem("NewLocalStorige", JSON.stringify(newsObject));
+    localStorage.setItem('NewLocalStorige', JSON.stringify(newsObject));
    
-    // getDataFromNewsCard();
-    // addToFavorite();
-    const readparse = localStorage.parse
-    if(readparse.map.id === newsObject.id) {
-      return;
-    } else {
-
-      localStorage.setItem("read", JSON.stringify(readparse.push(newsObject)));
-    }
-
-  }
+    const saveFavorite = localStorage.getItem('NewLocalStorige');
+    //console.log(saveFavorite);
+    
+    
+    
+    const parseFavorite = JSON.parse(saveFavorite)
+    console.log(parseFavorite);
+        if  ((parseFavorite.id) === newsObject.id) {
+console.log('eeeee');
+return }
+   
+else { 
+    const push = parseFavorite.push(newsObject)
+localStorage.setItem("favorite", JSON.stringify(push));
+}
+//else щось не добаляє  в favorite, подивись, в мене сьодні вже голова не варить
+}
 }
 
