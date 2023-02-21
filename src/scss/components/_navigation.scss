@@ -13,6 +13,7 @@
 
 .navigation-wrapper {
     min-width: 190px;
+    display: none;
     
     @include mq(tablet) {
         position: relative;
@@ -87,6 +88,7 @@
 
 
 .auth-btn__sign-in {
+    display: none;
     margin-left: auto;
     align-items: center;
     font-family: 'Manrope';
@@ -95,9 +97,14 @@
     line-height: 1.375;
     color: var(--main--text-color);
     padding: 30px 0 30px 0;
+
+    @include mq(tablet) {
+        display: flex;
+    }
 }
 
 .auth-btn__sign-out {
+    display: none;
     margin-left: auto;
     align-items: center;
     font-family: 'Manrope';
@@ -106,4 +113,16 @@
     line-height: 1.375;
     color: var(--main--text-color);
     padding: 30px 0 30px 0;
+
+    @include mq(tablet) {
+        display: flex;
+    }
+}
+
+.auth-btn__sign-in.is-hidden {
+    display: none;
+}
+
+.auth-btn__sign-out.is-hidden {
+    display: none;
 }
