@@ -1,7 +1,7 @@
 :root {
     /* text-color  */ 
     --main--text-color: #111321;
-    --border: rgba(0, 0, 0, 0.2);
+    --header-border: rgba(0, 0, 0, 0.2);
     --first-additional--text-color: #a8a8a8;
     --second-additional--text-color: #4440F6;
     --weather--text-color: #ffffff;
@@ -9,6 +9,10 @@
     --already-read--text-color: #00DD73;
     --accent--text-color: #4440f6; /* for hover,focus,accent */
     --additional-accent--text-color: #FFFFFF; /* for hover,focus,accent */
+    --calendar--text-color: #000000;
+    --categories-text-color: #4440f7;
+    --categorieshover--text-color: #ffffff;
+
 
     /* background-color */
     --main--background-color: #f4f4f4;
@@ -17,24 +21,40 @@
     --category-on-news--background-color: rgba(68, 64, 247, 0.7);
     --already-read-news--background-color: rgba(244, 244, 244, 0.4);;
     --accent--background-color: #4B48DB; /* for hover,focus,accent */
-
+    --moon-stroke-color: #5F6775;
+    --sun-stroke-color: #4B48DB;
+    --categories-background-color: #ffffff;
+    --categories-hover--background-color: #4440f6;
+    
+    
+    
     /* border-color */
     --main--border-color: #111321;
     --aditional--border-color: #4440F7;
+    --categories--border-color: #4440f7;
+    
+    
+    /* svg-color*/
+    --calendar-button-arrow--svg-color:#A2A2A2;
 }
 
 [dark] {
     /* text-color   */
     --main--text-color: #F4F4F4;
+    --header-border: rgba(244, 244, 244, 0.2);
     --first-additional--text-color: #F4F4F4;
     --second-additional--text-color: #4440F6;
     --weather--text-color: #ffffff;
     --category-on-news--text-color: #FFFFFF;
     --already-read--text-color: #00DD73;
     --accent--text-color: #4440f6;
+    --categories-text-color: #4440f7;
+    
     /* for hover,focus,accent */
     --additional-accent--text-color: #FFFFFF;
     /* for hover,focus,accent */
+    --calendar--text-color: #000000;
+    --categorieshover--text-color: #ffffff;
 
     /* background-color */
     --main--background-color: #111321;
@@ -42,11 +62,21 @@
     --weather-buttons--background-color: rgba(254, 254, 255, 0.3);
     --category-on-news--background-color: rgba(68, 64, 247, 0.7);
     --already-read-news--background-color: rgba(244, 244, 244, 0.4);
-    ;
+    --moon-stroke-color: #4B48DB;
+    --sun-stroke-color: #5F6775;
     --accent--background-color: #4B48DB;
+    --accent--background-color: #4b48db;
+    --categories-background-color: #ffffff;
+    --categories-hover--background-color: #4440f6;
     /* for hover,focus,accent */
 
     /* border-color */
     --main--border-color: #F4F4F4;
     --aditional--border-color: #4440F7;
+    --categories--border-color: #4440f7;
+
+     /* svg-color*/
+
+     ----calendar-button-arrow--svg-color:#A2A2A2;
 }
+
