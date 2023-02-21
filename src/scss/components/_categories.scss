@@ -196,6 +196,9 @@
 .filter-category__item-desktop {
   & + .filter-category__item-desktop {
     margin-top: 12px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   @include mq(mobile-only) {
     display: none;
@@ -209,6 +212,9 @@
 .filter-category__item-mobile {
   & + .filter-category__item-mobile {
     margin-top: 12px;
+    &:hover {
+      cursor: pointer;
+    }
   }
   @include mq(mobile-only) {
     display: block;
