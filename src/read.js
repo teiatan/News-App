@@ -7,6 +7,7 @@ import { addModalOpenListeners } from './js/modalOpening';
 import { addListenersForMobileHeader, viewportWidthCheck } from './js/headerSearchForm';
 import { currentLinkUnderline } from './js/currentLinkUnderline';
 
+
 Notiflix.Loading.pulse();
 defaultLocalStorage();
 addModalOpenListeners();

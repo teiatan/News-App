@@ -178,7 +178,6 @@ body {
 }
 
 .header.is-opened {
-  
   .header__container{
     align-items: baseline;
     height: 100%;
@@ -200,6 +199,7 @@ body {
   }
 
   .header__mobile-menu-container{
+    transform: translateY(0);
     width: 100%;
     order: 2;
     display: flex;
@@ -251,10 +251,17 @@ body {
         display: none;
       }
   }
+  .sign-in-wrapper {
+    transform: translateY(0);
+  }
+  .sign-out-wrapper {
+    transform: translateY(0);
+  }
   .auth-btn__sign-in {
     margin: 0;
     width: max-content;
     display: flex;
+    transform: translateY(0);
   }
   .auth-btn__sign-in.is-hidden {
     display: none;
@@ -263,6 +270,7 @@ body {
     margin: 0;
     width: max-content;
     display: flex;
+    transform: translateY(0);
   }
   .auth-btn__sign-out.is-hidden {
     display: none;

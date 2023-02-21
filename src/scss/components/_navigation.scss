@@ -1,9 +1,11 @@
-.header__mobile-menu-container {    
-    
+.header__mobile-menu-container {
+        transform: translateY(-135%);
+        transition: transform 250ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
     @include mq(tablet) {
         margin-left: auto;
         display: flex;
-        gap: 12px;        
+        gap: 12px;   
+        transform: none;     
     }
 
     @include mq(desktop) {
@@ -90,6 +92,8 @@
 
 
 .auth-btn__sign-in {
+    transform: translateY(-200%);
+    transition: transform 250ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: none;
     margin-left: auto;
     align-items: center;
@@ -102,11 +106,24 @@
 
     @include mq(tablet) {
         display: flex;
+        transform: none;
     }
+}
+
+.sign-in-wrapper {
+    transform: translateY(-200%);
+    transition: transform 250ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sign-out-wrapper {
+    transform: translateY(-200%);
+    transition: transform 250ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .auth-btn__sign-out {
+    transform: translateY(-200%);
+    transition: transform 250ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: none;
     margin-left: auto;
     align-items: center;
@@ -119,6 +136,7 @@
 
     @include mq(tablet) {
         display: flex;
+        transform: none;
     }
 }
 
