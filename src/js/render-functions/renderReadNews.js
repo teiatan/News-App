@@ -92,7 +92,8 @@ export function showReadNews() {
         return`
         <li class="date__item">
             <h3 date__title>${dateOfReading}</h3>
-            ${readNews.map(
+            //додати свг
+            <ul class="date__news-list">${readNews.map(
                 ({
             id,
             category,
@@ -126,6 +127,7 @@ export function showReadNews() {
                 <a href="${link}" class="news__link" target = "_blank">Read more</a>
             </li>
         ` }).join('')}
+        </ul>
         </li>`
     }).join('');
     refs.renderContainerReadPage.innerHTML = newsMarkup;
