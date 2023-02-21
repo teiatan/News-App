@@ -125,7 +125,7 @@
   overflow-x: scroll;
   // в низу показує скролл по горизонту і він не працює
   overflow-y: hidden;
-  overflow: scroll;
+  overflow: auto;
 
   &.is-hidden {
     display: block;
