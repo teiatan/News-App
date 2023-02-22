@@ -1,26 +1,16 @@
 import axios from 'axios';
-import { categoryForSearch } from '../render-functions/renderCategories';
 import { handleCategoryClick } from '../render-functions/renderCategories';
 import { nytApiSettings } from '../API/nytApiSettings';
+import { categoryForSearch } from '../render-functions/renderCategories';
 
-const categoryButtons = document.querySelectorAll(
-  '.categories-render-container'
-);
+export async function getNewsByCategory(categoryForSearch) {
+  const url = `${nytApiSettings.BASIC_URL}svc/search/v2/articlesearch.json?q=${categoryForSearch}&api-key=${nytApiSettings.apiKey}`;
 
-async function getNewsByCategory(category) {
-  const url = `${nytApiSettings.BASIC_URL}svc/topstories/v2/${category}.json?api-key=${nytApiSettings.apiKey}`;
   try {
     const response = await axios.get(url);
-    return response.data.results;
+    console.log(response.data.response.docs);
+    return response.data.response.docs;
   } catch (error) {
     console.error(error);
   }
 }
-
-categoryButtons.forEach(button => {
-  button.addEventListener('click', async event => {
-    const category = handleCategoryClick(event);
-    const news = await getNewsByCategory(category);
-    console.log(news);
-  });
-});

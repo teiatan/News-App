@@ -45,6 +45,4 @@ addEventListenerForBurgerBtn();
 //changeTheme();
 //addDarkClass();
 
-getNewsByCategory(categoryBtn).then(data => {
-  console.log(data);
-});
+getNewsByCategory();
