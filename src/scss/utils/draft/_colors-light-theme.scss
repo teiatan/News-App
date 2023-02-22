@@ -1,21 +1,26 @@
- //text-color  
+//text-color
 $main--text-color: #111321;
+$calendar--text-color: #000000;
 $first-additional--text-color: #a8a8a8;
-$second-additional--text-color: #4440F6;
+$second-additional--text-color: #4440f6;
 $weather--text-color: #ffffff;
-$category-on-news--text-color: #F4F4F4;
-$already-read--text-color: #00DD73;
+$category-on-news--text-color: #f4f4f4;
+$already-read--text-color: #00dd73;
 $accent--text-color: #4440f6; //for hover,focus,accent
-$additional-accent--text-color: #FFFFFF; //for hover,focus,accent
+$additional-accent--text-color: #ffffff; //for hover,focus,accent
 
 //background-color
 $main--background-color: #f4f4f4;
-$weather--background-color: #4440F7;
+$weather--background-color: #4440f7;
 $weather-buttons--background-color: rgba(254, 254, 255, 0.3);
 $category-on-news--background-color: rgba(68, 64, 247, 0.7);
-$already-read-news--background-color: rgba(244, 244, 244, 0.4);;
-$accent--background-color: #4B48DB; //for hover,focus,accent
+$already-read-news--background-color: rgba(244, 244, 244, 0.4);
+$accent--background-color: #4b48db; //for hover,focus,accent
 
 //border-color
 $main--border-color: #111321;
+
 $aditional--border-color: #4440F7;
+
+/* svg-color*/
+$calendar-button-arrow--svg-color:#A2A2A2;

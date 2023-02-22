@@ -7,7 +7,6 @@
 
 @import './layouts/modal-auth';
 
-
 @import './layouts/switcher-theme';
 
 @import './components/calendar';
@@ -19,7 +18,11 @@
 @import './components/weather';
 
 @import './components/categories';
+
 @import './components/pagination';
-/* 
-@import '';
-@import ''; */
+
+
+@import './layouts/footer';
+@import './components/back-to-top-btn';
+@import './layouts/modal-developers';
+

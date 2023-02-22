@@ -6,26 +6,28 @@ import {renderNewsByFormInput} from '../render-functions/renderNewsByFormInput';
 
 
 
-
 refs.formSearch.addEventListener("submit", onSubmitSearchForm);
 
 export async function onSubmitSearchForm (e) {
-    let page = 1;
     e.preventDefault();
+    
+    let page = 1;
     refs.negativeSearch.classList.add('is-hidden');
     const value = refs.formSearchInput.value;
-if (value === '') {
+if (value.trim() === '') {
     Notiflix.Notify.failure('Ooops. Please, enter something to search');
     return;
-}
-/* if (value !== 'Eng') {
+} 
+ if (value !== value.replace(/[А-Яа-яЁёІі]/, '')) {
     Notiflix.Notify.info('News only English! Please send it again in English.');
-    return;
-}  */
-    const result = await getNewsByFormInput(value, page);
-  
-  renderNewsByFormInput(result);
+    e.target.reset();
+    return
+}  
 
+  const results = await getNewsByFormInput(value, page);
+  
+  renderNewsByFormInput(results);
+  e.target.reset();
 
    async function getNewsByFormInput() {
     let formInput = refs.formSearchInput.value;

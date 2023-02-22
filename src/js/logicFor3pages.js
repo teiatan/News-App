@@ -9,8 +9,6 @@ export function defaultLocalStorage() {
         localStorage.lang = 'en';
         localStorage.theme = 'light';
         localStorage.auth = 'no';
-        localStorage.favorite = [];
-        localStorage.read = [];
         localStorage.temperature = '20C';
         localStorage.city = 'Kyiv';
     };
@@ -27,7 +25,7 @@ export function headerLogic() {
         defaultLocalStorage();
     } else if(localStorage.auth === 'yes') {
         addIsHidden([refs.headerSignInBtn, refs.authModal]);
-        removeIsHidden([refs.navWrapper, refs.navFavorite, refs.navRead, refs.headerSignOutBtn]);
+        removeIsHidden([refs.navFavorite, refs.navRead, refs.headerSignOutBtn]);
         refs.headerSignInBtn.removeEventListener('click', openAuthModal);
         refs.headerSignOutBtn.addEventListener('click', signOutBtnHandler);
         return;
