@@ -142,6 +142,10 @@
   .calendar__button-arrow-icon {
     cursor: pointer;
   }
+  .calendar__button-arrow-year{
+    cursor: pointer;
+    fill: var(--accent--text-color);
+  }
   
   .calendar__button-arrow.switched {
     fill: var(--additional-accent--text-color);
@@ -195,15 +199,14 @@
     align-items: center;
   }
   
-  .current-date {
-
- 
+  .current-month,
+  .current-year {
     font-family: 'Manrope';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.38;
-    color: var(--main--text-color);
+    color: var(--calendar--text-color);
   }
 
 .calendar-form {
