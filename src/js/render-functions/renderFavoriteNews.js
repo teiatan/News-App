@@ -39,7 +39,7 @@ const newsArray = [
         link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
       }
 ];
-//const news = JSON.parse(localStorage.getItem ("favorite"));
+const news = JSON.parse(localStorage.getItem ("favorite"));
 //localStorage.setItem("news", JSON.stringify(news));
   
 //const savedSettings = localStorage.getItem("news");
