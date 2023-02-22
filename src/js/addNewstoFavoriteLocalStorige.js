@@ -15,7 +15,7 @@ let newLocalStorage = [];
 function addNewsToFavoriteArray(event) {
   console.log("клік працює")
   if(localStorage.auth === 'no') {
-    console.log("не авторизовано")
+    //console.log("не авторизовано")
     Notiflix.Notify.failure('Sorry, for using this opportunity you need to be signed in');
     openAuthModal();
     return;
@@ -33,15 +33,18 @@ function addNewsToFavoriteArray(event) {
         favorite: true,
         wasRead: '',
       };
+
+      
+
+
+
+
+
     const favoriteArrayFromLocalStorage = localStorage.favorite;
-    console.log("масив прийшов");
-    if(favoriteArrayFromLocalStorage === "" || favoriteArrayFromLocalStorage === [] || favoriteArrayFromLocalStorage === {}) {
-      console.log("localStorage порожній");
+    
+    if(favoriteArrayFromLocalStorage === null || favoriteArrayFromLocalStorage === undefined || favoriteArrayFromLocalStorage === "" || favoriteArrayFromLocalStorage === [] || favoriteArrayFromLocalStorage === {}) {
+      //console.log("localStorage порожній");
       localStorage.setItem ("favorite", JSON.stringify(newsTargetObject));
-      //console.log(`localStorage після додавання нового об'єкту:`);
-      //console.log(localStorage.favorite);
-      //console.log("тип localStorage.favorite після додавання об'єкту");
-      //console.log(typeof localStorage.favorite);
     } else {
       //console.log("localStorage не порожній");
       const filledFavoriteArray = JSON.parse(localStorage.getItem ("favorite"));
@@ -49,7 +52,47 @@ function addNewsToFavoriteArray(event) {
       //console.log(typeof filledFavoriteArray);
       if(filledFavoriteArray.id === newsTargetObject.id) {
         localStorage.favorite = "";
-      };
+      } else {
+        //console.log(Array.isArray(filledFavoriteArray));
+
+        if(Array.isArray(filledFavoriteArray)) {
+          const newsId = filledFavoriteArray.findIndex((news) => {
+            news.id === newsTargetObject.id;
+          });
+          console.log(newsId);
+              if(newsId === -1) {
+                const box = filledFavoriteArray;
+                box.push(newsTargetObject);
+                localStorage.setItem ("favorite", JSON.stringify(box));
+                console.log(filledFavoriteArray);
+              } else {
+                const box = filledFavoriteArray;
+                box.splice(newsId, 1);
+                localStorage.setItem ("favorite", JSON.stringify(box));
+                console.log(filledFavoriteArray);
+              };
+
+        } else {
+          //const box = [];
+          //console.log(typeof box);
+          //const arrayWith2news = box.push(filledFavoriteArray, newsTargetObject);
+          //console.log(arrayWith2news);
+          const arrayWith2news = [filledFavoriteArray, newsTargetObject];
+          //console.log(typeof arrayWith2news);
+          //console.log(arrayWith2news.length);
+          localStorage.setItem ("favorite", JSON.stringify(arrayWith2news));
+          console.log(arrayWith2news);
+        }
+        /* const newsId = filledFavoriteArray.findIndex((news) => {
+          news.id === newsTargetObject.id;
+        });
+        console.log(newsId);
+        if(newsId === -1) {
+          filledFavoriteArray.push(newsTargetObject);
+        } else {
+          filledFavoriteArray.splice(3, 1);
+        } */
+      } 
     }
   }
 }
