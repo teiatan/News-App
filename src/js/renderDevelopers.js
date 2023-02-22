@@ -15,13 +15,15 @@ const q = allDevelopers.map(({
     mail,
     telegram,
     photo,
+    role,
 
 }) => {
     
     return `
      <li class="developer">
     <div class="developer__card">
-    <img class="developers__photo" href="${photo}"></img>
+    <img class="developers__photo" src="${photo}"></img>
+    
   <h3 class="developers__name">${fullName}</h3>
   </div>
   
@@ -37,9 +39,11 @@ const q = allDevelopers.map(({
       <use href="/sprite.e70822e0.svg#icon-mail"></use>
   </svg></a></li>
       <li class="developers__item"><a class="developers__link" href="${telegram}"><svg class="developer__svg">
-      <use  href="/sprite.e70822e0.svg#icon-telegram"></use>
+      <use href="/sprite.e70822e0.svg#icon-telegram"></use>
   </svg></a></li>
   </ul>
+  <span class="developers__role-style"></span>
+  <span class="developers__role">${role}</span>
 </li>
     `
     }
