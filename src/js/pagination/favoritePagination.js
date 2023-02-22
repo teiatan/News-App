@@ -17,7 +17,7 @@ export function showFavoritePagination() {
    } 
 
    for(let i = 1; i <= pages; i += 1) {
-      const onePaginationBtnMarkup = `<button class="page-nmb" data-page="${i}">${i}</button>`;
+      const onePaginationBtnMarkup = `<li class="pg-item"><a class="pg-link" data-page="${i}">${i}</a></li>`;
       paginationMarkUp.push(onePaginationBtnMarkup);
    } 
 
@@ -27,7 +27,7 @@ export function showFavoritePagination() {
 function onPaginBtnClick(evt) {
    evt.preventDefault();
 
-   const paginBtnEl = evt.target.classList.contains('page-nmb');
+   const paginBtnEl = evt.target.classList.contains('pg-link');
 
    if(!paginBtnEl) {
        return;

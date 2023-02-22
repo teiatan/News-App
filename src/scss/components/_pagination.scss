@@ -33,7 +33,7 @@
   }
 }
 
-.page-container span {
+.page-container a {
   padding: 4px 12px;
   font-family: Manrope;
   font-size: 14px;
@@ -41,15 +41,15 @@
   color: var(--main--text-color);
 }
 
-button.page-nmb {
-    border: 1px solid var(--second-additional--text-color);
-    border-radius: 2px;
-}
 
-button.page-nmb:hover,
-button.page-nmb:focus {
-  color: var(--weather--text-color);
-  background-color: var(--second-additional--text-color);
+.pg-item {
+  :hover,
+  :focus {
+      color: var(--additional-accent--text-color);
+      background-color: var(--accent--text-color);
+    }
+      border: 1px solid var(--accent--text-color);
+      border-radius: 2px;
 }
 
 .page-container button {
@@ -57,31 +57,8 @@ button.page-nmb:focus {
   justify-content: center;
   cursor: pointer;
   background-color: transparent;
-  // border: none;
-
-  padding: 4px 12px;
-  font-family: Manrope;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--main--text-color);
+  border: none;
 }
-
-.page-container button:hover {
-  color: var(--weather--text-color);
-  background-color: var(--second-additional--text-color);
-  // display: flex;
-  // justify-content: center;
-  // cursor: pointer;
-  // background-color: transparent;
-  // border: none;
-
-  // padding: 4px 12px;
-  // font-family: Manrope;
-  // font-size: 14px;
-  // font-weight: 500;
-  // color: var(--main--text-color);
-}
-
 
 button.prev-page,
 button.next-page {
@@ -104,7 +81,21 @@ button.next-page{
   margin-left: 6px;
 }
 
-.page-container button:disabled {
+button.prev-page:hover,
+button.next-page:hover {
+  color: var(--weather--text-color);
+  background-color: var(--accent--text-color);
+}
+
+ button:hover span {
+  color: var(--additional-accent--text-color);
+}
+
+button:focus span {
+  color: var(--additional-accent--text-color);
+}
+
+.page-container button:disabled a{
   color: var(--main--text-color);
   font-family: Manrope;
   font-size: 14px;
@@ -119,11 +110,23 @@ button.next-page{
   align-items: center;
 }
 
-#pagination button {
+#pagination li {
+  list-style: none;
   cursor: pointer;
   overflow: hidden;
   margin: 0 4px;
+}
 
+#pagination li.active {
+  background-color: var(--accent--text-color);
+}
+
+#pagination li.active a {
+  color: var(--weather--text-color);
+}
+
+#pagination li a {
+  text-decoration: none;
   padding: 4px auto;
   display: inline-block;
   font-family: Manrope;
@@ -132,17 +135,31 @@ button.next-page{
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
-  // pointer-events: none;
+  pointer-events: none;
   color: var(--main--text-color);
 }
 
-#pagination button.active {
-  background-color: var(--second-additional--text-color);
-  color: var(--additional-accent--text-color);
+#pagination li:hover {
+  background-color: var(--accent--text-color);
 }
 
-#pagination button:hover {
-  background-color: var(--second-additional--text-color);
-  color: var(--additional-accent--text-color);
+#pagination li:hover a {
+  color: var(--weather--text-color);
+  background-color: var(--accent--text-color);
 }
 
+.s_prew {
+  font-family: Manrope;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.pagination-hidden {
+  display: none;
+}
+a.fas {
+  height: 28px;
+}
