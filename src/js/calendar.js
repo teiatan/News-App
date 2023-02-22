@@ -147,4 +147,4 @@ localStorage.removeItem('VALUE');
 localStorage.removeItem('date');
 
 export let selectedDate = document.querySelector('.calendar-input').value;
-console.log("Selected Date:", selectedDate);
+//console.log("Selected Date:", selectedDate);

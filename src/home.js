@@ -40,7 +40,7 @@ viewportWidthCheck();
 addEventListenerForBurgerBtn();
 
 //addNewsToReadArrayInLocalStorage();
-addNewsToFavoriteArrayInLocalStorage();
+//addNewsToFavoriteArrayInLocalStorage();
 
 //changeTheme();
 //addDarkClass();

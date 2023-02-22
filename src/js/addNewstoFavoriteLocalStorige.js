@@ -1,49 +1,57 @@
+import Notiflix from 'notiflix';
 import { refs } from './refs';
+import { openAuthModal } from './modalOpening';
+
 
 export function addNewsToFavoriteArrayInLocalStorage() {
-  const container = refs.favouriteNewsContainer;
-  container.addEventListener('click', addNewsToFavoriteArray);
+  const containerWithCards = refs.favouriteNewsContainer;
+  containerWithCards.addEventListener('click', addNewsToFavoriteArray);
 
  
 }
-let newLocalStorage = []
+
+let newLocalStorage = [];
  
 function addNewsToFavoriteArray(event) {
-  if (event.target.nodeName === 'BUTTON') {
-    const FavoriteBox = event.target.closest('li');
-   
-
-    const newsObject = {
-        id: FavoriteBox.dataset.id,
-        category: FavoriteBox.lastElementChild.children[5].innerText,
-        title: FavoriteBox.lastElementChild.children[2].innerText,
-        img: FavoriteBox.lastElementChild.children[1].children[1].attributes.src.nodeValue,
-        description: FavoriteBox.lastElementChild.children[3].innerText,
-        date: FavoriteBox.lastElementChild.children[4].innerText,
-        link: FavoriteBox.lastElementChild.children[6].attributes[0].value,
-        favorite: 'true',
-        wasRead: 'true',
-
+  console.log("клік працює")
+  if(localStorage.auth === 'no') {
+    console.log("не авторизовано")
+    Notiflix.Notify.failure('Sorry, for using this opportunity you need to be signed in');
+    openAuthModal();
+    return;
+  } else if (event.target.nodeName === 'BUTTON') {
+    //console.log("авторизовано")
+    const favoriteTargetElement = event.target.closest('li');
+    const newsTargetObject = {
+        id: favoriteTargetElement.dataset.id,
+        category: favoriteTargetElement.lastElementChild.children[5].innerText,
+        title: favoriteTargetElement.lastElementChild.children[2].innerText,
+        img: favoriteTargetElement.lastElementChild.children[1].children[1].attributes.src.nodeValue,
+        description: favoriteTargetElement.lastElementChild.children[3].innerText,
+        date: favoriteTargetElement.lastElementChild.children[4].innerText,
+        link: favoriteTargetElement.lastElementChild.children[6].attributes[0].value,
+        favorite: true,
+        wasRead: '',
+      };
+    const favoriteArrayFromLocalStorage = localStorage.favorite;
+    console.log("масив прийшов");
+    if(favoriteArrayFromLocalStorage === "" || favoriteArrayFromLocalStorage === [] || favoriteArrayFromLocalStorage === {}) {
+      console.log("localStorage порожній");
+      localStorage.setItem ("favorite", JSON.stringify(newsTargetObject));
+      //console.log(`localStorage після додавання нового об'єкту:`);
+      //console.log(localStorage.favorite);
+      //console.log("тип localStorage.favorite після додавання об'єкту");
+      //console.log(typeof localStorage.favorite);
+    } else {
+      //console.log("localStorage не порожній");
+      const filledFavoriteArray = JSON.parse(localStorage.getItem ("favorite"));
+      //console.log(filledFavoriteArray);
+      //console.log(typeof filledFavoriteArray);
+      if(filledFavoriteArray.id === newsTargetObject.id) {
+        localStorage.favorite = "";
+      };
     }
+  }
+}
   
-    localStorage.setItem('NewLocalStorige', JSON.stringify(newsObject));
-   
-    const saveFavorite = localStorage.getItem('NewLocalStorige');
-    //console.log(saveFavorite);
-    
-    
-    
-    const parseFavorite = JSON.parse(saveFavorite)
-    console.log(parseFavorite);
-        if  ((parseFavorite.id) === newsObject.id) {
-console.log('eeeee');
-return }
-   
-else { 
-    const push = parseFavorite.push(newsObject)
-localStorage.setItem("favorite", JSON.stringify(push));
-}
-//else щось не добаляє  в favorite, подивись, в мене сьодні вже голова не варить
-}
-}
 

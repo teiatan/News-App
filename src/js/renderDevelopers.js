@@ -4,7 +4,7 @@ import g from "calendar-dates";
 import { developers } from '../developers';
 
 const allDevelopers = developers;
-console.log(allDevelopers);
+//console.log(allDevelopers);
 
 const card = document.querySelector('.render-deplovers')
 
