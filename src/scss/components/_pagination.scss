@@ -33,7 +33,7 @@
   }
 }
 
-.page-container a {
+.page-container a{
   padding: 4px 12px;
   font-family: Manrope;
   font-size: 14px;
@@ -55,6 +55,7 @@
 .page-container button {
   display: flex;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -74,10 +75,14 @@ button.next-page {
 }
 
 button.prev-page{
+  position: relative;
+  width: 82px;
   margin-right: 6px;
 }
 
 button.next-page{
+  position: relative;
+  width: 78px;
   margin-left: 6px;
 }
 
@@ -95,7 +100,7 @@ button:focus span {
   color: var(--additional-accent--text-color);
 }
 
-.page-container button:disabled a{
+.page-container button:disabled{
   color: var(--main--text-color);
   font-family: Manrope;
   font-size: 14px;
@@ -104,6 +109,23 @@ button:focus span {
   letter-spacing: 0em;
   text-align: left;
   background-color: var(--first-additional--text-color);
+}
+
+.icon-prew{
+  position: absolute;
+  top: 8px;
+  left: 11px;
+}
+
+.icon-next {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+}
+
+button:hover .icon-prew,
+button:hover .icon-next {
+  fill: var(--additional-accent--text-color);
 }
 
 #pagination {
@@ -118,15 +140,15 @@ button:focus span {
   margin: 0 4px;
 }
 
-#pagination li.active {
+#pagination .pg-item.active {
   background-color: var(--accent--text-color);
 }
 
-#pagination li.active a {
+#pagination .pg-item.active a {
   color: var(--weather--text-color);
 }
 
-#pagination li a {
+#pagination .pg-item a {
   text-decoration: none;
   padding: 4px auto;
   display: inline-block;
@@ -140,11 +162,11 @@ button:focus span {
   color: var(--main--text-color);
 }
 
-#pagination li:hover {
+#pagination .pg-item:hover {
   background-color: var(--accent--text-color);
 }
 
-#pagination li:hover a {
+#pagination .pg-item:hover a {
   color: var(--weather--text-color);
   background-color: var(--accent--text-color);
 }
@@ -156,11 +178,14 @@ button:focus span {
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
+  margin-left: 10px;
+}
+
+.s_next {
+  margin-right: 10px;
 }
 
 .pagination-hidden {
   display: none;
 }
-a.fas {
-  height: 28px;
-}
+

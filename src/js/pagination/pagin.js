@@ -19,7 +19,7 @@ function createPagin(totalPages, page) {
     if(page > 2) {
         render += `<li class="pg-item"><a class="pg-link" data-page="1">1</a></li>`;
         if(page > 3) {
-            render += `<li class="dots"><span class="pg-link">...</span></li>`
+            render += `<li class="dots"><span>...</span></li>`
         }
     }
 
@@ -56,7 +56,7 @@ function createPagin(totalPages, page) {
 
     if(page < totalPages - 1) {
         if(page < totalPages - 2) {
-            render += `<li class="dots"><span class="pg-link">...</span></li>`
+            render += `<li class="dots"><span>...</span></li>`
         }
         render += `<li class="pg-item"><a class="pg-link" data-page="${totalPages}">${totalPages}</a></li>`;
     }
