@@ -14,6 +14,8 @@ function createPagin(totalPages, page) {
         prevBtn.addEventListener('click', () => {
             createPagin(totalPages, page - 1);
         })
+    }else{
+        prevBtn.disabled = true;
     }
 
     if(page > 2) {
@@ -74,4 +76,4 @@ function createPagin(totalPages, page) {
     pag.innerHTML = render;
 }
 
-createPagin(totalPages, 3);
+createPagin(totalPages, 5);

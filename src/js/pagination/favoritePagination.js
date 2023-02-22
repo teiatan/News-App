@@ -5,7 +5,7 @@ const favorite = test;
 const perPage = 3;
 const pages = Math.ceil(favorite.length / perPage);
 
- let news = [];
+let news = [];
 const paginationMarkUp = [];
 
 paginConteinBtn.addEventListener('click', onPaginBtnClick);

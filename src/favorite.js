@@ -12,6 +12,7 @@ import {showFavouriteNews} from './js/render-functions/renderFavoriteNews';
 import { showFavoritePagination } from './js/pagination/favoritePagination.js';
 
 
+
 Notiflix.Loading.pulse();
 defaultLocalStorage();
 addModalOpenListeners();

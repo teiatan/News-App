@@ -108,7 +108,11 @@ button:focus span {
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
-  background-color: var(--first-additional--text-color);
+  background-color: var(--main--background-color);
+}
+
+.page-container button:disabled{
+  opacity: 0.5;
 }
 
 .icon-prew{
@@ -127,6 +131,7 @@ button:hover .icon-prew,
 button:hover .icon-next {
   fill: var(--additional-accent--text-color);
 }
+
 
 #pagination {
   display: flex;
