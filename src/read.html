@@ -2,9 +2,15 @@
 <html lang="en">
   <head>
     <include src="partials/layouts/head-common.html"></include>
-    <title>Read</title> 
+    <title>Read</title>
   </head>
   <body>
+    <include src="partials/layouts/header.html"></include>
+    <h1 class="is-hidden">News which athorized user is going to read</h1>
+    <include src="partials/layouts/main-read.html"></include>
+    <include src="partials/layouts/footer.html"></include>
+    <include src="partials/components/back-to-top-btn.html"></include>
+
 
       <include src="partials/layouts/header.html"></include>
       <h1 class="is-hidden modal__close-btn">News which athorized user is going to read</h1>
@@ -13,6 +19,7 @@
       <include src="partials/layouts/modal-developers.html"></include>
 
   
+
     <script type="module" src="./read.js"></script>
   </body>
 </html>
