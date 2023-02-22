@@ -27,13 +27,13 @@ export function headerLogic() {
         defaultLocalStorage();
     } else if(localStorage.auth === 'yes') {
         addIsHidden([refs.headerSignInBtn, refs.authModal]);
-        removeIsHidden([refs.navFavorite, refs.navRead, refs.headerSignOutBtn]);
+        removeIsHidden([refs.navWrapper, refs.headerSignOutBtn]);
         refs.headerSignInBtn.removeEventListener('click', openAuthModal);
         refs.headerSignOutBtn.addEventListener('click', signOutBtnHandler);
         return;
     } else if(localStorage.auth === 'no') {
         removeIsHidden(refs.headerSignInBtn);
-        addIsHidden([refs.navFavorite, refs.navRead, refs.headerSignOutBtn]);
+        addIsHidden([refs.navWrapper, refs.headerSignOutBtn]);
         refs.headerSignInBtn.addEventListener('click', openAuthModal);
         refs.headerSignOutBtn.removeEventListener('click', signOutBtnHandler);
     };

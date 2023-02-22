@@ -1,10 +1,7 @@
 import Notiflix from 'notiflix';
 import { addEventListenerForBurgerBtn } from './js/mobileMenu';
 import { headerLogic, defaultLocalStorage } from './js/logicFor3pages';
-import {
-  addListenersForMobileHeader,
-  viewportWidthCheck,
-} from './js/headerSearchForm';
+import { addListenersForMobileHeader, viewportWidthCheck } from './js/headerSearchForm';
 import { addModalOpenListeners } from './js/modalOpening';
 import { currentLinkUnderline } from './js/currentLinkUnderline';
 import { getMostViewedNews } from './js/API/getMostViewedNews';
@@ -22,7 +19,7 @@ import { changeTheme, addDarkClass } from './js/changeTheme';
 import { fetchDefaultWeather } from './js/API/getWeather';
 
 import {addNewsToReadArrayInLocalStorage} from './js/addNewsToReadArrayInLocalStorage';
-import {addNewsToFavoriteArrayInLocalStorage} from './js/addNewstoFavoriteLocalStorige';
+import { addNewsToFavoriteArrayInLocalStorage } from './js/addNewstoFavoriteLocalStorige';
 
 Notiflix.Loading.pulse();
 renderCategories();
@@ -34,7 +31,6 @@ showMostViewedNews(getMostViewedNews());
 window.setTimeout(Notiflix.Loading.remove(), 5000);
 
 addListenersForMobileHeader();
-
 currentLinkUnderline();
 viewportWidthCheck();
 addEventListenerForBurgerBtn();
