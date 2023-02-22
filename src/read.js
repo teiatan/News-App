@@ -11,6 +11,7 @@ import { showReadNews } from './js/render-functions/renderReadNews';
 
 Notiflix.Loading.pulse();
 defaultLocalStorage();
+headerLogic();
 addModalOpenListeners();
 headerLogic();
 showReadNews();
@@ -23,6 +24,6 @@ currentLinkUnderline();
 
 addEventListenerForBurgerBtn();
 
-changeTheme();
-addDarkClass();
+//changeTheme();
+//addDarkClass();
 

@@ -20,6 +20,8 @@ import { categoriesModalBtn } from './js/categoriesModalBtn';
 import { changeTheme, addDarkClass } from './js/changeTheme';
 import { fetchDefaultWeather } from './js/API/getWeather';
 
+import {addNewsToReadArrayInLocalStorage} from './js/addNewsToReadArrayInLocalStorage';
+import {addNewsToFavoriteArrayInLocalStorage} from './js/addNewstoFavoriteLocalStorige';
 
 Notiflix.Loading.pulse();
 renderCategories();
@@ -27,15 +29,17 @@ defaultLocalStorage();
 addModalOpenListeners();
 headerLogic();
 showMostViewedNews(getMostViewedNews());
-showNewsByFormInput(onSubmitSearchForm());
+//showNewsByFormInput(onSubmitSearchForm());
 window.setTimeout(Notiflix.Loading.remove(), 5000);
 
 addListenersForMobileHeader();
-currentLinkUnderline();
 
+currentLinkUnderline();
 viewportWidthCheck();
 addEventListenerForBurgerBtn();
 
+//addNewsToReadArrayInLocalStorage();
+addNewsToFavoriteArrayInLocalStorage();
 
-changeTheme();
-addDarkClass();
+//changeTheme();
+//addDarkClass();

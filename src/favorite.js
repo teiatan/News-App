@@ -13,20 +13,20 @@ import { changeTheme, addDarkClass } from './js/changeTheme';
 
 Notiflix.Loading.pulse();
 defaultLocalStorage();
-addModalOpenListeners();
 headerLogic();
+addModalOpenListeners();
 
-window.setTimeout(Notiflix.Loading.remove(), 5000);
 
 showFavouriteNews();
 
 window.setTimeout(Notiflix.Loading.remove(), 5000);
-addListenersForMobileHeader();
-viewportWidthCheck();
-currentLinkUnderline();
 
+addListenersForMobileHeader();
+
+currentLinkUnderline();
+viewportWidthCheck();
 addEventListenerForBurgerBtn();
 
-changeTheme();
-addDarkClass();
+//changeTheme();
+//addDarkClass();
 

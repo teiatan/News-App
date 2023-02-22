@@ -88,3 +88,26 @@ export async function renderCategories() {
     categorieMarkup2Mobile
   );
 }
+
+export default function handleCategoryClick(event) {
+  const categoryForSearch = event.target.textContent;
+  // викликати функцію з отриманим текстовим вмістом
+  // console.log(categoryForSearch); // виводить назву категорії на яку клікнули
+  return categoryForSearch;
+}
+
+const categoryButtons = document.querySelectorAll(
+  '.categories-render-container'
+);
+
+categoryButtons.forEach(button => {
+  button.addEventListener('click', handleCategoryClick);
+});
+
+// import handleCategoryClick from './handleCategoryClick.js';
+
+// // Викликаємо handleCategoryClick функцію
+// const categoryForSearch = handleCategoryClick(event);
+
+// // Використовуємо categoryForSearch
+// console.log(categoryForSearch);
