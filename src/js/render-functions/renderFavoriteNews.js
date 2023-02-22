@@ -1,7 +1,59 @@
 import {refs} from '../refs';
+
 import { addNewsToFavoriteArrayInLocalStorage } from '../addNewstoFavoriteLocalStorige';
 
 const newsArray = [
+
+    {
+      id: "100000008772688",
+      category: "Technology",
+      wasRead:true,
+      img: "https://static01.nyt.com/images/2023/02/16/reader-center/bing-roose-hp/bing-roose-hp-mediumThreeByTwo440-v3.png",
+      imgAlt: "Altimg",
+      title: "A Conversation With Bing’s Chatbot Left Me Deeply Unsettled",
+      description: "A very strange conversation with the chatbot built into Microsoft’s search engin...",
+      date: "2023/02/17",
+      favorite: "true",
+      link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
+    },
+    {
+      id: "100000008772688",
+      category: "Technology",
+      wasRead:true,
+      img: "https://static01.nyt.com/images/2023/02/16/reader-center/bing-roose-hp/bing-roose-hp-mediumThreeByTwo440-v3.png",
+      imgAlt: "Altimg",
+      title: "A Conversation With Bing’s Chatbot Left Me Deeply Unsettled",
+      description: "A very strange conversation with the chatbot built into Microsoft’s search engin...",
+      date: "2023/02/17",
+      favorite: "true",
+      link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
+    },
+    {
+      id: "100000008772688",
+      category: "Technology",
+      wasRead:true,
+      img: "https://static01.nyt.com/images/2023/02/16/reader-center/bing-roose-hp/bing-roose-hp-mediumThreeByTwo440-v3.png",
+      imgAlt: "Altimg",
+      title: "A Conversation With Bing’s Chatbot Left Me Deeply Unsettled",
+      description: "A very strange conversation with the chatbot built into Microsoft’s search engin...",
+      date: "2023/02/17",
+      favorite: "true",
+      link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
+    },
+    {
+      id: "100000008772688",
+      category: "Technology",
+      wasRead:true,
+      img: "https://static01.nyt.com/images/2023/02/16/reader-center/bing-roose-hp/bing-roose-hp-mediumThreeByTwo440-v3.png",
+      imgAlt: "Altimg",
+      title: "A Conversation With Bing’s Chatbot Left Me Deeply Unsettled",
+      description: "A very strange conversation with the chatbot built into Microsoft’s search engin...",
+      date: "2023/02/17",
+      favorite: "true",
+      link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
+    }
+];
+export const news = [
     {
         id: "100000008772688",
         category: "Technology",
@@ -38,9 +90,96 @@ const newsArray = [
         favorite: "true",
         link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
       }
+      ,
+      {
+        id: "100000008772688",
+        category: "Technology",
+        wasRead:true,
+        img: "https://static01.nyt.com/images/2023/02/16/reader-center/bing-roose-hp/bing-roose-hp-mediumThreeByTwo440-v3.png",
+        imgAlt: "Altimg",
+        title: "A Conversation With Bing’s Chatbot Left Me Deeply Unsettled",
+        description: "A very strange conversation with the chatbot built into Microsoft’s search engin...",
+        date: "2023/02/17",
+        favorite: "true",
+        link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
+      },
+      {
+        id: "100000008772688",
+        category: "Technology",
+        wasRead:true,
+        img: "https://static01.nyt.com/images/2023/02/16/reader-center/bing-roose-hp/bing-roose-hp-mediumThreeByTwo440-v3.png",
+        imgAlt: "Altimg",
+        title: "A Conversation With Bing’s Chatbot Left Me Deeply Unsettled",
+        description: "A very strange conversation with the chatbot built into Microsoft’s search engin...",
+        date: "2023/02/17",
+        favorite: "true",
+        link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
+      },
+      {
+        id: "100000008772688",
+        category: "Technology",
+        wasRead:true,
+        img: "https://static01.nyt.com/images/2023/02/16/reader-center/bing-roose-hp/bing-roose-hp-mediumThreeByTwo440-v3.png",
+        imgAlt: "Altimg",
+        title: "A Conversation With Bing’s Chatbot Left Me Deeply Unsettled",
+        description: "A very strange conversation with the chatbot built into Microsoft’s search engin...",
+        date: "2023/02/17",
+        favorite: "true",
+        link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
+      },
+      {
+        id: "100000008772688",
+        category: "Technology",
+        wasRead:true,
+        img: "https://static01.nyt.com/images/2023/02/16/reader-center/bing-roose-hp/bing-roose-hp-mediumThreeByTwo440-v3.png",
+        imgAlt: "Altimg",
+        title: "A Conversation With Bing’s Chatbot Left Me Deeply Unsettled",
+        description: "A very strange conversation with the chatbot built into Microsoft’s search engin...",
+        date: "2023/02/17",
+        favorite: "true",
+        link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
+      },
+      {
+        id: "100000008772688",
+        category: "Technology",
+        wasRead:true,
+        img: "https://static01.nyt.com/images/2023/02/16/reader-center/bing-roose-hp/bing-roose-hp-mediumThreeByTwo440-v3.png",
+        imgAlt: "Altimg",
+        title: "A Conversation With Bing’s Chatbot Left Me Deeply Unsettled",
+        description: "A very strange conversation with the chatbot built into Microsoft’s search engin...",
+        date: "2023/02/17",
+        favorite: "true",
+        link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
+      },
+      {
+        id: "100000008772688",
+        category: "Technology",
+        wasRead:true,
+        img: "https://static01.nyt.com/images/2023/02/16/reader-center/bing-roose-hp/bing-roose-hp-mediumThreeByTwo440-v3.png",
+        imgAlt: "Altimg",
+        title: "A Conversation With Bing’s Chatbot Left Me Deeply Unsettled",
+        description: "A very strange conversation with the chatbot built into Microsoft’s search engin...",
+        date: "2023/02/17",
+        favorite: "true",
+        link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
+      },
+      {
+        id: "100000008772688",
+        category: "Technology",
+        wasRead:true,
+        img: "https://static01.nyt.com/images/2023/02/16/reader-center/bing-roose-hp/bing-roose-hp-mediumThreeByTwo440-v3.png",
+        imgAlt: "Altimg",
+        title: "A Conversation With Bing’s Chatbot Left Me Deeply Unsettled",
+        description: "A very strange conversation with the chatbot built into Microsoft’s search engin...",
+        date: "2023/02/17",
+        favorite: "true",
+        link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
+      }
 ];
+
 const news = JSON.parse(localStorage.getItem ("favorite"));
 //localStorage.setItem("news", JSON.stringify(news));
+
   
 //const savedSettings = localStorage.getItem("news");
 
