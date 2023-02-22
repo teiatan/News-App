@@ -25,7 +25,7 @@
 }
 
 .search-form__input {
-  
+  max-width: 173px;
   height: 31px;
 
   font-size: 12px;
@@ -36,7 +36,6 @@
   padding-left: 48px;
 
   border-radius: 20px;
-  border: 1px solid var(--text-color);
   outline: transparent;
 
   @include mq(tablet) {
@@ -89,6 +88,18 @@
 
 .menu-button-burger {
   margin-left: 14px;
+  &.toggle-icon {
+    svg:last-of-type {
+        display: block;
+      }
+      svg:first-of-type {
+        display: none;
+      }
+  }
+
+  svg:last-of-type{
+    display: none;
+  }
 
   @include mq(tablet) {
     display: none;

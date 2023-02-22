@@ -1,6 +1,7 @@
 import { refs } from '../refs';
 import { weatherMarkup } from '../API/getWeather';
 import { fillAbsentDataInNewsCard } from './newsCardSample';
+import { addNewsToReadArrayInLocalStorage } from '../addNewsToReadArrayInLocalStorage';
 export async function showMostViewedNews(apiFetch) {
     renderMostViewedNews(await apiFetch);
 };
@@ -34,14 +35,23 @@ export async function renderMostViewedNews({results}) {
       return `
           <li class="news__item card" data-id=${id}>
             <p class="news__Already-read is-hidden">Already read 
-              <svg style="display:inline" width="17px" height="13px">
+              <svg class="news__svg news_svg-alreagy-read>
                   <use href="/sprite.e70822e0.svg#Vector-1"></use>
               </svg>
             </p>
             <div class="news__container">
               <span class="news__read is-hidden"></span>
               <div class="news__container-img">
-              <button class="news__favorite">Add to favorite</button>
+
+              <button class="news__favorite">Add to favorite
+              <svg class="news__svg news__svg-heart">
+                  <use href="/sprite.e70822e0.svg#heartDisable"></use>
+              </svg>
+              <svg class="news__svg news__svg-heart" style="display:none">
+                  <use href="/sprite.e70822e0.svg#heartActive"></use>
+              </svg>
+              </button>
+
               <img src="${imgSrc}" alt="${alt}" class="news__img"/>
             </div>
 
@@ -60,6 +70,7 @@ export async function renderMostViewedNews({results}) {
   const markup = weatherMarkup.concat(newsMarkup);
   refs.renderContainerHome.insertAdjacentHTML('afterbegin', markup);
   //fillAbsentDataInNewsCard();
+  addNewsToReadArrayInLocalStorage();
   
   const wasRead = document.querySelector(".news__container");
   const links = document.querySelectorAll(".news__link");

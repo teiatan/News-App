@@ -6,15 +6,15 @@ import {renderNewsByFormInput} from '../render-functions/renderNewsByFormInput';
 
 
 
-
 refs.formSearch.addEventListener("submit", onSubmitSearchForm);
 
 export async function onSubmitSearchForm (e) {
     e.preventDefault();
+    
     let page = 1;
     refs.negativeSearch.classList.add('is-hidden');
     const value = refs.formSearchInput.value;
-if (value === '') {
+if (value.trim() === '') {
     Notiflix.Notify.failure('Ooops. Please, enter something to search');
     return;
 } 
