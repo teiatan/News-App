@@ -8,11 +8,11 @@ export async function getNewsByCategory(category) {
 
   try {
     const response = await axios.get(url);
-    console.log(response.data.results);
+    // console.log(response.data.results);
+    // console.log(url);
+    // console.log(response);
     return response.data.results;
   } catch (error) {
     console.error(error);
   }
-  console.log(url);
-  console.log(response);
 }
