@@ -24,15 +24,17 @@ export function renderNewsList(newsList) {
         multimedia,
       } = news;
 
-      const imgSrc = `https://static01.nyt.com/${
-        multimedia.find(
-          item => item.type === 'image' && item.subtype === 'xlarge'
-        ).legacy.xlarge
-      }`;
+      const multimediaImage = multimedia.find(
+        item => item.type === 'image' && item.subtype === 'xlarge'
+      );
+
+      const imgSrc = multimediaImage
+        ? `https://static01.nyt.com/${multimediaImage.legacy.xlarge}`
+        : '';
+
+      const dateWithoutTimeZone = pub_date.slice(0, 19).replace('T', ' ');
 
       const alt = multimedia?.[0]?.caption ?? 'No image available';
-      const newsAbstract = newsList.abstract ?? 'No abstract available';
-
       return `
       <li class="news__item card" data-id="${id}">
         <p class="news__Already-read is-hidden">
@@ -57,7 +59,7 @@ export function renderNewsList(newsList) {
           </div>
           <h3 class="news__title">${headline.main}</h3>
           <p class="news__abstract">${abstract}</p>
-          <span class="news__date">${pub_date.replaceAll('-', '/')}</span>
+          <span class="news__date">${dateWithoutTimeZone}</span>
           <p class="news__category news__marker-search">${section_name}</p>
           <a href="${web_url}" class="news__link" target="_blank">Read more</a>
         </div>
