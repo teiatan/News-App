@@ -1,7 +1,7 @@
 const daysTag = document.querySelector('.days'),
   currentDate = document.querySelector('.current-date'),
   prevNextIcon = document.querySelectorAll('.calendar-icons span');
-
+ 
 // getting new date, current year and month
 let date = new Date(),
   currDay = date.getDate(),
@@ -104,6 +104,7 @@ const renderCalendar = number => {
     localStorage.setItem('VALUE', JSON.stringify(newValueDay));
 
     let inputDateValue = document.querySelector('.calendar-input').value;
+
     localStorage.setItem('date', JSON.stringify(inputDateValue));
     document.querySelector('[data-modal]').classList.add('is-hidden-wrapper');
     document.querySelector('.calendar-input').classList.remove('isActive');
@@ -116,6 +117,7 @@ const renderCalendar = number => {
   });
   //}
 };
+
 
 renderCalendar();
 let findUl = document.querySelector('.days');
@@ -143,3 +145,6 @@ prevNextIcon.forEach(icon => {
 
 localStorage.removeItem('VALUE');
 localStorage.removeItem('date');
+
+export let selectedDate = document.querySelector('.calendar-input').value;
+console.log("Selected Date:", selectedDate);
