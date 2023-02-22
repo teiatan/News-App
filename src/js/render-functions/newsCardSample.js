@@ -8,15 +8,15 @@ export function fillAbsentDataInNewsCard() {
   const newsCategory = document.querySelector('.news__category');
   const newsLink = document.querySelector('.news__link');
 
-  if (newsImg.textContent === null || undefined || '') {
+  if (newsImg === null || undefined || '') {
     newsImg.innerHTML = ` <img src="./src/img/plug-Desc.png" alt="No image" class="news__img"/>`;
-  } else if (newsTitle.textContent === null || undefined || '') {
+  } else if (newsTitle === null || undefined || '') {
     newsTitle.textContent = 'Something goes wrong - no title';
-  } else if (newsAbstract.textContent === null || undefined || '') {
+  } else if (newsAbstract === null || undefined || '') {
     newsAbstract.textContent = "We couldn't download description of this article, sorry";
-  } else if (newsCategory.textContent === null || undefined || '') {
+  } else if (newsCategory === null || undefined || '') {
     newsCategory.textContent = 'Ooops';
-  } else if (newsLink.textContent === null || undefined || '') {
+  } else if (newsLink === null || undefined || '') {
     newsLink.innerHTML = `<a href="https://www.nytimes.com/" class="news__link" target = "_blank">Read more</a></div>`;
   }
   return;
