@@ -45,6 +45,7 @@ function addNewsToFavoriteArray(event) {
     if(favoriteArrayFromLocalStorage === null || favoriteArrayFromLocalStorage === undefined || favoriteArrayFromLocalStorage === "" || favoriteArrayFromLocalStorage === [] || favoriteArrayFromLocalStorage === {}) {
       //console.log("localStorage порожній");
       localStorage.setItem ("favorite", JSON.stringify(newsTargetObject));
+      event.target.textContent = 'Remove from favorite';
     } else {
       //console.log("localStorage не порожній");
       const filledFavoriteArray = JSON.parse(localStorage.getItem ("favorite"));
@@ -52,6 +53,7 @@ function addNewsToFavoriteArray(event) {
       //console.log(typeof filledFavoriteArray);
       if(filledFavoriteArray.id === newsTargetObject.id) {
         localStorage.favorite = "";
+        event.target.textContent = 'Add to favorite';
       } else {
         //console.log(Array.isArray(filledFavoriteArray));
 
@@ -59,17 +61,19 @@ function addNewsToFavoriteArray(event) {
           const newsId = filledFavoriteArray.findIndex((news) =>
             news.id === newsTargetObject.id
           );
-          console.log(newsId);
+          //console.log(newsId);
               if(newsId === -1) {
                 const box = filledFavoriteArray;
                 box.push(newsTargetObject);
                 localStorage.setItem ("favorite", JSON.stringify(box));
-                console.log(filledFavoriteArray);
+                //console.log(filledFavoriteArray);
+                event.target.textContent = 'Remove from favorite';
               } else {
                 const box = filledFavoriteArray;
                 box.splice(newsId, 1);
                 localStorage.setItem ("favorite", JSON.stringify(box));
-                console.log(filledFavoriteArray);
+                //console.log(filledFavoriteArray);
+                event.target.textContent = 'Add to favorite';
               };
 
         } else {
@@ -81,7 +85,7 @@ function addNewsToFavoriteArray(event) {
           //console.log(typeof arrayWith2news);
           //console.log(arrayWith2news.length);
           localStorage.setItem ("favorite", JSON.stringify(arrayWith2news));
-          console.log(arrayWith2news);
+          //console.log(arrayWith2news);
         }
         /* const newsId = filledFavoriteArray.findIndex((news) => {
           news.id === newsTargetObject.id;
