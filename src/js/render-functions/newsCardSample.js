@@ -31,7 +31,7 @@
 // тут же перевіряти довжину абстракту і виводити не більше кількох символів
 // подивитись, які ще можуть бути відхилення
 export function fillAbsentDataInNewsCard() {
-if(news__category("достучатись за класом").textContent === null || underfined || "") {
+if(news__("достучатись за класом").textContent === null || underfined || "") {
     news__category("достучатись за класом").textContent = заглушка
   }
 }  
