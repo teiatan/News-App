@@ -56,9 +56,9 @@ function addNewsToFavoriteArray(event) {
         //console.log(Array.isArray(filledFavoriteArray));
 
         if(Array.isArray(filledFavoriteArray)) {
-          const newsId = filledFavoriteArray.findIndex((news) => {
-            news.id === newsTargetObject.id;
-          });
+          const newsId = filledFavoriteArray.findIndex((news) =>
+            news.id === newsTargetObject.id
+          );
           console.log(newsId);
               if(newsId === -1) {
                 const box = filledFavoriteArray;
