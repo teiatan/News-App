@@ -89,8 +89,10 @@ export async function renderCategories() {
   );
 }
 
-export default function handleCategoryClick(event) {
-  const categoryForSearch = event.target.textContent;
+export function handleCategoryClick(event) {
+  let categoryForSearch = event.target.textContent;
+  // console.log(categoryForSearch);
+
   // викликати функцію з отриманим текстовим вмістом
   // console.log(categoryForSearch); // виводить назву категорії на яку клікнули
   return categoryForSearch;

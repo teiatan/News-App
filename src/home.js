@@ -1,7 +1,10 @@
 import Notiflix from 'notiflix';
 import { addEventListenerForBurgerBtn } from './js/mobileMenu';
 import { headerLogic, defaultLocalStorage } from './js/logicFor3pages';
-import { addListenersForMobileHeader, viewportWidthCheck } from './js/headerSearchForm';
+import {
+  addListenersForMobileHeader,
+  viewportWidthCheck,
+} from './js/headerSearchForm';
 import { addModalOpenListeners } from './js/modalOpening';
 import { currentLinkUnderline } from './js/currentLinkUnderline';
 import { getMostViewedNews } from './js/API/getMostViewedNews';
@@ -10,15 +13,16 @@ import { onSubmitSearchForm } from './js/API/getNewsByFormInput';
 import { showNewsByFormInput } from './js/render-functions/renderNewsByFormInput';
 
 import { developers } from './developers';
-import {renderDevelopers} from './js/renderDevelopers';
+import { renderDevelopers } from './js/renderDevelopers';
 
 import { renderCategories } from './js/render-functions/renderCategories';
 import { categoriesModalBtn } from './js/categoriesModalBtn';
+import { getNewsByCategory } from './js/API/getNewsByCategory';
 
 import { changeTheme, addDarkClass } from './js/changeTheme';
 import { fetchDefaultWeather } from './js/API/getWeather';
 
-import {addNewsToReadArrayInLocalStorage} from './js/addNewsToReadArrayInLocalStorage';
+import { addNewsToReadArrayInLocalStorage } from './js/addNewsToReadArrayInLocalStorage';
 import { addNewsToFavoriteArrayInLocalStorage } from './js/addNewstoFavoriteLocalStorige';
 
 Notiflix.Loading.pulse();
@@ -40,3 +44,7 @@ addEventListenerForBurgerBtn();
 
 //changeTheme();
 //addDarkClass();
+
+getNewsByCategory(categoryBtn).then(data => {
+  console.log(data);
+});
