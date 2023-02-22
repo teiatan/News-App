@@ -3,6 +3,7 @@ import { getNewsByCategory } from '../API/getNewsByCategory';
 
 export async function showNewsByCategory(category) {
   const newsList = await getNewsByCategory(category);
+  console.log(newsList);
   renderNewsList(newsList);
 }
 
@@ -13,10 +14,11 @@ export function renderNewsList(newsList) {
         news;
 
       let imgSrc = '';
+      let mediaMetaData = 2;
       let alt = '';
 
       if (media.length > 0) {
-        imgSrc = media[0]['media-metadata'][2].url;
+        imgSrc = media[0]['media-metadata'][`${mediaMetaData}`].url;
         alt = media[0].caption;
       } else {
         imgSrc = '/assets/actions-config-step-1.png';

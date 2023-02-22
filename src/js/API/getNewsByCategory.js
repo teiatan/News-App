@@ -6,7 +6,7 @@ export async function getNewsByCategory(category) {
 
   try {
     const response = await axios.get(url);
-    console.log(response);
+    // console.log(response);
     return response.data.results;
   } catch (error) {
     console.error(error);
