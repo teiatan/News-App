@@ -14,22 +14,33 @@ const q = allDevelopers.map(({
     gitHub,
     mail,
     telegram,
+    photo,
 
 }) => {
+    
     return `
-    
-    <li class="developer">
-    <p>${fullName}</p>
-   <div>
-   <a class="link-style" href="${linkedIn}"> LinkedIn</a>
-   <a class="link-style" href="${gitHub}"> gitHub</a>
-   <a class="link-style" href="${mail}"> Mail</a>
-   <a class="link-style" href="${telegram}">Telegram</a>
-   </div>
-    
-
-    </li>
-    
+     <li class="developer">
+    <div class="developer__card">
+    <img class="developers__photo" href="${photo}"></img>
+  <h3 class="developers__name">${fullName}</h3>
+  </div>
+  
+  <ul  class="developers__container">
+  
+      <li class="developers__item"><a class="developers__link" href="${linkedIn}"> <svg class="developer__svg">
+      <use href="/sprite.e70822e0.svg#icon-linkedin"></use>
+  </svg></a></li>
+      <li class="developers__item"><a class="developers__link" href="${gitHub}"> <svg class="developer__svg">
+      <use href="/sprite.e70822e0.svg#icon-github"></use>
+  </svg></a></li>
+      <li class="developers__item"><a class="developers__link" href="${mail}"> <svg class="developer__svg">
+      <use href="/sprite.e70822e0.svg#icon-mail"></use>
+  </svg></a></li>
+      <li class="developers__item"><a class="developers__link" href="${telegram}"><svg class="developer__svg">
+      <use  href="/sprite.e70822e0.svg#icon-telegram"></use>
+  </svg></a></li>
+  </ul>
+</li>
     `
     }
 ).join('');
