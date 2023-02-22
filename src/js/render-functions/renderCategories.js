@@ -90,7 +90,7 @@ export async function renderCategories() {
 }
 
 export function handleCategoryClick(event) {
-  let categoryForSearch = event.target.textContent;
+  const categoryForSearch = event.target.textContent;
   // console.log(categoryForSearch);
 
   // викликати функцію з отриманим текстовим вмістом

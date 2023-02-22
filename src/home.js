@@ -17,7 +17,6 @@ import { renderDevelopers } from './js/renderDevelopers';
 
 import { renderCategories } from './js/render-functions/renderCategories';
 import { categoriesModalBtn } from './js/categoriesModalBtn';
-import { getNewsByCategory } from './js/API/getNewsByCategory';
 
 import { changeTheme, addDarkClass } from './js/changeTheme';
 import { fetchDefaultWeather } from './js/API/getWeather';
@@ -44,5 +43,3 @@ addEventListenerForBurgerBtn();
 
 //changeTheme();
 //addDarkClass();
-
-getNewsByCategory();
