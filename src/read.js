@@ -27,3 +27,6 @@ addEventListenerForBurgerBtn();
 //changeTheme();
 //addDarkClass();
 
+refs.searchForm.addEventListener("submit", clickonSearchForm);
+function clickonSearchForm(){
+   window.location.href = 'index.html' }
