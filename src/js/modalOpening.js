@@ -83,7 +83,6 @@ function authWithEnter(e) {
 };
 
 function closeDeveloperModalOnMouse(e) {
-    console.log("close");
     if (e.target === e.currentTarget) {
         closeDevelopersModal();
     }
