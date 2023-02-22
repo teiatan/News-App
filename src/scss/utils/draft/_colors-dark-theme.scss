@@ -1,3 +1,4 @@
+
  //text-color  
  $main--text-color: #F4F4F4;
  $first-additional--text-color: #F4F4F4;
@@ -7,6 +8,7 @@
  $already-read--text-color: #00DD73;
  $accent--text-color: #4440f6; //for hover,focus,accent
  $additional-accent--text-color: #FFFFFF; //for hover,focus,accent
+ $calendar-inactive-color: #5F6775;
 
  
  //background-color
@@ -20,3 +22,7 @@
  //border-color
  $main--border-color: #F4F4F4;
  $aditional--border-color: #4440F7;
+
+ /* svg-color*/
+ $calendar-button-arrow--svg-color:#F4F4F4;
+
