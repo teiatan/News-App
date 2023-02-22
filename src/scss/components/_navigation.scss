@@ -1,5 +1,5 @@
 .header__mobile-menu-container {    
-    
+    align-items: baseline;
     @include mq(tablet) {
         margin-left: auto;
         display: flex;
