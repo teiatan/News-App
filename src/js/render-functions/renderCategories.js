@@ -1,5 +1,6 @@
 import { getCategories } from '../API/getCategories.js';
 import { refs } from '../refs.js';
+import { getNewsByCategory } from '../API/getNewsByCategory.js';
 
 export async function renderCategories() {
   // пішов взяв категорії з API
@@ -91,11 +92,12 @@ export async function renderCategories() {
 
 export function handleCategoryClick(event) {
   const categoryForSearch = event.target.textContent;
-  // console.log(categoryForSearch);
+  console.log(categoryForSearch);
 
   // викликати функцію з отриманим текстовим вмістом
   // console.log(categoryForSearch); // виводить назву категорії на яку клікнули
-  return categoryForSearch;
+  // return categoryForSearch;
+  getNewsByCategory(categoryForSearch);
 }
 
 const categoryButtons = document.querySelectorAll(
@@ -105,11 +107,3 @@ const categoryButtons = document.querySelectorAll(
 categoryButtons.forEach(button => {
   button.addEventListener('click', handleCategoryClick);
 });
-
-// import handleCategoryClick from './handleCategoryClick.js';
-
-// // Викликаємо handleCategoryClick функцію
-// const categoryForSearch = handleCategoryClick(event);
-
-// // Використовуємо categoryForSearch
-// console.log(categoryForSearch);
