@@ -28,6 +28,3 @@ export function addListenersForMobileHeader() {
     refs.searchFormInput.addEventListener('blur', onSearchFormFocusLose);
 }
 
-refs.searchForm.addEventListener("submit", clickonSearchForm);
-export function clickonSearchForm(){
-   window.location.href = 'index.html' }
