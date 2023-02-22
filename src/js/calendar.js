@@ -101,10 +101,8 @@ const renderCalendar = number => {
       '/' +
       currYear ;
 
-    localStorage.setItem('VALUE', JSON.stringify(newValueDay));
-
-    let inputDateValue = document.querySelector('.calendar-input').value;
-    localStorage.setItem('date', JSON.stringify(inputDateValue));
+      selectedDate(newValueDay);
+    
     document.querySelector('[data-modal]').classList.add('is-hidden-wrapper');
     document.querySelector('.calendar-input').classList.remove('isActive');
     document
@@ -143,3 +141,14 @@ prevNextIcon.forEach(icon => {
 
 localStorage.removeItem('VALUE');
 localStorage.removeItem('date');
+
+
+// export let selectedDate = document.querySelector('.calendar-input').value;
+// console.log("Selected Date:", selectedDate);
+export function selectedDate(value){
+  localStorage.setItem('VALUE', JSON.stringify(value));
+
+  let inputDateValue = document.querySelector('.calendar-input').value;
+  localStorage.setItem('date', JSON.stringify(inputDateValue));
+  console.log(inputDateValue);
+}
