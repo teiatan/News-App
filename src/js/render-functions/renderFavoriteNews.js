@@ -40,9 +40,9 @@ const newsArray = [
       }
 ];
 const news = JSON.parse(localStorage.getItem ("favorite"));
-localStorage.setItem("news", JSON.stringify(news));
+//localStorage.setItem("news", JSON.stringify(news));
   
-const savedSettings = localStorage.getItem("news");
+//const savedSettings = localStorage.getItem("news");
 
 export function showFavouriteNews(){
     if(localStorage.favorite === "" || localStorage.favorite === undefined || localStorage.favorite === null) {

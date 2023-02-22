@@ -9,7 +9,9 @@ import { addListenersForMobileHeader, viewportWidthCheck } from './js/headerSear
 import { currentLinkUnderline } from './js/currentLinkUnderline';
 
 import {showFavouriteNews} from './js/render-functions/renderFavoriteNews';
+import { showFavoritePagination } from './js/pagination/favoritePagination.js';
 import { changeTheme, addDarkClass } from './js/changeTheme';
+import {clickonSearchForm} from './js/headerSearchForm'
 
 Notiflix.Loading.pulse();
 defaultLocalStorage();
@@ -18,6 +20,7 @@ addModalOpenListeners();
 
 
 showFavouriteNews();
+//showFavoritePagination();
 
 window.setTimeout(Notiflix.Loading.remove(), 5000);
 
@@ -29,4 +32,6 @@ addEventListenerForBurgerBtn();
 
 //changeTheme();
 //addDarkClass();
+clickonSearchForm();
+
 

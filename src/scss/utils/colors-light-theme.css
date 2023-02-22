@@ -8,8 +8,10 @@
   --weather--text-color: #ffffff;
   --category-on-news--text-color: #f4f4f4;
   --already-read--text-color: #00dd73;
-  --accent--text-color: #4440f6; /* for hover,focus,accent */
-  --additional-accent--text-color: #ffffff; /* for hover,focus,accent */
+  --accent--text-color: #4440f6;
+  /* for hover,focus,accent */
+  --additional-accent--text-color: #ffffff;
+  /* for hover,focus,accent */
   --calendar--text-color: #000000;
   --categories-text-color: #4440f7;
   --categories-text-color-hover: #ffffff;
@@ -23,7 +25,8 @@
   --weather-buttons--background-color: rgba(254, 254, 255, 0.3);
   --category-on-news--background-color: rgba(68, 64, 247, 0.7);
   --already-read-news--background-color: rgba(244, 244, 244, 0.4);
-  --accent--background-color: #4b48db; /* for hover,focus,accent */
+  --accent--background-color: #4b48db;
+  /* for hover,focus,accent */
   --moon-stroke-color: #5f6775;
   --sun-stroke-color: #4b48db;
   --categories-background-color: #ffffff;
@@ -41,7 +44,7 @@
   --back-to-top-btn-color: white;
   --back-to-top-btn-bg-color: #7270ca;
   --back-to-top-btn-bg-color-hover: #4440f7;
-  
+
   --moon-stroke-color: #5F6775;
   --sun-stroke-color: #4B48DB;
   --categories-background-color: #ffffff;
@@ -49,7 +52,7 @@
   --main--border-color: #111321;
   --aditional--border-color: #4440F7;
   --categories--border-color: #4440f7;
-  --calendar-button-arrow--svg-color:#A2A2A2;
+  --calendar-button-arrow--svg-color: #A2A2A2;
 }
 
 [dark] {
@@ -98,15 +101,14 @@
   --back-to-top-btn-color: black;
   --back-to-top-btn-bg-color: white;
   --back-to-top-btn-bg-color-hover: wheat;
-  
-  
+
+
   --moon-stroke-color: #4B48DB;
   --sun-stroke-color: #5F6775;
   --accent--background-color: #4b48db;
   --categories-background-color: #ffffff;
   --categories-hover--background-color: #4440f6;
   --categories--border-color: #4440f7;
-  --calendar-button-arrow--svg-color:#F4F4F4;
-  
-}
+  --calendar-button-arrow--svg-color: #F4F4F4;
 
+}

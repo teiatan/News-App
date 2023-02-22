@@ -55,6 +55,7 @@ export function closeAuthModal() {
     addIsHidden(refs.authModal);
     refs.authEntranceBtn.removeEventListener('click', authEntranceBtnHandler);
     refs.authRegistrationBtn.addEventListener('click', signUpBtnHandler);
+    refs.body.classList.remove('no-scroll');
     document.removeEventListener( 'keyup', authWithEnter);
 };
 

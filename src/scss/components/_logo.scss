@@ -1,4 +1,5 @@
 .logo {
+    margin-left: 16px;
     margin-right: auto;
 
     font-family: 'Manrope';
@@ -9,6 +10,7 @@
     padding: 24px 0 24px 0;
 
     @include mq(tablet) {
+        margin: 0;
         font-size: 32px;
         padding: 32px 0 30px 0;
     }
