@@ -1,10 +1,10 @@
-const pag = document.getElementById('pagination');
+export const pag = document.getElementById('pagination');
 const prevBtn = document.querySelector('.js-prev-page');
 const nextBtn = document.querySelector('.js-next-page');
 
-let totalPages = 20;
+// let totalPages = 20;
 
-function createPagin(totalPages, page) {
+export function createPagin(totalPages, page) {
     let render = '';
     let activePage;
     let beforePages = page - 1;
@@ -53,7 +53,7 @@ function createPagin(totalPages, page) {
         } else {
             activePage = '';
         }
-        render += `<li class="pg-item ${activePage}"><a class="pg-link" data-page="${pageLength}">${pageLength}</a></li>`;
+        render += `<li class="pg-item ${activePage}"><a class="pg-link">${pageLength}</a></li>`;
     }
 
     if(page < totalPages - 1) {
@@ -76,4 +76,4 @@ function createPagin(totalPages, page) {
     pag.innerHTML = render;
 }
 
-createPagin(totalPages, 5);
+

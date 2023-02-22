@@ -20,7 +20,7 @@ addModalOpenListeners();
 
 
 showFavouriteNews();
-//showFavoritePagination();
+// showFavoritePagination();
 
 window.setTimeout(Notiflix.Loading.remove(), 5000);
 

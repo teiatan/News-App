@@ -1,49 +1,112 @@
-/* import {test} from '../render-functions/renderFavoriteNews.js';
-import { showFavouriteNews } from '../render-functions/renderFavoriteNews.js';
+import { showFavouriteNews} from '../render-functions/renderFavoriteNews.js';
+import { createPagin } from './pagin.js';
+import {refs} from '../refs';
+const favorite = JSON.parse(localStorage.getItem ("favorite"));
 const paginConteinBtn = document.getElementById('pagination');
-const favorite = test;
 const perPage = 3;
 const pages = Math.ceil(favorite.length / perPage);
 
-let news = [];
-const paginationMarkUp = [];
-
+let newsPerPage = [];
+let newsArr = [];
 paginConteinBtn.addEventListener('click', onPaginBtnClick);
 
-export function showFavoritePagination() {
+const start = 1 * perPage;
+const end = start + perPage;
+newsPerPage = favorite.slice(start, end);
+newsArr.push(newsPerPage);
+console.log(newsArr[0]);
 
-   if(favorite.length === 0) {
-      return;
-   } 
+const newsMarkup = newsPerPage.map(
+           ({
+       id,
+       category,
+       wasRead,
+       img,
+       imgAlt,
+       title,
+       description,
+       date,
+       favorite,
+       link
+    }) => {
+           return`
+   <li class="news__item card" data-id=${id}>
+   <p class="news__Already-read is-hidden">Already read 
+     <svg class="news__svg news_svg-alreagy-read>
+         <use href="/sprite.e70822e0.svg#Vector-1"></use>
+     </svg>
+   </p>
+   <div class="news__container">
+     <span class="news__read is-hidden"></span>
+     <div class="news__container-img">
+   
+     <button class="news__favorite">Add to favorite
+     <svg class="news__svg news__svg-heart">
+         <use href="/sprite.e70822e0.svg#heartDisable"></use>
+     </svg>
+     <svg class="news__svg news__svg-heart" style="display:none">
+         <use href="/sprite.e70822e0.svg#heartActive"></use>
+     </svg>
+     </button>
+   
+     <img src="${img}" alt="${imgAlt}" class="news__img"/>
+   </div>
+   
+   <h3 class="news__title">${title}</h3>
+   <p class="news__abstract">${description}</p>
+     
+   <span class="news__date">${date}</span>
+   <p class="news__category news__marker-search">${category}</p>
+   <a href="${link}" class="news__link" target = "_blank">Read more</a></div>
+   </li>
+   ` }).join('');
+   refs.favouriteNewsContainer.innerHTML = newsMarkup;
+ 
 
-   for(let i = 1; i <= pages; i += 1) {
-      const onePaginationBtnMarkup = `<li class="pg-item"><a class="pg-link" data-page="${i}">${i}</a></li>`;
-      paginationMarkUp.push(onePaginationBtnMarkup);
-   } 
+export function showFavoritePagination(item) {
 
-   paginConteinBtn.insertAdjacentHTML('beforeend', paginationMarkUp.join(''));
+
+
+   // if(favorite.length === 0) {
+   //    return;
+   // } 
+
+   // for(let i = 1; i <= pages; i += 1) {
+   //    createPagin(pages, i);
+   // } 
+   createPagin(pages, 1);
+   // showFavouriteNews(item);
 }
 
 function onPaginBtnClick(evt) {
    evt.preventDefault();
 
-   const paginBtnEl = evt.target.classList.contains('pg-link');
+   const paginBtnEl = evt.target.classList.contains('pg-item');
 
    if(!paginBtnEl) {
        return;
    }
 
-   const pageNum = evt.target.dataset.page;
+   const pageNum = +evt.target.textContent;
    const start = (pageNum - 1) * perPage;
    const end = start + perPage;
+   newsPerPage = favorite.slice(start, end);
+   console.log(newsPerPage);
+   newsArr.push(newsPerPage);
 
-   news = favorite.slice(start, end);
-   
-   console.log(news);
-   showFavouriteNews();
+   const currentActivePage = document.querySelector('.pg-item.active');
+
+   if(currentActivePage){
+         currentActivePage.classList.remove('active');
+   }
+   evt.target.classList.add('active');
+
+   createPagin(pages, pageNum);
+   showFavouriteNews(newsPerPage);
 }
+console.log(newsArr);
 
-// showFavoritePagination();
+showFavoritePagination(newsArr[0]);
 
 
-// export news */
+// // export news */
