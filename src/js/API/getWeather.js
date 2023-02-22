@@ -59,7 +59,7 @@ export  async function fetchWeatherByGeo(lat, lon) {
      </div>
   </div>
    <img class="weather-img"
-         src="./img/weather-icon-temp.png"
+         src="https://openweathermap.org/img/wn/10n@4x.png"
         alt="Weather icon"/>
    <p class="weather-date">Mon</p>
    <p class="weather-date">20 Feb 2023</p>
