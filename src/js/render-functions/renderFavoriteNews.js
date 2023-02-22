@@ -1,5 +1,7 @@
 import {refs} from '../refs';
-const news = [
+import { addNewsToFavoriteArrayInLocalStorage } from '../addNewstoFavoriteLocalStorige';
+
+const newsArray = [
     {
         id: "100000008772688",
         category: "Technology",
@@ -37,6 +39,7 @@ const news = [
         link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
       }
 ];
+const news = JSON.parse(localStorage.getItem ("favorite"));
 localStorage.setItem("news", JSON.stringify(news));
   
 const savedSettings = localStorage.getItem("news");
@@ -64,22 +67,38 @@ export function showFavouriteNews(){
         }
 
         return`
-        <li class="news__item card" data-id=${id}>
-        <span class="news__category is-hidden">${category}</span>
-        <span class="news__read is-hidden"></span>
-        <div class="news__container-img">
-        
-        <button class="news__favorite">Add to favorite</button>
-        <img src="${img}" alt="${imgAlt}" class="news__img"/>
-        </div>
-        <h3 class="news__title">${title}</h3>
-        <p class="news__abstract">${description}</p>
-        
-        <span class="news__date">${date.replaceAll('-' , '/')}</span>
-        <a href="${link}" class="news__link" target = "_blank">Read more</a>
-    </li>
+<li class="news__item card" data-id=${id}>
+<p class="news__Already-read is-hidden">Already read 
+  <svg class="news__svg news_svg-alreagy-read>
+      <use href="/sprite.e70822e0.svg#Vector-1"></use>
+  </svg>
+</p>
+<div class="news__container">
+  <span class="news__read is-hidden"></span>
+  <div class="news__container-img">
+
+  <button class="news__favorite">Add to favorite
+  <svg class="news__svg news__svg-heart">
+      <use href="/sprite.e70822e0.svg#heartDisable"></use>
+  </svg>
+  <svg class="news__svg news__svg-heart" style="display:none">
+      <use href="/sprite.e70822e0.svg#heartActive"></use>
+  </svg>
+  </button>
+
+  <img src="${img}" alt="${imgAlt}" class="news__img"/>
+</div>
+
+<h3 class="news__title">${title}</h3>
+<p class="news__abstract">${description}</p>
+  
+<span class="news__date">${date}</span>
+<p class="news__category news__marker-search">${category}</p>
+<a href="${link}" class="news__link" target = "_blank">Read more</a></div>
+</li>
 ` }).join('');
 refs.favouriteNewsContainer.innerHTML = newsMarkup;
+addNewsToFavoriteArrayInLocalStorage();
     }
 
 }
