@@ -1,26 +1,40 @@
+//розмітка 1 картки новини 
+//Використовуємо для всіх рендерів новин
+//нижче два варіанти, використовуємо new thread
+//якщо використовували olg thread - перероблюємо
+
+
+//olg thread
+/*
+`<li class="news__item card" data-id=${id}>
+    <p class="news__Already-read is-hidden">Already read 
+        <svg style="display:inline" width="17px" height="13px">
+            <use href="/sprite.e70822e0.svg#Vector-1"></use>
+        </svg>
+    </p>
+    <div class="news__container">
+      <span class="news__read is-hidden"></span>
+      <div class="news__container-img">
+       <button class="news__favorite">Add to favorite</button>
+       <img src="${imgSrc}" alt="${alt}" class="news__img"/>
+    </div>
+
+    <h3 class="news__title">${title}</h3>
+    <p class="news__abstract">${abstract}</p>
+      
+    <span class="news__date">${date}</span>
+    <p class="news__marker-search">${section}</p>
+    <a href="${url}" class="news__link" target = "_blank">Read more</a></div>
+</li>`
+*/
+
+
+
+
+
+
+
 //new thread
-
-
-export function fillAbsentDataInNewsCard() {
-  const newsImg = document.querySelector('.news__img');
-  const newsTitle = document.querySelector('.news__title');
-  const newsAbstract = document.querySelector('.news__abstract');
-  const newsCategory = document.querySelector('.news__category');
-  const newsLink = document.querySelector('.news__link');
-
-  if (newsImg === null || undefined || '') {
-    newsImg.innerHTML = ` <img src="./src/img/plug-Desc.png" alt="No image" class="news__img"/>`;
-  } else if (newsTitle === null || undefined || '') {
-    newsTitle.textContent = 'Something goes wrong - no title';
-  } else if (newsAbstract === null || undefined || '') {
-    newsAbstract.textContent = "We couldn't download description of this article, sorry";
-  } else if (newsCategory === null || undefined || '') {
-    newsCategory.textContent = 'Ooops';
-  } else if (newsLink === null || undefined || '') {
-    newsLink.innerHTML = `<a href="https://www.nytimes.com/" class="news__link" target = "_blank">Read more</a></div>`;
-  }
-  return;
-}  
 /*
 `
           <li class="news__item card" data-id=${id}>

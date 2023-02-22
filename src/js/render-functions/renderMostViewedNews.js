@@ -1,6 +1,7 @@
 import { refs } from '../refs';
 import { weatherMarkup } from '../API/getWeather';
 import { fillAbsentDataInNewsCard } from './newsCardSample';
+import { addNewsToFavoriteArrayInLocalStorage } from '../addNewstoFavoriteLocalStorige';
 import { addNewsToReadArrayInLocalStorage } from '../addNewsToReadArrayInLocalStorage';
 export async function showMostViewedNews(apiFetch) {
     renderMostViewedNews(await apiFetch);
@@ -71,6 +72,7 @@ export async function renderMostViewedNews({results}) {
   refs.renderContainerHome.insertAdjacentHTML('afterbegin', markup);
   //fillAbsentDataInNewsCard();
   addNewsToReadArrayInLocalStorage();
+  addNewsToFavoriteArrayInLocalStorage();
   
   const wasRead = document.querySelector(".news__container");
   const links = document.querySelectorAll(".news__link");

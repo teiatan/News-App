@@ -13,6 +13,7 @@ import { onSubmitSearchForm } from './js/API/getNewsByFormInput';
 import { showNewsByFormInput } from './js/render-functions/renderNewsByFormInput';
 
 import { developers } from './developers';
+import {renderDevelopers} from './js/renderDevelopers';
 
 import { renderCategories } from './js/render-functions/renderCategories';
 import { categoriesModalBtn } from './js/categoriesModalBtn';
@@ -39,7 +40,7 @@ viewportWidthCheck();
 addEventListenerForBurgerBtn();
 
 //addNewsToReadArrayInLocalStorage();
-addNewsToFavoriteArrayInLocalStorage();
+//addNewsToFavoriteArrayInLocalStorage();
 
 //changeTheme();
 //addDarkClass();
