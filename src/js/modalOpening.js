@@ -46,6 +46,7 @@ export function openAuthModal() {
     removeIsHidden(refs.authModal);
     refs.authEntranceBtn.addEventListener('click', authEntranceBtnHandler);
     refs.authRegistrationBtn.addEventListener('click', signUpBtnHandler);
+    refs.body.classList.add('no-scroll');
     document.addEventListener( 'keyup', authWithEnter);
 
 };
@@ -60,10 +61,16 @@ export function closeAuthModal() {
 export function openDevelopersModal() {
     refs.developerModal.addEventListener('click', closeDeveloperModalOnMouse);
     refs.developerModal.classList.remove('is-hidden')
+    refs.body.classList.add('no-scroll');
 };
-
+refs.developerModalBtnClose.addEventListener("click", () => {
+  refs.developerModal.classList.add('is-hidden')
+  refs.body.classList.remove('no-scroll');
+});
+    
 export function closeDevelopersModal() {
     refs.developerModal.classList.add('is-hidden')
+    refs.body.classList.remove('no-scroll');
 };
 
 function authWithEnter(e) {
@@ -77,8 +84,20 @@ function authWithEnter(e) {
 
 function closeDeveloperModalOnMouse(e) {
     console.log("close");
-        if(e.target === e.currentTarget) {
-            closeDevelopersModal();
-        }
+    if (e.target === e.currentTarget) {
+        closeDevelopersModal();
+    }
+};
 
-    };
+refs.authModalBtnClose.addEventListener("click", () => {
+  refs.authModal.classList.add('is-hidden')
+  refs.body.classList.remove('no-scroll');
+});
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+      closeDevelopersModal();
+      refs.authModal.classList.add('is-hidden')
+      refs.body.classList.remove('no-scroll');
+  }
+});

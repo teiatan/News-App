@@ -5,18 +5,19 @@ refs.modalOtherBtns.addEventListener('click', categoriesButtonModalClick);
 export default function categoriesButtonModalClick() {
   refs.renderContainerCategoriesTheme.classList.toggle('is-hidden');
   refs.modalOtherArrow.classList.toggle('switched');
-}
 
-// refs.modalText.
-window.addEventListener('resize', handleResize);
-
-
-export default function handleResize() {
-  if(window.innerWidth >= 768) {
-    refs.modalText.textContent = 'Others';
+  function handleClickOutside(e) {
+    if (
+      !refs.renderContainerCategoriesTheme.contains(e.target) &&
+      !refs.modalOtherBtns.contains(e.target)
+    ) {
+      refs.renderContainerCategoriesTheme.classList.remove('is-hidden');
+      refs.modalOtherArrow.classList.remove('switched');
+      document.removeEventListener('click', handleClickOutside);
+    }
   }
-  else {
-    refs.modalText.textContent = 'Categories';
-  }
+
+  setTimeout(() => {
+    document.addEventListener('click', handleClickOutside);
+  }, 0);
 }
-  handleResize();
