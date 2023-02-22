@@ -9,8 +9,6 @@ export function defaultLocalStorage() {
         localStorage.lang = 'en';
         localStorage.theme = 'light';
         localStorage.auth = 'no';
-        localStorage.favorite = [];
-        localStorage.read = [];
         localStorage.temperature = '20C';
         localStorage.city = 'Kyiv';
     };
