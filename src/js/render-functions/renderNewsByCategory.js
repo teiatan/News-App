@@ -14,19 +14,18 @@ export async function showNewsByCategory(category) {
 export function renderNewsList(newsList) {
   const newsMarkup = newsList
     .map(news => {
-      const { url, id, title, abstract, subsection, published_date, media } =
-        news;
+      const { url, id, title, abstract, subsection, pub_date } = news;
 
       let imgSrc = '';
       let mediaMetaData = 2;
       let alt = '';
 
-      if (media.length > 0) {
-        imgSrc = media[0]['media-metadata'][`${mediaMetaData}`].url;
-        alt = media[0].caption;
-      } else {
-        imgSrc = '/assets/actions-config-step-1.png';
-      }
+      //   if (media.length > 0) {
+      //     imgSrc = media[0]['media-metadata'][`${mediaMetaData}`].url;
+      //     alt = media[0].caption;
+      //   } else {
+      //     imgSrc = '/assets/actions-config-step-1.png';
+      //   }
 
       return `
       <li class="news__item card" data-id="${id}">
@@ -52,7 +51,7 @@ export function renderNewsList(newsList) {
           </div>
           <h3 class="news__title">${title}</h3>
           <p class="news__abstract">${abstract}</p>
-          <span class="news__date">${published_date.replaceAll('-', '/')}</span>
+          <span class="news__date">${pub_date.replaceAll('-', '/')}</span>
           <p class="news__category news__marker-search">${subsection}</p>
           <a href="${url}" class="news__link" target="_blank">Read more</a>
         </div>
