@@ -59,15 +59,6 @@ role: "developer",
 doneTasks: "календар"},
 
 
-{ fullName: "Pavlo Shyshko",
-linkedIn: "https://www.linkedin.com/in/pavlo-shyshko-5512aa140/","gitHub": "https://github.com/PavloShyshko",
-mail: "shyshkopavlo@gmail.com",
-telegram: "https://t.me/PavloPalych",
-photo: "",
-role: "Scrum master",
-doneTasks: ""},
-
-
 { fullName: "Nazarii Tkachuk",
 linkedIn: "",
 gitHub: "https://github.com/Nazzik1992",
