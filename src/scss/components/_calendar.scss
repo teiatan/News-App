@@ -11,9 +11,7 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--additional-accent--text-color);
   }
-.calendar{
-  display: flex;
-}
+
   .calendar-input.isActive {
     background-color: var(--accent--text-color);
     color: var(--additional-accent--text-color);
@@ -207,7 +205,6 @@
     line-height: 1.38;
     color: var(--main--text-color);
   }
-
 
 .calendar-form {
   display: flex;
