@@ -62,7 +62,7 @@
 
 button.prev-page,
 button.next-page {
-  width: 72px;
+  width: 82px;
   font-family: Manrope;
   font-size: 14px;
   font-weight: 500;
@@ -103,6 +103,7 @@ button:focus span {
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
+  background-color: var(--first-additional--text-color);
 }
 
 #pagination {
