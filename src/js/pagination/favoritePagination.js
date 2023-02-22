@@ -1,4 +1,4 @@
-import {test} from '../render-functions/renderFavoriteNews.js';
+//import {test} from '../render-functions/renderFavoriteNews.js';
 import { showFavouriteNews } from '../render-functions/renderFavoriteNews.js';
 const paginConteinBtn = document.getElementById('pagination');
 const favorite = test;
