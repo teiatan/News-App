@@ -1,7 +1,7 @@
 :root {
-
   /* text-color  */
   --main--text-color: #111321;
+  --header-border: rgba(0, 0, 0, 0.2);
   --header-border: rgba(0, 0, 0, 0.2);
   --first-additional--text-color: #a8a8a8;
   --second-additional--text-color: #4440f6;
@@ -13,6 +13,9 @@
   --calendar--text-color: #000000;
   --categories-text-color: #4440f7;
   --categories-text-color-hover: #ffffff;
+  --calendar-inactive-color: #5F6775;
+  --categories-text-color: #4440f7;
+  --categorieshover--text-color: #ffffff;
 
   /* background-color */
   --main--background-color: #f4f4f4;
@@ -38,6 +41,15 @@
   --back-to-top-btn-color: white;
   --back-to-top-btn-bg-color: #7270ca;
   --back-to-top-btn-bg-color-hover: #4440f7;
+  
+  --moon-stroke-color: #5F6775;
+  --sun-stroke-color: #4B48DB;
+  --categories-background-color: #ffffff;
+  --categories-hover--background-color: #4440f6;
+  --main--border-color: #111321;
+  --aditional--border-color: #4440F7;
+  --categories--border-color: #4440f7;
+  --calendar-button-arrow--svg-color:#A2A2A2;
 }
 
 [dark] {
@@ -51,7 +63,7 @@
   --already-read--text-color: #00dd73;
   --accent--text-color: #4440f6;
   --categories-text-color: #4440f7;
-
+  --categorieshover--text-color: #ffffff;
   /* for hover,focus,accent */
   --additional-accent--text-color: #ffffff;
   /* for hover,focus,accent */
@@ -86,4 +98,15 @@
   --back-to-top-btn-color: black;
   --back-to-top-btn-bg-color: white;
   --back-to-top-btn-bg-color-hover: wheat;
+  
+  
+  --moon-stroke-color: #4B48DB;
+  --sun-stroke-color: #5F6775;
+  --accent--background-color: #4b48db;
+  --categories-background-color: #ffffff;
+  --categories-hover--background-color: #4440f6;
+  --categories--border-color: #4440f7;
+  --calendar-button-arrow--svg-color:#F4F4F4;
+  
 }
+

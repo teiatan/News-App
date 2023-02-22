@@ -1,7 +1,7 @@
 const daysTag = document.querySelector('.days'),
   currentDate = document.querySelector('.current-date'),
   prevNextIcon = document.querySelectorAll('.calendar-icons span');
-
+ 
 // getting new date, current year and month
 let date = new Date(),
   currDay = date.getDate(),
@@ -60,7 +60,7 @@ const months = [
   'December',
 ];
 const renderCalendar = number => {
-  let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
+  let firstDayofMonth = new Date(currYear, currMonth, 0).getDay(), // getting first day of month
     lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
     lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
     lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
@@ -76,7 +76,7 @@ const renderCalendar = number => {
       currYear === new Date().getFullYear();
     liTag += `<li class="${isToday}">${i}</li>`;
   }
-  for (let i = lastDayofMonth; i < 6; i++) {
+  for (let i = lastDayofMonth; i < 7; i++) {
     liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;
   }
   currentDate.innerText = `${months[currMonth]} ${currYear}`; 
@@ -104,6 +104,7 @@ const renderCalendar = number => {
     localStorage.setItem('VALUE', JSON.stringify(newValueDay));
 
     let inputDateValue = document.querySelector('.calendar-input').value;
+
     localStorage.setItem('date', JSON.stringify(inputDateValue));
     document.querySelector('[data-modal]').classList.add('is-hidden-wrapper');
     document.querySelector('.calendar-input').classList.remove('isActive');
@@ -116,6 +117,7 @@ const renderCalendar = number => {
   });
   //}
 };
+
 
 renderCalendar();
 let findUl = document.querySelector('.days');
@@ -143,3 +145,6 @@ prevNextIcon.forEach(icon => {
 
 localStorage.removeItem('VALUE');
 localStorage.removeItem('date');
+
+export let selectedDate = document.querySelector('.calendar-input').value;
+console.log("Selected Date:", selectedDate);
