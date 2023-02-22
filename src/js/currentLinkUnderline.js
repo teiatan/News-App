@@ -1,16 +1,16 @@
 import { refs } from "./refs"
 
-const { navFavoriteLink, navReadLink, navHomeLink} = refs; 
+const { navigationFavoriteLink, navigationReadLink, navigationHomeLink } = refs; 
 
 const currentClass = 'navigation__item--current';
 
 export function currentLinkUnderline() {
     if (document.title.toLowerCase() === 'newsapp') {
-        //navHomeLink.classList.add(currentClass)    
+        navigationHomeLink.classList.add(currentClass)    
     } else if (document.title.toLowerCase() === 'favorite') {
-        navFavoriteLink.classList.add(currentClass)
+        navigationFavoriteLink.classList.add(currentClass)
     } else if (document.title.toLowerCase() === 'read') {
-        navReadLink.classList.add(currentClass)
+        navigationReadLink.classList.add(currentClass)
     }
 }
 

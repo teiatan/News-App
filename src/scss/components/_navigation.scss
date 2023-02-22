@@ -1,5 +1,5 @@
 .header__mobile-menu-container {    
-    
+    align-items: baseline;
     @include mq(tablet) {
         margin-left: auto;
         display: flex;
@@ -16,7 +16,6 @@
     display: none;
     
     @include mq(tablet) {
-        position: relative;
         display: block;
     }
 }
@@ -52,7 +51,6 @@
 }
 
 .navigation__item--current {
-
     @include mq(tablet) {
         position: relative;
     }
