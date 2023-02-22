@@ -14,18 +14,24 @@ export async function showNewsByCategory(category) {
 export function renderNewsList(newsList) {
   const newsMarkup = newsList
     .map(news => {
-      const { url, id, title, abstract, subsection, pub_date } = news;
+      const {
+        id,
+        headline,
+        web_url,
+        pub_date,
+        section_name,
+        abstract,
+        multimedia,
+      } = news;
 
-      let imgSrc = '';
-      let mediaMetaData = 2;
-      let alt = '';
+      const imgSrc = `https://static01.nyt.com/${
+        multimedia.find(
+          item => item.type === 'image' && item.subtype === 'xlarge'
+        ).legacy.xlarge
+      }`;
 
-      //   if (media.length > 0) {
-      //     imgSrc = media[0]['media-metadata'][`${mediaMetaData}`].url;
-      //     alt = media[0].caption;
-      //   } else {
-      //     imgSrc = '/assets/actions-config-step-1.png';
-      //   }
+      const alt = multimedia?.[0]?.caption ?? 'No image available';
+      const newsAbstract = newsList.abstract ?? 'No abstract available';
 
       return `
       <li class="news__item card" data-id="${id}">
@@ -49,11 +55,11 @@ export function renderNewsList(newsList) {
             </button>
             <img src="${imgSrc}" alt="${alt}" class="news__img"/>
           </div>
-          <h3 class="news__title">${title}</h3>
+          <h3 class="news__title">${headline.main}</h3>
           <p class="news__abstract">${abstract}</p>
           <span class="news__date">${pub_date.replaceAll('-', '/')}</span>
-          <p class="news__category news__marker-search">${subsection}</p>
-          <a href="${url}" class="news__link" target="_blank">Read more</a>
+          <p class="news__category news__marker-search">${section_name}</p>
+          <a href="${web_url}" class="news__link" target="_blank">Read more</a>
         </div>
       </li>
     `;
