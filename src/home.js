@@ -17,6 +17,7 @@ import { renderDevelopers } from './js/renderDevelopers';
 
 import { renderCategories } from './js/render-functions/renderCategories';
 import { categoriesModalBtn } from './js/categoriesModalBtn';
+import { showNewsByCategory } from './js/render-functions/renderNewsByCategory';
 
 import { changeTheme, addDarkClass } from './js/changeTheme';
 import { fetchDefaultWeather } from './js/API/getWeather';
@@ -26,6 +27,7 @@ import { addNewsToFavoriteArrayInLocalStorage } from './js/addNewstoFavoriteLoca
 
 Notiflix.Loading.pulse();
 renderCategories();
+showNewsByCategory();
 defaultLocalStorage();
 addModalOpenListeners();
 headerLogic();
