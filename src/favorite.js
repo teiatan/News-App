@@ -11,7 +11,7 @@ import { currentLinkUnderline } from './js/currentLinkUnderline';
 import {showFavouriteNews} from './js/render-functions/renderFavoriteNews';
 import { showFavoritePagination } from './js/pagination/favoritePagination.js';
 import { changeTheme, addDarkClass } from './js/changeTheme';
-
+import {clickonSearchForm} from './js/headerSearchForm'
 
 Notiflix.Loading.pulse();
 defaultLocalStorage();
@@ -32,9 +32,6 @@ addEventListenerForBurgerBtn();
 
 //changeTheme();
 //addDarkClass();
+clickonSearchForm();
 
-
-refs.searchForm.addEventListener("submit", clickonSearchForm);
-function clickonSearchForm(){
-   window.location.href = 'index.html' }
 

@@ -8,6 +8,7 @@ import { addListenersForMobileHeader, viewportWidthCheck } from './js/headerSear
 import { currentLinkUnderline } from './js/currentLinkUnderline';
 import { changeTheme, addDarkClass } from './js/changeTheme';
 import { showReadNews } from './js/render-functions/renderReadNews';
+import {clickonSearchForm} from './js/headerSearchForm'
 
 Notiflix.Loading.pulse();
 defaultLocalStorage();
@@ -26,7 +27,5 @@ addEventListenerForBurgerBtn();
 
 //changeTheme();
 //addDarkClass();
+clickonSearchForm();
 
-refs.searchForm.addEventListener("submit", clickonSearchForm);
-function clickonSearchForm(){
-   window.location.href = 'index.html' }
