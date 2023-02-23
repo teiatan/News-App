@@ -4,9 +4,7 @@ import { getNewsByCategory } from '../API/getNewsByCategory';
 // рендер новин по категорії приходить з кнопки категорії  і визиваю функцію взяти масив с АРІ визиваю функцію рендеру
 export async function showNewsByCategory(category) {
   const newsList = await getNewsByCategory(category);
-  //   console.log(newsList.data.response.docs);
   const { docs } = newsList.data.response;
-  //   console.log(docs);
 
   renderNewsList(docs, category);
 }
@@ -67,7 +65,7 @@ export function renderNewsList(newsList, category) {
     `;
     })
     .join('');
-  //   console.log(newsMarkup);
+
   refs.renderContainerHome.innerHTML = '';
   refs.renderContainerHome.insertAdjacentHTML('afterbegin', newsMarkup);
 }
