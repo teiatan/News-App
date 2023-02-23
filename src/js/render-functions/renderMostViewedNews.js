@@ -32,6 +32,12 @@ export async function renderMostViewedNews({results}) {
         imgSrc = media[0]["media-metadata"][`${mediaMetaData}`].url
         alt = media[0]["caption"]
       }
+      if(subsection.length === 0) {
+        sub = `<p class="">${subsection}</p>`;
+      } else { 
+        sub = `<p class="news__category news__marker-search">${subsection}</p>`
+      }
+      console.log(sub);
       
       return `
           <li class="news__item card" data-id=${id}>
@@ -58,9 +64,9 @@ export async function renderMostViewedNews({results}) {
 
             <h3 class="news__title">${title}</h3>
             <p class="news__abstract">${abstract}</p>
-              
+            <p ${sub}</p>
             <span class="news__date">${published_date.replaceAll('-' , '/')}</span>
-            <p class="news__category news__marker-search">${subsection}</p>
+            ${sub}
             <a href="${url}" class="news__link" target = "_blank">Read more</a></div>
           </li>
       `

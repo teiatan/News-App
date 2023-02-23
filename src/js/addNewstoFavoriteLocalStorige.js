@@ -3,6 +3,8 @@ import { refs } from './refs';
 import { openAuthModal } from './modalOpening';
 
 
+
+
 export function addNewsToFavoriteArrayInLocalStorage() {
   const containerWithCards = refs.favouriteNewsContainer;
   containerWithCards.addEventListener('click', addNewsToFavoriteArray);
@@ -45,7 +47,8 @@ function addNewsToFavoriteArray(event) {
     if(favoriteArrayFromLocalStorage === null || favoriteArrayFromLocalStorage === undefined || favoriteArrayFromLocalStorage === "" || favoriteArrayFromLocalStorage === [] || favoriteArrayFromLocalStorage === {}) {
       //console.log("localStorage порожній");
       localStorage.setItem ("favorite", JSON.stringify(newsTargetObject));
-      event.target.textContent = 'Remove from favorite';
+      // event.target.textContent = 'Remove from favorite';
+      event.target.innerHTML = 'Remove from favorite <svg class="news__svg news__svg-heart"><use href="/sprite.e70822e0.svg#heartActive"></use></svg>';
     } else {
       //console.log("localStorage не порожній");
       const filledFavoriteArray = JSON.parse(localStorage.getItem ("favorite"));
@@ -53,7 +56,8 @@ function addNewsToFavoriteArray(event) {
       //console.log(typeof filledFavoriteArray);
       if(filledFavoriteArray.id === newsTargetObject.id) {
         localStorage.favorite = "";
-        event.target.textContent = 'Add to favorite';
+        // event.target.textContent = 'Remove from favorite';
+        event.target.innerHTML = 'Add to favorite <svg class="news__svg news__svg-heart"><use href="/sprite.e70822e0.svg#heartDisable"></use></svg>';
       } else {
         //console.log(Array.isArray(filledFavoriteArray));
 
@@ -66,14 +70,17 @@ function addNewsToFavoriteArray(event) {
                 const box = filledFavoriteArray;
                 box.push(newsTargetObject);
                 localStorage.setItem ("favorite", JSON.stringify(box));
-                //console.log(filledFavoriteArray);
-                event.target.textContent = 'Remove from favorite';
+              
+                // event.target.textContent = 'Remove from favorite';
+                event.target.innerHTML = 'Remove from favorite <svg class="news__svg news__svg-heart"><use href="/sprite.e70822e0.svg#heartActive"></use></svg>';
+                
               } else {
                 const box = filledFavoriteArray;
                 box.splice(newsId, 1);
                 localStorage.setItem ("favorite", JSON.stringify(box));
                 //console.log(filledFavoriteArray);
-                event.target.textContent = 'Add to favorite';
+                // event.target.textContent = 'Add to favorite';
+                event.target.innerHTML = 'Add to favorite <svg class="news__svg news__svg-heart"><use href="/sprite.e70822e0.svg#heartDisable"></use></svg>';
               };
 
         } else {
@@ -100,5 +107,5 @@ function addNewsToFavoriteArray(event) {
     }
   }
 }
-  
+ console.log(newLocalStorage); 
 
