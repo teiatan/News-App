@@ -1,6 +1,5 @@
 .top-container {
   display: flex;
-  justify-content: space-between;
 }
 .days li .inactive {
   color: var(--first-additional--text-color);
@@ -53,7 +52,7 @@
   .calendar-form {
     display: flex;
     position: relative;
-    margin-left: 52px;
+    margin-left: auto;
     }
   
   
@@ -212,7 +211,9 @@
 .calendar-form {
   display: flex;
   position: relative;
-  margin-left: 40px;
+  margin-left: auto;
+  gap: 37px;
+  justify-content: center;
 }
 
 .calendar-input {

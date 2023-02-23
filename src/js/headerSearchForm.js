@@ -15,8 +15,6 @@ function onSearchFormFocusLose() {
     }
 }
 
-
-
 export function viewportWidthCheck() {
     if (window.innerWidth >= 768) {
         refs.searchForm.classList.remove('is-hidden');
