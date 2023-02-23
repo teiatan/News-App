@@ -10,7 +10,6 @@ export async function showNewsByCategory(category) {
 }
 
 export function renderNewsList(newsList, category) {
-  console.log(first);
   const newsMarkup = newsList
     .map(news => {
       const { id, headline, web_url, pub_date, abstract, multimedia } = news;
