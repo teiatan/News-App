@@ -108,6 +108,7 @@ button.next-page:hover {
 }
 
 .page-container button:disabled{
+  cursor: not-allowed;
   opacity: 0.5;
 }
 

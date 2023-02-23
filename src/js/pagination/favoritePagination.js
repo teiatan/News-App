@@ -116,7 +116,6 @@ function showFavouriteNews(news) {
 
 function handleButton(evt) {
     evt.preventDefault();
-
     
   if (evt.target.classList.contains('js-prev-page')) {
     pageNum -= 1;
