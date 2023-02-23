@@ -89,11 +89,14 @@ export async function renderCategories() {
     categorieMarkup2Mobile
   );
 }
-
 export function handleCategoryClick(event) {
   const categoryForSearch = event.target.textContent;
-  // викликаю функцію рендеру новин по категорії і передаю в неї категорію
-  showNewsByCategory(categoryForSearch);
+
+  // Перевіряємо, чи містить клікнутий елемент клас 'other--categories__filters'
+  if (event.target.closest('.other--categories__filters')) {
+    // Якщо елемент містить клас, передаємо категорію в showNewsByCategory
+    showNewsByCategory(categoryForSearch);
+  }
 }
 
 const categoryButtons = document.querySelectorAll(

@@ -6,7 +6,7 @@ export async function showNewsByCategory(category) {
   const newsList = await getNewsByCategory(category);
   //   console.log(newsList.data.response.docs);
   const { docs } = newsList.data.response;
-  console.log(docs);
+  //   console.log(docs);
 
   renderNewsList(docs);
 }
