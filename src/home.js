@@ -7,16 +7,16 @@ import {
 } from './js/headerSearchForm';
 import { addModalOpenListeners } from './js/modalOpening';
 import { currentLinkUnderline } from './js/currentLinkUnderline';
-import { getMostViewedNews } from './js/API/getMostViewedNews';
+import { getMostViewedNews } from './js/api/getMostViewedNews';
 import { showMostViewedNews } from './js/render-functions/renderMostViewedNews';
-import { onSubmitSearchForm } from './js/API/getNewsByFormInput';
+import { onSubmitSearchForm } from './js/api/getNewsByFormInput';
 import { showNewsByFormInput } from './js/render-functions/renderNewsByFormInput';
 import { developers } from './developers';
 import { renderDevelopers } from './js/renderDevelopers';
 import { renderCategories } from './js/render-functions/renderCategories';
 import { categoriesModalBtn } from './js/categoriesModalBtn';
 import { changeTheme, addDarkClass } from './js/changeTheme';
-import { fetchDefaultWeather } from './js/API/getWeather';
+import { fetchDefaultWeather } from './js/api/getWeather';
 import { addNewsToReadArrayInLocalStorage } from './js/addNewsToReadArrayInLocalStorage';
 import { addNewsToFavoriteArrayInLocalStorage } from './js/addNewstoFavoriteLocalStorige';
 

@@ -1,4 +1,4 @@
-import { nytApiSettings } from '../API/nytApiSettings';
+import { nytApiSettings } from './nytApiSettings';
 import axios from 'axios';
 
 async function getCategories() {

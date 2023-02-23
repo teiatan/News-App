@@ -1,5 +1,5 @@
 import { refs } from '../refs';
-import { getNewsByCategory } from '../API/getNewsByCategory';
+import { getNewsByCategory } from '../api/getNewsByCategory';
 
 // рендер новин по категорії приходить з кнопки категорії  і визиваю функцію взяти масив с АРІ визиваю функцію рендеру
 export async function showNewsByCategory(category) {

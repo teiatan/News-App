@@ -1,5 +1,5 @@
 import { refs } from '../refs';
-import { weatherMarkup } from '../API/getWeather';
+import { weatherMarkup } from '../api/getWeather';
 import { fillAbsentDataInNewsCard } from './newsCardSample';
 import { addNewsToFavoriteArrayInLocalStorage } from '../addNewstoFavoriteLocalStorige';
 import { addNewsToReadArrayInLocalStorage } from '../addNewsToReadArrayInLocalStorage';
