@@ -30,6 +30,7 @@ export const refs = {
   searchFormOpeningButton: document.querySelector('.header__search-form-opening-btn'),
   searchForm: document.querySelector('.search-form'),
   searchFormInput: document.querySelector('.search-form__input'),
+  searchFormLabel: document.querySelector('.search-form__label'),
 
   //форма пошуку
   formSearch: document.querySelector('.search-form'),
