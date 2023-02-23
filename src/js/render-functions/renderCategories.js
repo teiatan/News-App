@@ -92,9 +92,14 @@ export async function renderCategories() {
 export function handleCategoryClick(event) {
   const categoryForSearch = event.target.textContent;
 
-  // Перевіряємо, чи містить клікнутий елемент клас 'other--categories__filters'
-  if (event.target.closest('.other--categories__filters')) {
-    // Якщо елемент містить клас, передаємо категорію в showNewsByCategory
+  if (
+    event.target.closest('.categories-render-container__list-desktop') ||
+    event.target.closest('.categories-render-container__list-mobile') ||
+    event.target.closest('.categories-render-container__list-tablet') ||
+    event.target.closest('.other--categories__filters-list') ||
+    (event.target.closest('.other--categories__filters') &&
+      !event.target.closest('.categories-render-container__other-categories'))
+  ) {
     showNewsByCategory(categoryForSearch);
   }
 }
