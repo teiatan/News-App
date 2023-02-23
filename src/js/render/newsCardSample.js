@@ -1,26 +1,42 @@
-//new thread
-
-
 export function fillAbsentDataInNewsCard() {
-  const newsImg = document.querySelector('.news__img');
-  const newsTitle = document.querySelector('.news__title');
-  const newsAbstract = document.querySelector('.news__abstract');
-  const newsCategory = document.querySelector('.news__category');
-  const newsLink = document.querySelector('.news__link');
+  const newsImg = document.querySelectorAll('.news__img');
+  const newsTitle = document.querySelectorAll('.news__title');
+  const newsAbstract = document.querySelectorAll('.news__abstract');
+  const newsCategory = document.querySelectorAll('.news__category');
+  const newsLink = document.querySelectorAll('.news__link');
+  newsImg.forEach( function defaultImage(el) {
+    if (el.src === null || el.src === undefined || el.src === '') {
+      el.src="https://wellesleysocietyofartists.org/wp-content/uploads/2015/11/image-not-found.jpg";
+    };
+    if (el.src.slice((el.src.length-3),(el.src.length)) === 'png') {
+      console.log(el.src.slice((el.src.length-4),(el.src.length-1)));
+      el.src="https://wellesleysocietyofartists.org/wp-content/uploads/2015/11/image-not-found.jpg";
+    };
 
-  if (newsImg === null || undefined || '') {
-    newsImg.innerHTML = ` <img src="./src/img/plug-Desc.png" alt="No image" class="news__img"/>`;
-  } else if (newsTitle === null || undefined || '') {
-    newsTitle.textContent = 'Something goes wrong - no title';
-  } else if (newsAbstract === null || undefined || '') {
-    newsAbstract.textContent = "We couldn't download description of this article, sorry";
-  } else if (newsCategory === null || undefined || '') {
-    newsCategory.textContent = 'Ooops';
-  } else if (newsLink === null || undefined || '') {
-    newsLink.innerHTML = `<a href="https://www.nytimes.com/" class="news__link" target = "_blank">Read more</a></div>`;
-  }
-  return;
-}  
+  })
+
+  newsTitle.forEach( function defaultTitle(el) {
+    if (el.textContent === null || undefined || '') {
+      el.textContent = 'Something goes wrong - no title';
+    };
+  })
+  
+  newsCategory.forEach( function defaultCategory(el) {
+    if (el.textContent === null || el.textContent === undefined || el.textContent === '') {
+    el.textContent = 'No category';
+    };
+  })
+
+  newsAbstract.forEach( function defaultAbstract(el) {
+    if (el.textContent === null || el.textContent === undefined || el.textContent === '') {
+    el.textContent = "We couldn't download description of this article, sorry";
+    };
+    if (el.textContent.length > 125) {
+      el.textContent = `${el.textContent.slice(0,124)} ...`;
+    }
+  })
+};
+
 /*
 `
           <li class="news__item card" data-id=${id}>

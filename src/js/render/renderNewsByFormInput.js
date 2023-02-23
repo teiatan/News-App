@@ -64,7 +64,7 @@ export async function renderNewsByFormInput(results) {
   const markup = weatherMarkup.concat(newsMarkup);
   refs.renderContainerHome.insertAdjacentHTML('afterbegin', markup);
   addNewsToFavoriteArrayInLocalStorage();
-  //addNewsToReadArrayInLocalStorage();
+  addNewsToReadArrayInLocalStorage();
   
 }
 }

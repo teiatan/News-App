@@ -73,10 +73,10 @@ export async function renderMostViewedNews({results}) {
   //fillAbsentDataInNewsCard();
   addNewsToReadArrayInLocalStorage();
   addNewsToFavoriteArrayInLocalStorage();
-  
-  const wasRead = document.querySelector(".news__container");
+  fillAbsentDataInNewsCard();
+  /* const wasRead = document.querySelector(".news__container");
   const links = document.querySelectorAll(".news__link");
-  const already = document.querySelector(".news__Already-read");
+  const already = document.querySelector(".news__Already-read"); */
 
   
   //console.log(links);
