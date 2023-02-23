@@ -16,7 +16,6 @@ import { renderDevelopers } from './js/renderDevelopers';
 import { renderCategories } from './js/render/renderCategories';
 import { categoriesModalBtn } from './js/categoriesModalBtn';
 import { changeTheme, addDarkClass } from './js/changeTheme';
-import { fetchDefaultWeather } from './js/api/getWeather';
 import { addNewsToReadArrayInLocalStorage } from './js/addNewsToReadArrayInLocalStorage';
 import { addNewsToFavoriteArrayInLocalStorage } from './js/addNewstoFavoriteLocalStorige';
 
