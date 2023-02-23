@@ -34,4 +34,4 @@ export function searchByForm() {
 
 refs.searchForm.addEventListener("submit", clickonSearchForm);
 export function clickonSearchForm(){
-   window.location.href = 'index.html' }
+   //window.location.href = 'index.html' }
