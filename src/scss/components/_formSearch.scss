@@ -28,6 +28,7 @@
 .search-form__input {
   background-color: var(--main--background-color);
   border-color: var(--main--border-color);
+  color: var(--main--text-color);
   max-width: 173px;
   min-width: 130px;
   height: 31px;
@@ -51,6 +52,7 @@
     min-width: 288px;
   }
 }
+
 
 .search-form__label {
   pointer-events: none;

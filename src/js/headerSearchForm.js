@@ -24,6 +24,9 @@ export function viewportWidthCheck() {
 }
 
 export function addListenersForMobileHeader() {
+    refs.searchFormInput.addEventListener("input", () => {
+        refs.searchFormLabel.classList.add('is-hidden');
+        });
     refs.searchFormOpeningButton.addEventListener('click', onSearchBtnClick);
     refs.searchFormInput.addEventListener('blur', onSearchFormFocusLose);
 }
