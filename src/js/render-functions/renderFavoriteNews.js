@@ -45,8 +45,8 @@ import { addNewsToFavoriteArrayInLocalStorage } from '../addNewstoFavoriteLocalS
   
 // //const savedSettings = localStorage.getItem("news");
 
-export function showFavouriteNews(news){
-  console.log(news)
+// export function showFavouriteNews(news){
+//   console.log(news)
 //   const news = newsPerPage;
 //   console.log(news);
 // //     if(localStorage.favorite === "" || localStorage.favorite === undefined || localStorage.favorite === null) {
@@ -105,7 +105,7 @@ export function showFavouriteNews(news){
 // addNewsToFavoriteArrayInLocalStorage();
 //     }
 
-}
+// }
 
   
 //   localStorage.setItem("news", JSON.stringify(news));
