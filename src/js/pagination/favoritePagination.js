@@ -2,28 +2,35 @@ import { refs } from '../refs';
 import Notiflix from 'notiflix';
 import { createPagin } from './pagin.js';
 import {refs} from '../refs';
-const favorite = JSON.parse(localStorage.getItem ("favorite"));
+// const favorite = JSON.parse(localStorage.getItem ("favorite"));
 const perPage = 3;
+let favorite = [];
 let pageNum = 1;
+let pages = 1;
 let newsPerPage = [];
 
 refs.paginConteinBtn.addEventListener('click', onPaginBtnClick);
-
-   
+ 
 export function showFavoritePagination() {
+    try {
+        favorite = JSON.parse(localStorage.getItem ("favorite"));
+        pages = Math.ceil(favorite.length / perPage);
+        const start = (pageNum - 1) * perPage;
 
-    if(favorite === "" || favorite === undefined || favorite === null) {
+        findNewsPerPage(start);
+        createPagin(pages, 1);
+        showFavouriteNews(newsPerPage);
+    } catch(err) {
         refs.pag.classList.add('pagination-hidden');
         Notiflix.Report.info('Порожньо', 'Ви ще не додали новин', 'OK');
-        return;
-    } 
+    }
 
-    const pages = Math.ceil(favorite.length / perPage);
-    const start = (pageNum - 1) * perPage;
+    // if(favorite === [] || favorite === undefined || favorite === null) {
+    //     refs.pag.classList.add('pagination-hidden');
+    //     Notiflix.Report.info('Порожньо', 'Ви ще не додали новин', 'OK');
+    //     return;
+    // } 
 
-    findNewsPerPage(start);
-    createPagin(pages, 1);
-    showFavouriteNews(newsPerPage);
 }
 
 function onPaginBtnClick(evt) {
@@ -42,10 +49,11 @@ function onPaginBtnClick(evt) {
    const currentActivePage = document.querySelector('.pg-item.active');
 
    if(currentActivePage){
-         currentActivePage.classList.remove('active');
+        currentActivePage.classList.remove('active');
    }
+
    evt.target.classList.add('active');
-   const pages = Math.ceil(favorite.length / perPage);
+   pages = Math.ceil(favorite.length / perPage);
 
    createPagin(pages, pageNum);
    showFavouriteNews(newsPerPage);
@@ -102,4 +110,42 @@ function showFavouriteNews(news) {
        </li>
        ` }).join('');
        refs.favouriteNewsContainer.innerHTML = newsMarkup;
+}
+
+  refs.pag.addEventListener('click', handleButton);
+
+function handleButton(evt) {
+    evt.preventDefault();
+
+    
+  if (evt.target.classList.contains('js-prev-page')) {
+    pageNum -= 1;
+    handleButtonLeft();
+    refs.nextBtn.disabled = false;
+
+  } else if (evt.target.classList.contains('js-next-page')) {
+    pageNum += 1;
+    handleButtonRight();
+    refs.prevBtn.disabled = false;
+  }
+
+  const start = (pageNum - 1) * perPage;
+  findNewsPerPage(start);
+  createPagin(pages, pageNum);
+  showFavouriteNews(newsPerPage);
+}
+
+function handleButtonLeft() {
+  if (pageNum === 1) {
+    refs.prevBtn.disabled = true;
+  } else {
+    refs.prevBtn.disabled = false;
+  }
+}
+function handleButtonRight() {
+  if (pageNum === pages) {
+    refs.nextBtn.disabled = true;
+  } else {
+    refs.nextBtn.disabled = false;
+  }
 }

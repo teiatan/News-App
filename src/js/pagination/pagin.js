@@ -22,18 +22,18 @@ export function createPagin(totalPages, page) {
     }
 
     // how many pages show before the current li
-    // if(page === totalPages) {
-    //     beforePages -= 2;
-    // }else if(page === totalPages - 1){
-    //     beforePages -= 1;
-    // }
+    if(page === totalPages) {
+        beforePages -= 2;
+    }else if(page === totalPages - 1){
+        beforePages -= 1;
+    }
 
     // // how many pages show after the current li
-    // if(page === 1) {
-    //     afterPages += 2;
-    // }else if(page === 2) {
-    //     afterPages += 1;
-    // }
+    if(page === 1) {
+        afterPages += 2;
+    }else if(page === 2) {
+        afterPages += 1;
+    }
 
     for(let pageLength = beforePages; pageLength <= afterPages; pageLength += 1) {
         if(pageLength > totalPages) {

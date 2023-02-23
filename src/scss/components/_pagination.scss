@@ -96,10 +96,6 @@ button.next-page:hover {
   color: var(--additional-accent--text-color);
 }
 
-button:focus span {
-  color: var(--additional-accent--text-color);
-}
-
 .page-container button:disabled{
   color: var(--main--text-color);
   font-family: Manrope;
