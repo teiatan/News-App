@@ -50,4 +50,9 @@ export const refs = {
 
   navHomeLink: document.querySelector('.render-container--read'),
 
+  // pagination
+  paginConteinBtn: document.getElementById('pagination'),
+  prevBtn: document.querySelector('.js-prev-page'),
+  nextBtn: document.querySelector('.js-next-page'),
+
 };
