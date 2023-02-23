@@ -1,10 +1,10 @@
 import { refs } from '../refs';
+import Notiflix from 'notiflix';
 import { createPagin } from './pagin.js';
 import {refs} from '../refs';
 const favorite = JSON.parse(localStorage.getItem ("favorite"));
 const perPage = 3;
 let pageNum = 1;
-const pages = Math.ceil(favorite.length / perPage);
 let newsPerPage = [];
 
 refs.paginConteinBtn.addEventListener('click', onPaginBtnClick);
@@ -12,10 +12,13 @@ refs.paginConteinBtn.addEventListener('click', onPaginBtnClick);
    
 export function showFavoritePagination() {
 
-    if(favorite.length === "" || favorite.length === undefined || favorite.length === null) {
-        refs.paginConteinBtn.classList.add('pagination-hidden');
+    if(favorite === "" || favorite === undefined || favorite === null) {
+        refs.pag.classList.add('pagination-hidden');
+        Notiflix.Report.info('Порожньо', 'Ви ще не додали новин', 'OK');
         return;
     } 
+
+    const pages = Math.ceil(favorite.length / perPage);
     const start = (pageNum - 1) * perPage;
 
     findNewsPerPage(start);
@@ -37,10 +40,12 @@ function onPaginBtnClick(evt) {
    findNewsPerPage(start);
 
    const currentActivePage = document.querySelector('.pg-item.active');
+
    if(currentActivePage){
          currentActivePage.classList.remove('active');
    }
    evt.target.classList.add('active');
+   const pages = Math.ceil(favorite.length / perPage);
 
    createPagin(pages, pageNum);
    showFavouriteNews(newsPerPage);
