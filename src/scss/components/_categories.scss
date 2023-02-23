@@ -72,15 +72,21 @@
 }
 
 .categories-render-container__other-categories {
-  margin-left: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @include mq(desktop) {
-  }
   @include mq(mobile-only) {
-    margin-right: 0px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+  
+  @include mq(tablet){
+    margin-left: 14px;
   }
+  @include mq(desktop) {
+    margin-left: 16px;
+  }
+  
+  
 }
 
 .other-categories__icon-arrow {
