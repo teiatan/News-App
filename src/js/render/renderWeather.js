@@ -1,5 +1,5 @@
 import { format } from 'date-fns';
-import { fetchDefaultWeather, getGeoposition, fetchWeatherByGeo} from '../api/getWeather';
+import { fetchDefaultWeather, getGeoposition, fetchWeatherByGeo} from '../API/getWeather';
 export let weatherMarkup;
 
 async function createDefaultWeatherMarkup() {

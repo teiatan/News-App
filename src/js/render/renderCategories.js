@@ -1,4 +1,4 @@
-import { getCategories } from '../api/getCategories.js';
+import { getCategories } from '../API/getCategories.js';
 import { refs } from '../refs.js';
 import { showNewsByCategory } from './renderNewsByCategory.js';
 
