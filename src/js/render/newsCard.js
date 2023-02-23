@@ -7,7 +7,7 @@
 //olg thread
 /*
 `<li class="news__item card" data-id=${id}>
-    <p class="news__Already-read is-hidden">Already read 
+    <p class="news__Already-read">Already read &#128504
         <svg style="display:inline" width="17px" height="13px">
             <use href="/sprite.e70822e0.svg#Vector-1"></use>
         </svg>
@@ -38,7 +38,7 @@
 /*
 `
           <li class="news__item card" data-id=${id}>
-            <p class="news__Already-read is-hidden">Already read 
+            <p class="news__Already-read">Already read &#128504
               <svg class="news__svg news_svg-alreagy-read>
                   <use href="/sprite.e70822e0.svg#Vector-1"></use>
               </svg>

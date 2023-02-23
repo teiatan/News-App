@@ -39,7 +39,7 @@ export async function renderNewsByFormInput(results) {
 
       return `
       <li class="news__item card" data-id=${_id}>
-      <p class="news__Already-read is-hidden">Already read 
+      <p class="news__Already-read">Already read &#128504
           <svg style="display:inline" width="17px" height="13px">
               <use href="/sprite.e70822e0.svg#Vector-1"></use>
           </svg>
