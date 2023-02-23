@@ -19,6 +19,9 @@ headerLogic();
 addModalOpenListeners();
 
 
+showFavouriteNews();
+// showFavoritePagination();
+
 
 window.setTimeout(Notiflix.Loading.remove(), 5000);
 
