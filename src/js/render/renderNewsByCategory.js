@@ -1,5 +1,8 @@
 import { refs } from '../refs';
 import { getNewsByCategory } from '../API/getNewsByCategory';
+import { fillAbsentDataInNewsCard } from './newsCardSample';
+import { addNewsToFavoriteArrayInLocalStorage } from '../addNewstoFavoriteLocalStorige';
+import { addNewsToReadArrayInLocalStorage } from '../addNewsToReadArrayInLocalStorage';
 
 // рендер новин по категорії приходить з кнопки категорії  і визиваю функцію взяти масив с АРІ визиваю функцію рендеру
 export async function showNewsByCategory(category) {
@@ -60,4 +63,7 @@ export function renderNewsList(newsList, category) {
 
   refs.renderContainerHome.innerHTML = '';
   refs.renderContainerHome.insertAdjacentHTML('afterbegin', newsMarkup);
+  addNewsToReadArrayInLocalStorage();
+  addNewsToFavoriteArrayInLocalStorage();
+  fillAbsentDataInNewsCard();
 }

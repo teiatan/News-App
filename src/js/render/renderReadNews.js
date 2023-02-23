@@ -1,4 +1,7 @@
 import {refs} from '../refs';
+import { addNewsToFavoriteArrayInLocalStorage } from '../addNewstoFavoriteLocalStorige';
+import { fillAbsentDataInNewsCard } from './newsCardSample';
+import { addNewsToReadArrayInLocalStorage } from '../addNewsToReadArrayInLocalStorage';
 //сonst news = localStorage.read;
 const news = [
     {
@@ -133,6 +136,9 @@ export function showReadNews() {
         </li>`
     }).join('');
     refs.renderContainerReadPage.innerHTML = newsMarkup;
+    addNewsToReadArrayInLocalStorage();
+    addNewsToFavoriteArrayInLocalStorage();
+    fillAbsentDataInNewsCard();
     //addEventListenersForDateBtns();
 };
 };

@@ -9,7 +9,6 @@ export function fillAbsentDataInNewsCard() {
       el.src="https://wellesleysocietyofartists.org/wp-content/uploads/2015/11/image-not-found.jpg";
     };
     if (el.src.slice((el.src.length-3),(el.src.length)) === 'png') {
-      console.log(el.src.slice((el.src.length-4),(el.src.length-1)));
       el.src="https://wellesleysocietyofartists.org/wp-content/uploads/2015/11/image-not-found.jpg";
     };
 
@@ -31,8 +30,8 @@ export function fillAbsentDataInNewsCard() {
     if (el.textContent === null || el.textContent === undefined || el.textContent === '') {
     el.textContent = "We couldn't download description of this article, sorry";
     };
-    if (el.textContent.length > 125) {
-      el.textContent = `${el.textContent.slice(0,124)} ...`;
+    if (el.textContent.length > 140) {
+      el.textContent = `${el.textContent.slice(0,140)} ...`;
     }
   })
 };

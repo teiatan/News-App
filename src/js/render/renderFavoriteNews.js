@@ -103,6 +103,7 @@ export function showFavouriteNews(news){
 // ` }).join('');
 // refs.favouriteNewsContainer.innerHTML = newsMarkup;
 // addNewsToFavoriteArrayInLocalStorage();
+//fillAbsentDataInNewsCard();
 //     }
 
 }

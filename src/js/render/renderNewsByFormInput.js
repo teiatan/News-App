@@ -1,7 +1,8 @@
 import { refs } from '../refs';
 import { weatherMarkup } from '../API/getWeather';
 import { addNewsToFavoriteArrayInLocalStorage } from '../addNewstoFavoriteLocalStorige';
-
+import { fillAbsentDataInNewsCard } from './newsCardSample';
+import { addNewsToReadArrayInLocalStorage } from '../addNewsToReadArrayInLocalStorage';
 
 export async function showNewsByFormInput(apiFetch) {
     renderNewsByFormInput(await apiFetch);
@@ -63,8 +64,8 @@ export async function renderNewsByFormInput(results) {
   .join('');
   const markup = weatherMarkup.concat(newsMarkup);
   refs.renderContainerHome.insertAdjacentHTML('afterbegin', markup);
-  addNewsToFavoriteArrayInLocalStorage();
   addNewsToReadArrayInLocalStorage();
-  
+  addNewsToFavoriteArrayInLocalStorage();
+  fillAbsentDataInNewsCard();
 }
 }
