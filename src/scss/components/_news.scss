@@ -66,19 +66,24 @@
     margin-bottom: 6px;
 }
 
-.news__was-read{
+.was-read{
     opacity: 40%;
 }
-.news__Already-read{
+
+.was-read .news__Already-read{
+        display: block;
         position: absolute;
         color:var(--already-read--text-color);
-        
+        opacity: 100%;
         right: 0;
         z-index: 2;
 
         margin: 20px 22px;
-
         font-weight: 700;
+}
+
+.news__Already-read{
+        display: none;
 }
 .news__container{
 }
