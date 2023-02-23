@@ -19,6 +19,7 @@ import { changeTheme, addDarkClass } from './js/changeTheme';
 import { addNewsToReadArrayInLocalStorage } from './js/addNewsToReadArrayInLocalStorage';
 import { addNewsToFavoriteArrayInLocalStorage } from './js/addNewstoFavoriteLocalStorige';
 
+
 Notiflix.Loading.pulse();
 renderCategories();
 defaultLocalStorage();
