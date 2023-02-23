@@ -8,10 +8,10 @@ export async function showNewsByCategory(category) {
   const { docs } = newsList.data.response;
   //   console.log(docs);
 
-  renderNewsList(docs);
+  renderNewsList(docs, category);
 }
 
-export function renderNewsList(newsList) {
+export function renderNewsList(newsList, category) {
   const newsMarkup = newsList
     .map(news => {
       const {
@@ -60,7 +60,7 @@ export function renderNewsList(newsList) {
           <h3 class="news__title">${headline.main}</h3>
           <p class="news__abstract">${abstract}</p>
           <span class="news__date">${dateWithoutTimeZone}</span>
-          <p class="news__category news__marker-search">${section_name}</p>
+          <p class="news__category news__marker-search">${category}</p>
           <a href="${web_url}" class="news__link" target="_blank">Read more</a>
         </div>
       </li>
