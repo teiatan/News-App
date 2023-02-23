@@ -32,7 +32,7 @@ export function renderNewsList(newsList) {
         ? `https://static01.nyt.com/${multimediaImage.legacy.xlarge}`
         : '';
 
-      const dateWithoutTimeZone = pub_date.slice(0, 19).replace('T', ' ');
+      const dateWithoutTimeZone = pub_date.substring(0, 10).replace(/-/g, '/');
 
       const alt = multimedia?.[0]?.caption ?? 'No image available';
       return `
