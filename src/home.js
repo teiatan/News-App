@@ -8,12 +8,12 @@ import {
 import { addModalOpenListeners } from './js/modalOpening';
 import { currentLinkUnderline } from './js/currentLinkUnderline';
 import { getMostViewedNews } from './js/api/getMostViewedNews';
-import { showMostViewedNews } from './js/render-functions/renderMostViewedNews';
+import { showMostViewedNews } from './js/render/renderMostViewedNews';
 import { onSubmitSearchForm } from './js/api/getNewsByFormInput';
-import { showNewsByFormInput } from './js/render-functions/renderNewsByFormInput';
+import { showNewsByFormInput } from './js/render/renderNewsByFormInput';
 import { developers } from './developers';
 import { renderDevelopers } from './js/renderDevelopers';
-import { renderCategories } from './js/render-functions/renderCategories';
+import { renderCategories } from './js/render/renderCategories';
 import { categoriesModalBtn } from './js/categoriesModalBtn';
 import { changeTheme, addDarkClass } from './js/changeTheme';
 import { fetchDefaultWeather } from './js/api/getWeather';

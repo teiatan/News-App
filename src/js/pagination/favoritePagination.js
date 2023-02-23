@@ -1,4 +1,4 @@
-import { showFavouriteNews} from '../render-functions/renderFavoriteNews.js';
+import { showFavouriteNews} from '../render/renderFavoriteNews.js';
 import { createPagin } from './pagin.js';
 import {refs} from '../refs';
 const favorite = JSON.parse(localStorage.getItem ("favorite"));

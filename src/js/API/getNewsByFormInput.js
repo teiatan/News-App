@@ -2,7 +2,7 @@ import axios from 'axios';
 import Notiflix from 'notiflix';
 import { nytApiSettings } from './nytApiSettings';
 import { refs } from '../refs';
-import {renderNewsByFormInput} from '../render-functions/renderNewsByFormInput';
+import {renderNewsByFormInput} from '../render/renderNewsByFormInput';
 
 
 

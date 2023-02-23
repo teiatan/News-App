@@ -1,6 +1,6 @@
 
 import axios from "axios";
-import { createMarkup } from "../render-functions/renderWeather";
+import { createMarkup } from "../render/renderWeather";
 
 export async function fetchDefaultWeather() {
   const ENDPOINT = 'https://api.openweathermap.org/data/2.5/weather?';
