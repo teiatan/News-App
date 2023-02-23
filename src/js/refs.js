@@ -56,4 +56,9 @@ export const refs = {
   modalText: document.querySelector('.other-categories__button-text'),
   modalOtherBtns: document.querySelector('.other-categories__button'),
   modalOtherArrow: document.querySelector('.other-categories__icon-arrow'),
+
+   // пагінація
+   paginConteinBtn: document.getElementById('pagination'),
+   prevBtn: document.querySelector('.js-prev-page'),
+   nextBtn: document.querySelector('.js-next-page'),
 };
