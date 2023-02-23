@@ -64,11 +64,8 @@ export function openDevelopersModal() {
     refs.developerModal.classList.remove('is-hidden')
     refs.body.classList.add('no-scroll');
 };
-refs.developerModalBtnClose.addEventListener("click", () => {
-  refs.developerModal.classList.add('is-hidden')
-  refs.body.classList.remove('no-scroll');
-});
-    
+
+
 export function closeDevelopersModal() {
     refs.developerModal.classList.add('is-hidden')
     refs.body.classList.remove('no-scroll');
@@ -89,10 +86,15 @@ function closeDeveloperModalOnMouse(e) {
     }
 };
 
-refs.authModalBtnClose.addEventListener("click", () => {
-  refs.authModal.classList.add('is-hidden')
+refs.developerModalBtnClose.addEventListener("click", () => {
+  refs.developerModal.classList.add('is-hidden')
   refs.body.classList.remove('no-scroll');
 });
+
+// refs.authModalBtnClose.addEventListener("click", () => {
+//     refs.authModal.classList.add('is-hidden')
+//     refs.body.classList.remove('no-scroll');
+// });
 
 document.addEventListener('keydown', function(event) {
   if (event.key === 'Escape') {
