@@ -13,7 +13,7 @@ export function addNewsToFavoriteArrayInLocalStorage() {
 let newLocalStorage = [];
  
 function addNewsToFavoriteArray(event) {
-  console.log("клік працює")
+  //console.log("клік працює")
   if(localStorage.auth === 'no') {
     //console.log("не авторизовано")
     Notiflix.Notify.failure('Sorry, for using this opportunity you need to be signed in');

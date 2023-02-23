@@ -67,7 +67,7 @@ export function showFavouriteNews(news){
 //  }) => {
     
 //     if(!localStorage.getItem("news")){
-//            return  alert("Not found news");
+//            return;
 //         }
 
 //         return`
@@ -115,7 +115,7 @@ export function showFavouriteNews(news){
 // // console.log(parsedSettings);
 // //-----Перевірка чи LocalStorage пустий
 // if(!localStorage.getItem('news')){
-//     alert("Not found news");
+//     
 // }
 // export function renderFavouriteNews(){
 //     // refs.favouriteNews.innerHTML = addFavouriteNews();

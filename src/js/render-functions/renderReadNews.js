@@ -85,9 +85,9 @@ export function showReadNews() {
     if(localStorage.read === "" || localStorage.read === undefined || localStorage.read === null) {
         return;
       } else {
-    console.log('gfhj');
+    //console.log('gfhj');
     const newsMarkup = news.map(({dateOfReading, readNews}) => {
-        console.log(dateOfReading);
+        //console.log(dateOfReading);
 
         return`
         <li class="date__item">
@@ -109,8 +109,8 @@ export function showReadNews() {
             link
          }) => {
             
-            if(!localStorage.getItem("news")){
-                   return  alert("Not found news");
+            if(!localStorage.getItem("read")){
+                   return;
                 }
         
                 return`
@@ -133,10 +133,10 @@ export function showReadNews() {
         </li>`
     }).join('');
     refs.renderContainerReadPage.innerHTML = newsMarkup;
-    addEventListenersForDateBtns();
+    //addEventListenersForDateBtns();
 };
 };
-
+/* 
 function addEventListenersForDateBtns() {
   document.querySelector('.container').addEventListener('click', showDateCards);
 };
@@ -146,4 +146,4 @@ function showDateCards(event) {
   if(event.target.getAttribute('class') === "date__click-container") {
     event.target.closest('ul').classList.remove('is-hidden');
   }
-};
+}; */
