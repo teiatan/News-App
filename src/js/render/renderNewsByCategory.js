@@ -4,25 +4,15 @@ import { getNewsByCategory } from '../API/getNewsByCategory';
 // рендер новин по категорії приходить з кнопки категорії  і визиваю функцію взяти масив с АРІ визиваю функцію рендеру
 export async function showNewsByCategory(category) {
   const newsList = await getNewsByCategory(category);
-  //   console.log(newsList.data.response.docs);
   const { docs } = newsList.data.response;
-  //   console.log(docs);
 
-  renderNewsList(docs);
+  renderNewsList(docs, category);
 }
 
-export function renderNewsList(newsList) {
+export function renderNewsList(newsList, category) {
   const newsMarkup = newsList
     .map(news => {
-      const {
-        id,
-        headline,
-        web_url,
-        pub_date,
-        section_name,
-        abstract,
-        multimedia,
-      } = news;
+      const { id, headline, web_url, pub_date, abstract, multimedia } = news;
 
       const multimediaImage = multimedia.find(
         item => item.type === 'image' && item.subtype === 'xlarge'
@@ -60,14 +50,14 @@ export function renderNewsList(newsList) {
           <h3 class="news__title">${headline.main}</h3>
           <p class="news__abstract">${abstract}</p>
           <span class="news__date">${dateWithoutTimeZone}</span>
-          <p class="news__category news__marker-search">${section_name}</p>
+          <p class="news__category news__marker-search">${category}</p>
           <a href="${web_url}" class="news__link" target="_blank">Read more</a>
         </div>
       </li>
     `;
     })
     .join('');
-  //   console.log(newsMarkup);
+
   refs.renderContainerHome.innerHTML = '';
   refs.renderContainerHome.insertAdjacentHTML('afterbegin', newsMarkup);
 }
