@@ -7,8 +7,8 @@ import {
 } from './js/headerSearchForm';
 import { addModalOpenListeners } from './js/modalOpening';
 import { currentLinkUnderline } from './js/currentLinkUnderline';
-import { getMostViewedNews } from './js/api/getMostViewedNews';
 import { showMostViewedNews } from './js/render/renderMostViewedNews';
+import { getMostViewedNews } from './js/api/getMostViewedNews';
 import { onSubmitSearchForm } from './js/api/getNewsByFormInput';
 import { showNewsByFormInput } from './js/render/renderNewsByFormInput';
 import { developers } from './developers';
