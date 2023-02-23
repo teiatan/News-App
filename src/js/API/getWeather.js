@@ -47,9 +47,9 @@ export  async function fetchWeatherByGeo(lat, lon) {
 
   export let weatherMarkup = `<li class="weather-item card">
     <div class="weather-header">
-     <p class="weather-header__degrees">23&#176</p>
+     <p class="weather-header__degrees">-2&#176</p>
     <div>
-       <p class="weather-header__condition">Sunny</p>
+       <p class="weather-header__condition">Broken clouds</p>
        <div class="weather-header__geowrap">
   <svg class="weather-header__geoicon">
                 <use href="./img/sprite.svg#icon-geo"></use>
@@ -59,10 +59,10 @@ export  async function fetchWeatherByGeo(lat, lon) {
      </div>
   </div>
    <img class="weather-img"
-         src="https://openweathermap.org/img/wn/10n@4x.png"
+         src="https://openweathermap.org/img/wn/04d.png"
         alt="Weather icon"/>
    <p class="weather-date">Mon</p>
-   <p class="weather-date">20 Feb 2023</p>
+   <p class="weather-date">24 Feb 2023</p>
    <div class="weather-linkwrap">
     <a class="weather-linkwrap__link" href="https://sinoptik.ua" target="_blank">weather for week</a>
    </div> 
