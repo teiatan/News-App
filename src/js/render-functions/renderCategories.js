@@ -1,5 +1,6 @@
 import { getCategories } from '../API/getCategories.js';
 import { refs } from '../refs.js';
+import { showNewsByCategory } from './renderNewsByCategory.js';
 
 export async function renderCategories() {
   // пішов взяв категорії з API
@@ -88,12 +89,19 @@ export async function renderCategories() {
     categorieMarkup2Mobile
   );
 }
-
-export default function handleCategoryClick(event) {
+export function handleCategoryClick(event) {
   const categoryForSearch = event.target.textContent;
-  // викликати функцію з отриманим текстовим вмістом
-  // console.log(categoryForSearch); // виводить назву категорії на яку клікнули
-  return categoryForSearch;
+
+  if (
+    event.target.closest('.categories-render-container__list-desktop') ||
+    event.target.closest('.categories-render-container__list-mobile') ||
+    event.target.closest('.categories-render-container__list-tablet') ||
+    event.target.closest('.other--categories__filters-list') ||
+    (event.target.closest('.other--categories__filters') &&
+      !event.target.closest('.categories-render-container__other-categories'))
+  ) {
+    showNewsByCategory(categoryForSearch);
+  }
 }
 
 const categoryButtons = document.querySelectorAll(
@@ -103,11 +111,3 @@ const categoryButtons = document.querySelectorAll(
 categoryButtons.forEach(button => {
   button.addEventListener('click', handleCategoryClick);
 });
-
-// import handleCategoryClick from './handleCategoryClick.js';
-
-// // Викликаємо handleCategoryClick функцію
-// const categoryForSearch = handleCategoryClick(event);
-
-// // Використовуємо categoryForSearch
-// console.log(categoryForSearch);

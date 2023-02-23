@@ -1,6 +1,8 @@
 const daysTag = document.querySelector('.days'),
-  currentDate = document.querySelector('.current-date'),
-  prevNextIcon = document.querySelectorAll('.calendar-icons span');
+  currentMonth = document.querySelector('.current-month'),
+  currentYear = document.querySelector('.current-year'),
+  prevNextIcon = document.querySelectorAll('.calendar-icons span'),
+  prevNextYear = document.querySelectorAll('.calendar__button-arrow-year');
  
 // getting new date, current year and month
 let date = new Date(),
@@ -15,6 +17,7 @@ let date = new Date(),
     modal: document.querySelector('.calendar-wrapper'),
     input: document.querySelector('.calendar-input'),
     arrow: document.querySelector('.calendar__button-arrow'),
+    year: document.querySelector('selected-year'),
     calendarBtn: document.querySelector('.calendar__button-calendar'),
   };
 
@@ -79,7 +82,8 @@ const renderCalendar = number => {
   for (let i = lastDayofMonth; i < 7; i++) {
     liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;
   }
-  currentDate.innerText = `${months[currMonth]} ${currYear}`; 
+  currentMonth.innerText = `${months[currMonth]}`; 
+  currentYear.innerText = `${currYear}`;
   daysTag.innerHTML = liTag;
   const dayChange = document.querySelector('.days');
 
@@ -101,9 +105,10 @@ const renderCalendar = number => {
       '/' +
       currYear ;
 
+    let inputDateValue = document.querySelector('.calendar-input').value;
 
-      selectedDate(newValueDay);
-    
+
+
 
     document.querySelector('[data-modal]').classList.add('is-hidden-wrapper');
     document.querySelector('.calendar-input').classList.remove('isActive');
@@ -126,23 +131,25 @@ prevNextIcon.forEach(icon => {
     currMonth = icon.id === 'prev' ? currMonth - 1 : currMonth + 1;
     if (currMonth < 0 || currMonth > 11) {
       date = new Date(currYear, currMonth, new Date().getDate());
-      currYear = date.getFullYear(); 
       currMonth = date.getMonth(); 
     } else {
       date = new Date(); 
     }
     renderCalendar(); 
-    let test = JSON.parse(localStorage.getItem('VALUE'));
-    let reachUl = daysTag.childNodes;
-    reachUl.forEach(elem => {
-      if (elem.textContent === test) {
-        elem.classList.add('active');
-      }
     });
   });
-});
+// });
+function inputYear(){
+prevNextYear.forEach(year => {
+  year.addEventListener('click', () => {
+     currYear = currYear + 1;
+     currentYear.innerText = `${currYear}`;
+  })
+})
+}
+inputYear();
 
-localStorage.removeItem('VALUE');
+
 localStorage.removeItem('date');
 
 

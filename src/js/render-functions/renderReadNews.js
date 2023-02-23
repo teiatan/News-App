@@ -91,13 +91,10 @@ export function showReadNews() {
 
         return`
         <li class="date__item">
-            <h3 date__title>${dateOfReading}</h3>
-            <svg class="read-btn__icon--pointer" width="9px" height="15px">
-                <use href="/src/img/sprite.svg#icon-arrow-down"></use>
-            </svg>
-            <svg class="read-btn__icon--pointer" width="9px" height="15px">
-                <use href="/src/img/sprite.svg#icon-arrow-up"></use>
-            </svg>
+        <div class="date__click-container">
+            <h3 class="date__title">${dateOfReading}</h3>
+            <span date__marker>&#11167</span>
+        </div>
             <ul class="date__news-list render-container">${readNews.map(
                 ({
             id,
@@ -136,5 +133,17 @@ export function showReadNews() {
         </li>`
     }).join('');
     refs.renderContainerReadPage.innerHTML = newsMarkup;
-}
-}
+    addEventListenersForDateBtns();
+};
+};
+
+function addEventListenersForDateBtns() {
+  document.querySelector('.container').addEventListener('click', showDateCards);
+};
+
+function showDateCards(event) {
+  console.log(event.target);
+  if(event.target.getAttribute('class') === "date__click-container") {
+    event.target.closest('ul').classList.remove('is-hidden');
+  }
+};

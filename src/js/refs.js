@@ -5,7 +5,7 @@ export const refs = {
   navHome: document.querySelector('.navigation__item--home'),
   navFavorite: document.querySelector('.navigation__item--favorite'),
   navRead: document.querySelector('.navigation__item--read'),
-  navWrapper: document.querySelector('.navigation-wrapper'),
+  navWrapper: document.querySelector('.navigation'),
   headerSignInBtn: document.querySelector('.auth-btn__sign-in'),
   headerSignOutBtn: document.querySelector('.auth-btn__sign-out'),
 
@@ -27,31 +27,22 @@ export const refs = {
   authEntranceBtn: document.querySelector('.js-auth__entrance-btn'),
   authRegistrationBtn: document.querySelector('.js-auth__registration-btn'),
   authModal: document.querySelector('.modal-auth'),
-
-  searchFormOpeningButton: document.querySelector(
-    '.header__search-form-opening-btn'
-  ),
+  navigationHomeLink: document.querySelector('a[data-link="home"]'),
+  navigationFavoriteLink: document.querySelector('a[data-link="favorite"]'),
+  navigationReadLink: document.querySelector('a[data-link="read"]'),
+  searchFormOpeningButton: document.querySelector('.header__search-form-opening-btn'),
   searchForm: document.querySelector('.search-form'),
   searchFormInput: document.querySelector('.search-form__input'),
 
-  navFavoriteLink: document.querySelector('a[data-link="favorite"]'),
-  navReadLink: document.querySelector('a[data-link="read"]'),
-  navHomeLink: document.querySelector('a[data-link="home"]'),
+  
+  
 
   favouriteNewsContainer: document.querySelector('.render-container'),
 
-  renderContainerCategoriesDesktop: document.querySelector(
-    '.categories-render-container__list-desktop'
-  ),
-  renderContainerCategoriesMobile: document.querySelector(
-    '.categories-render-container__list-mobile'
-  ),
-  renderContainerCategoriesTablet: document.querySelector(
-    '.categories-render-container__list-tablet'
-  ),
-  renderContainerCategoriesTheme: document.querySelector(
-    '.other--categories__filters-list'
-  ),
+  renderContainerCategoriesDesktop: document.querySelector('.categories-render-container__list-desktop'),
+  renderContainerCategoriesMobile: document.querySelector('.categories-render-container__list-mobile'),
+  renderContainerCategoriesTablet: document.querySelector('.categories-render-container__list-tablet'),
+  renderContainerCategoriesTheme: document.querySelector('.other--categories__filters-list'),
   modalText: document.querySelector('.other-categories__button-text'),
   modalOtherBtns: document.querySelector('.other-categories__button'),
   modalOtherArrow: document.querySelector('.other-categories__icon-arrow'),

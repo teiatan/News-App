@@ -8,13 +8,14 @@ import { addListenersForMobileHeader, viewportWidthCheck } from './js/headerSear
 import { currentLinkUnderline } from './js/currentLinkUnderline';
 import { changeTheme, addDarkClass } from './js/changeTheme';
 import { showReadNews } from './js/render-functions/renderReadNews';
+import {searchByForm} from './js/headerSearchForm'
 
 Notiflix.Loading.pulse();
 defaultLocalStorage();
 headerLogic();
 addModalOpenListeners();
 headerLogic();
-showReadNews();
+
 
 
 window.setTimeout(Notiflix.Loading.remove(), 5000);
@@ -26,4 +27,7 @@ addEventListenerForBurgerBtn();
 
 //changeTheme();
 //addDarkClass();
+searchByForm();
+
+showReadNews();
 

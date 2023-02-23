@@ -11,7 +11,7 @@ import { currentLinkUnderline } from './js/currentLinkUnderline';
 import {showFavouriteNews} from './js/render-functions/renderFavoriteNews';
 import { showFavoritePagination } from './js/pagination/favoritePagination.js';
 import { changeTheme, addDarkClass } from './js/changeTheme';
-
+import {searchByForm} from './js/headerSearchForm'
 
 Notiflix.Loading.pulse();
 defaultLocalStorage();
@@ -21,6 +21,7 @@ addModalOpenListeners();
 
 showFavouriteNews();
 // showFavoritePagination();
+
 
 window.setTimeout(Notiflix.Loading.remove(), 5000);
 
@@ -32,6 +33,8 @@ addEventListenerForBurgerBtn();
 
 //changeTheme();
 //addDarkClass();
+searchByForm();
 
 
-
+showFavouriteNews();
+//showFavoritePagination();

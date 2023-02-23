@@ -27,3 +27,11 @@ export function addListenersForMobileHeader() {
     refs.searchFormOpeningButton.addEventListener('click', onSearchBtnClick);
     refs.searchFormInput.addEventListener('blur', onSearchFormFocusLose);
 }
+
+export function searchByForm() {
+    refs.searchForm.addEventListener("submit", clickonSearchForm);
+}
+
+refs.searchForm.addEventListener("submit", clickonSearchForm);
+export function clickonSearchForm(){
+   window.location.href = 'index.html' }
