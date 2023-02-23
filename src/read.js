@@ -1,6 +1,5 @@
 import Notiflix from 'notiflix';
 import { addEventListenerForBurgerBtn } from './js/mobileMenu';
-import { refs } from './js/refs';
 import { currentLinkUnderline } from './js/currentLinkUnderline'
 import { headerLogic, defaultLocalStorage } from './js/logicFor3pages';
 import { addModalOpenListeners } from './js/modalOpening';
@@ -15,19 +14,10 @@ defaultLocalStorage();
 headerLogic();
 addModalOpenListeners();
 headerLogic();
-
-
-
-window.setTimeout(Notiflix.Loading.remove(), 5000);
 addListenersForMobileHeader();
 viewportWidthCheck();
 currentLinkUnderline();
-
 addEventListenerForBurgerBtn();
-
-//changeTheme();
-//addDarkClass();
 searchByForm();
-
 showReadNews();
-
+window.setTimeout(Notiflix.Loading.remove(), 5000);
