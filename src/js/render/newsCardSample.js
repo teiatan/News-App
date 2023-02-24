@@ -57,7 +57,7 @@ export function fillAbsentDataInNewsCard() {
           
         } else {
           el.textContent = "Remove from favorite";
-          svg.href = `/News-App/sprite.601f618d.svg#heartActive`;
+          
         };
       }
      } catch(error) {el.textContent = "Add to favorite";};
