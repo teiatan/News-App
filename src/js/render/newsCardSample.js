@@ -47,7 +47,6 @@ export function fillAbsentDataInNewsCard() {
         const elId = el.closest('li').dataset.id;
         const newsId = filledFavoriteArray.findIndex((news) =>
           news.id === elId);
-        console.log(newsId);
 
         if(newsId === -1) {
           el.textContent = "Add to favorite";
