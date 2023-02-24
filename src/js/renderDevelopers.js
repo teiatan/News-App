@@ -30,16 +30,16 @@ const q = allDevelopers.map(({
   <ul  class="developers__container">
   
       <li class="developers__item"><a class="developers__link" href="${linkedIn}"> <svg class="developer__svg">
-      <use href="/..sprite.e70822e0.svg#icon-linkedin"></use>
+      <use href="/..sprite.601f618d.svg#icon-linkedin"></use>
   </svg></a></li>
       <li class="developers__item"><a class="developers__link" href="${gitHub}"> <svg class="developer__svg">
-      <use href="../sprite.e70822e0.svg#icon-github"></use>
+      <use href="../sprite.601f618d.svg#icon-github"></use>
   </svg></a></li>
       <li class="developers__item"><a class="developers__link" href="${mail}"> <svg class="developer__svg">
-      <use href="../sprite.e70822e0.svg#icon-mail"></use>
+      <use href="../sprite.601f618d.svg#icon-mail"></use>
   </svg></a></li>
       <li class="developers__item"><a class="developers__link" href="${telegram}"><svg class="developer__svg">
-      <use href="../sprite.e70822e0.svg#icon-telegram"></use>
+      <use href="../sprite.601f618d.svg#icon-telegram"></use>
   </svg></a></li>
   </ul>
   <span class="developers__role-style"></span>
