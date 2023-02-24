@@ -46,9 +46,7 @@ export async function renderMostViewedNews({results}) {
               <svg class="news__svg news__svg-heart">
                   <use href="/News-App/sprite.601f618d.svg#heartDisable"></use>
               </svg>
-              <svg class="news__svg news__svg-heart" style="display:none">
-                  <use href="/News-App/sprite.601f618d.svg#heartActive"></use>
-              </svg>
+              
               </button>
 
               <img src="${imgSrc}" alt="${alt}" class="news__img"/>
