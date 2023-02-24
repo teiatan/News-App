@@ -43,9 +43,7 @@ export async function renderMostViewedNews({results}) {
               <div class="news__container-img">
 
               <button class="news__favorite">Add to favorite
-              <svg class="news__svg news__svg-heart">
-                  <use href="/News-App/sprite.601f618d.svg#heartDisable"></use>
-              </svg>
+              
               
               </button>
 
