@@ -14,12 +14,12 @@ let newLocalStorage = [];
  
 function addNewsToFavoriteArray(event) {
   //console.log("клік працює")
-  if(localStorage.auth === 'no') {
-    //console.log("не авторизовано")
-    Notiflix.Notify.failure('Sorry, for using this opportunity you need to be signed in');
-    openAuthModal();
-    return;
-  } else if (event.target.nodeName === 'BUTTON') {
+  if (event.target.nodeName === 'BUTTON') {
+    if(localStorage.auth === 'no') {
+      //console.log("не авторизовано")
+      Notiflix.Notify.failure('Sorry, for using this opportunity you need to be signed in');
+      openAuthModal();
+      return;};
     //console.log("авторизовано")
     const favoriteTargetElement = event.target.closest('li');
     const newsTargetObject = {
