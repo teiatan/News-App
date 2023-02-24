@@ -37,7 +37,7 @@ export async function renderMostViewedNews({results}) {
           <li class="news__item card" data-id=${id}>
             <p class="news__Already-read">Already read &#128504
               <svg class="news__svg news_svg-alreagy-read>
-                  <use href="/sprite.601f618d.svg#Vector-1"></use>
+                  <use href="/News-App/sprite.601f618d.svg#Vector-1"></use>
               </svg>
             </p>
             <div class="news__container">
@@ -46,10 +46,10 @@ export async function renderMostViewedNews({results}) {
 
               <button class="news__favorite">Add to favorite
               <svg class="news__svg news__svg-heart">
-                  <use href="/sprite.601f618d.svg#heartDisable"></use>
+                  <use href="/News-App/sprite.601f618d.svg#heartDisable"></use>
               </svg>
               <svg class="news__svg news__svg-heart" style="display:none">
-                  <use href="/sprite.601f618d.svg#heartActive"></use>
+                  <use href="/News-App/sprite.601f618d.svg#heartActive"></use>
               </svg>
               </button>
 
