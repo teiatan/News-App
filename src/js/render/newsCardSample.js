@@ -54,14 +54,14 @@ export function fillAbsentDataInNewsCard() {
 
         if(newsId === -1) {
           el.textContent = "Add to favorite";
-          svg.href = `${gitHubPath}.svg#heartDisable`;
+          
         } else {
           el.textContent = "Remove from favorite";
-          svg.href = `${gitHubPath}.svg#heartActive`;
+          svg.href = `/News-App/sprite.601f618d.svg#heartActive`;
         };
       }
      } catch(error) {el.textContent = "Add to favorite";};
-     svg.href = `${gitHubPath}.svg#heartDisable`;
+     
 
     if (el.textContent === null || el.textContent === undefined || el.textContent === '') {
     el.textContent = 'No category';
