@@ -1,4 +1,4 @@
-export default gitHubPath = "/News-App/sprite.601f618d";
+export const gitHubPath = "/News-App/sprite.601f618d";
 
 export function fillAbsentDataInNewsCard() {
   const newsImg = document.querySelectorAll('.news__img');
