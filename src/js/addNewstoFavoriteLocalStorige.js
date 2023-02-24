@@ -4,7 +4,7 @@ import { openAuthModal } from './modalOpening';
 
 
 export function addNewsToFavoriteArrayInLocalStorage() {
-  const containerWithCards = refs.favouriteNewsContainer;
+  const containerWithCards = document.querySelector('.render-container');
   containerWithCards.addEventListener('click', addNewsToFavoriteArray);
 
  

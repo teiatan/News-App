@@ -42,7 +42,7 @@ export function fillAbsentDataInNewsCard() {
 
 
   newsFavorite.forEach( function textContentforBtn(el) {
-    const svg = el.querySelector('.news__svg-heart').firstElementChild;
+    //const svg = el.querySelector('.news__svg-heart').firstElementChild;
     //el.closest('use').href = `${gitHubPath}.svg#heartDisable`;
     try {
       
