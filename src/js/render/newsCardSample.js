@@ -53,14 +53,11 @@ export function fillAbsentDataInNewsCard() {
 
         if(newsId === -1) {
           el.textContent = "Add to favorite";
-          el.closest('use').href = `${gitHubPath}.svg#heartDisable`;
         } else {
           el.textContent = "Remove from favorite";
-          el.closest('use').href = `${gitHubPath}.svg#heartActive`;
         };
       }
-     } catch(error) {el.textContent = "Add to favorite";
-     el.closest('use').href = `${gitHubPath}.svg#heartDisable`;};
+     } catch(error) {el.textContent = "Add to favorite";};
 
     if (el.textContent === null || el.textContent === undefined || el.textContent === '') {
     el.textContent = 'No category';
