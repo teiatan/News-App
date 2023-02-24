@@ -1,7 +1,8 @@
 import {refs} from '../refs';
 import { addNewsToFavoriteArrayInLocalStorage } from '../addNewstoFavoriteLocalStorige';
 const gitHubPath = "/News-App/sprite.601f618d";
-
+import {fillAbsentDataInNewsCard} from './newsCardSample';
+ 
 // const newsArray = [
 //     {
 //         id: "100000008772688",
@@ -40,73 +41,74 @@ const gitHubPath = "/News-App/sprite.601f618d";
 //         link: "https://www.nytimes.com/2023/02/16/technology/bing-chatbot-microsoft-chatgpt.html",
 //       }
 // // ];
-// const news = JSON.parse(localStorage.getItem ("favorite"));
+
 // //localStorage.setItem("news", JSON.stringify(news));
   
 // //const savedSettings = localStorage.getItem("news");
 
-export function showFavouriteNews(news){
-  console.log(news)
+export function showFavouriteNews(){
+  //console.log(news)
 //   const news = newsPerPage;
 //   console.log(news);
 // //     if(localStorage.favorite === "" || localStorage.favorite === undefined || localStorage.favorite === null) {
 // //       return;
 // //     } else {
-//       const newsMarkup = news.map(
-//         ({
-//     id,
-//     category,
-//     wasRead,
-//     img,
-//     imgAlt,
-//     title,
-//     description,
-//     date,
-//     favorite,
-//     link
-//  }) => {
+  if(!localStorage.getItem("favorite")){
+    return;
+  }
+const news = JSON.parse(localStorage.getItem ("favorite"));
+const newsMarkup = news.map(
+       ({
+    id,
+     category,
+     wasRead,
+     img,
+     imgAlt,
+     title,
+    description,
+     date,
+     favorite,
+     link
+  }) => {
     
-//     if(!localStorage.getItem("news")){
-//            return;
-//         }
+     
 
-//         return`
-// <li class="news__item card" data-id=${id}>
-// <p class="news__Already-read">Already read &#128504
-//   <svg class="news__svg news_svg-alreagy-read>
-//       <use href="/sprite.e70822e0.svg#Vector-1"></use>
-//   </svg>
-// </p>
-// <div class="news__container">
-//   <span class="news__read is-hidden"></span>
-//   <div class="news__container-img">
+         return`
+ <li class="news__item card" data-id=${id}>
+ <p class="news__Already-read">Already read &#128504
+   <svg class="news__svg news_svg-alreagy-read>
+       <use href="/sprite.e70822e0.svg#Vector-1"></use>
+   </svg>
+ </p>
+ <div class="news__container">
+   <span class="news__read is-hidden"></span>
+   <div class="news__container-img">
 
-//   <button class="news__favorite">Add to favorite
-//   <svg class="news__svg news__svg-heart">
-//       <use href="/sprite.e70822e0.svg#heartDisable"></use>
-//   </svg>
-//   <svg class="news__svg news__svg-heart" style="display:none">
-//       <use href="/sprite.e70822e0.svg#heartActive"></use>
-//   </svg>
-//   </button>
+   <button class="news__favorite">Add to favorite
+   <svg class="news__svg news__svg-heart">
+       <use href="/sprite.e70822e0.svg#heartDisable"></use>
+   </svg>
+   <svg class="news__svg news__svg-heart" style="display:none">
+       <use href="/sprite.e70822e0.svg#heartActive"></use>
+   </svg>
+   </button>
 
-//   <img src="${img}" alt="${imgAlt}" class="news__img"/>
-// </div>
+   <img src="${img}" alt="${imgAlt}" class="news__img"/>
+ </div>
 
-// <h3 class="news__title">${title}</h3>
-// <p class="news__abstract">${description}</p>
+ <h3 class="news__title">${title}</h3>
+ <p class="news__abstract">${description}</p>
   
-// <span class="news__date">${date}</span>
-// <p class="news__category news__marker-search">${category}</p>
-// <a href="${link}" class="news__link" target = "_blank">Read more</a></div>
-// </li>
-// ` }).join('');
-// refs.favouriteNewsContainer.innerHTML = newsMarkup;
-// addNewsToFavoriteArrayInLocalStorage();
-//fillAbsentDataInNewsCard();
-//     }
+ <span class="news__date">${date}</span>
+ <p class="news__category news__marker-search">${category}</p>
+ <a href="${link}" class="news__link" target = "_blank">Read more</a></div>
+ </li>
+ ` }).join('');
+ refs.favouriteNewsContainer.innerHTML = newsMarkup;
+ addNewsToFavoriteArrayInLocalStorage();
+fillAbsentDataInNewsCard();
+     }
 
-}
 
   
 //   localStorage.setItem("news", JSON.stringify(news));

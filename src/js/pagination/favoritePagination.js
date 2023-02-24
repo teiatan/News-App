@@ -15,7 +15,7 @@ const start = 1 * perPage;
 const end = start + perPage;
 newsPerPage = favorite.slice(start, end);
 newsArr.push(newsPerPage);
-console.log(newsArr[0]);
+//console.log(newsArr[0]);
 
 const newsMarkup = newsPerPage.map(
            ({
@@ -105,7 +105,7 @@ function onPaginBtnClick(evt) {
    createPagin(pages, pageNum);
    showFavouriteNews(newsPerPage);
 }
-console.log(newsArr);
+//console.log(newsArr);
 
 showFavoritePagination(newsArr[0]);
 
