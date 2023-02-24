@@ -1,7 +1,7 @@
 import { all } from "axios";
 import g from "calendar-dates";
-import gitHubPath from './render/newsCardSample';
-
+import gitHubSvg from './render/newsCardSample';
+gitHubSvg();
 import { developers } from '../developers';
 
 const allDevelopers = developers;
