@@ -42,7 +42,8 @@ export function fillAbsentDataInNewsCard() {
 
 
   newsFavorite.forEach( function textContentforBtn(el) {
-    
+    const svg = el.querySelector('.news__svg-heart');
+    //el.closest('use').href = `${gitHubPath}.svg#heartDisable`;
     try {
       
       const filledFavoriteArray = JSON.parse(localStorage.getItem ("favorite"));
@@ -53,11 +54,14 @@ export function fillAbsentDataInNewsCard() {
 
         if(newsId === -1) {
           el.textContent = "Add to favorite";
+          svg.href = `${gitHubPath}.svg#heartDisable`;
         } else {
           el.textContent = "Remove from favorite";
+          svg.href = `${gitHubPath}.svg#heartActive`;
         };
       }
      } catch(error) {el.textContent = "Add to favorite";};
+     svg.href = `${gitHubPath}.svg#heartDisable`;
 
     if (el.textContent === null || el.textContent === undefined || el.textContent === '') {
     el.textContent = 'No category';
