@@ -1,7 +1,7 @@
 export const pag = document.getElementById('pagination');
 const prevBtn = document.querySelector('.js-prev-page');
 const nextBtn = document.querySelector('.js-next-page');
-
+const gitHubPath = "/News-App/sprite.601f618d";
 // let totalPages = 20;
 
 export function createPagin(totalPages, page) {

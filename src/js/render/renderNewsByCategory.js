@@ -3,7 +3,7 @@ import { getNewsByCategory } from '../API/getNewsByCategory';
 import { fillAbsentDataInNewsCard } from './newsCardSample';
 import { addNewsToFavoriteArrayInLocalStorage } from '../addNewstoFavoriteLocalStorige';
 import { addNewsToReadArrayInLocalStorage } from '../addNewsToReadArrayInLocalStorage';
-
+const gitHubPath = "/News-App/sprite.601f618d";
 // рендер новин по категорії приходить з кнопки категорії  і визиваю функцію взяти масив с АРІ визиваю функцію рендеру
 export async function showNewsByCategory(category) {
   const newsList = await getNewsByCategory(category);

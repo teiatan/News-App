@@ -1,6 +1,7 @@
 import { showFavouriteNews} from '../render/renderFavoriteNews.js';
 import { createPagin } from './pagin.js';
 import {refs} from '../refs';
+const gitHubPath = "/News-App/sprite.601f618d";
 const favorite = JSON.parse(localStorage.getItem ("favorite"));
 const paginConteinBtn = document.getElementById('pagination');
 const perPage = 3;

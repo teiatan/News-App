@@ -6,7 +6,7 @@ import { addNewsToReadArrayInLocalStorage } from '../addNewsToReadArrayInLocalSt
 export async function showMostViewedNews(apiFetch) {
     renderMostViewedNews(await apiFetch);
 };
-
+const gitHubPath = "/News-App/sprite.601f618d";
 export async function renderMostViewedNews({results}) {
   refs.renderContainerHome.innerHTML = '';
   

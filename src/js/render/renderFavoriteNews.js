@@ -1,6 +1,6 @@
 import {refs} from '../refs';
 import { addNewsToFavoriteArrayInLocalStorage } from '../addNewstoFavoriteLocalStorige';
-
+const gitHubPath = "/News-App/sprite.601f618d";
 
 // const newsArray = [
 //     {

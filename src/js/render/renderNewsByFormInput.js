@@ -3,7 +3,7 @@ import { weatherMarkup } from '../API/getWeather';
 import { addNewsToFavoriteArrayInLocalStorage } from '../addNewstoFavoriteLocalStorige';
 import { fillAbsentDataInNewsCard } from './newsCardSample';
 import { addNewsToReadArrayInLocalStorage } from '../addNewsToReadArrayInLocalStorage';
-
+const gitHubPath = "/News-App/sprite.601f618d";
 export async function showNewsByFormInput(apiFetch) {
     renderNewsByFormInput(await apiFetch);
 };
