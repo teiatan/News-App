@@ -1,9 +1,7 @@
 import { all } from "axios";
 import g from "calendar-dates";
-import gitHubSvg from './render/newsCardSample';
-gitHubSvg();
 import { developers } from '../developers';
-
+const gitHubPath = "/News-App/sprite.601f618d";
 const allDevelopers = developers;
 //console.log(allDevelopers);
 
