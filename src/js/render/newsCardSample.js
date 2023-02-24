@@ -1,5 +1,5 @@
-export function gitHubSvg() {
-  gitHubPath = "/News-App/sprite.601f618d";
+export default function gitHubSvg() {
+  const gitHubPath = "/News-App/sprite.601f618d";
 };
 export function fillAbsentDataInNewsCard() {
   const newsImg = document.querySelectorAll('.news__img');
