@@ -37,7 +37,7 @@ export async function renderMostViewedNews({results}) {
           <li class="news__item card" data-id=${id}>
             <p class="news__Already-read">Already read &#128504
               <svg class="news__svg news_svg-alreagy-read>
-                  <use href="/sprite.601f618d.svg#Vector-1"></use>
+                  <use href="${gitHubPath}.svg#Vector-1"></use>
               </svg>
             </p>
             <div class="news__container">
@@ -48,9 +48,7 @@ export async function renderMostViewedNews({results}) {
               <svg class="news__svg news__svg-heart">
                   <use href="${gitHubPath}.sprite.svg#heartDisable"></use>
               </svg>
-              <svg class="news__svg news__svg-heart" style="display:none">
-                  <use href="${gitHubPath}.sprite.svg#heartActive"></use>
-              </svg>
+              
               </button>
 
               <img src="${imgSrc}" alt="${alt}" class="news__img"/>
