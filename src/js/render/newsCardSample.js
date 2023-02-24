@@ -4,6 +4,8 @@ export function fillAbsentDataInNewsCard() {
   const newsAbstract = document.querySelectorAll('.news__abstract');
   const newsCategory = document.querySelectorAll('.news__category');
   const newsLink = document.querySelectorAll('.news__link');
+  const newsFavorite = document.querySelectorAll('.news__favorite');
+
   newsImg.forEach( function defaultImage(el) {
     if (el.src === null || el.src === undefined || el.src === '') {
       el.src="https://wellesleysocietyofartists.org/wp-content/uploads/2015/11/image-not-found.jpg";
@@ -33,6 +35,32 @@ export function fillAbsentDataInNewsCard() {
     if (el.textContent.length > 140) {
       el.textContent = `${el.textContent.slice(0,140)} ...`;
     }
+  })
+
+
+  newsFavorite.forEach( function textContentforBtn(el) {
+    
+    try {
+      
+      const filledFavoriteArray = JSON.parse(localStorage.getItem ("favorite"));
+      if(Array.isArray(filledFavoriteArray)) {
+        const elId = el.closest('li').dataset.id;
+        const newsId = filledFavoriteArray.findIndex((news) =>
+          news.id === elId);
+        console.log(newsId);
+
+        if(newsId === -1) {
+          el.textContent = "Add to favorite";
+        } else {
+          el.textContent = "Remove from favorite";
+        };
+      }
+     } catch(error) {el.textContent = "Add to favorite";};
+
+    if (el.textContent === null || el.textContent === undefined || el.textContent === '') {
+    el.textContent = 'No category';
+    };
+    
   })
 };
 
