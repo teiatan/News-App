@@ -46,10 +46,10 @@ export async function renderMostViewedNews({results}) {
 
               <button class="news__favorite">Add to favorite
               <svg class="news__svg news__svg-heart">
-                  <use href="/sprite.601f618d.svg#heartDisable"></use>
+                  <use href="${gitHubPath}.svg#heartDisable"></use>
               </svg>
               <svg class="news__svg news__svg-heart" style="display:none">
-                  <use href="/sprite.601f618d.svg#heartActive"></use>
+                  <use href="${gitHubPath}.svg#heartActive"></use>
               </svg>
               </button>
 
