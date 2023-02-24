@@ -60,7 +60,7 @@ export function fillAbsentDataInNewsCard() {
         };
       }
      } catch(error) {el.textContent = "Add to favorite";
-     el.closest('use').href = `${gitHubPath}.svg#heartDisable`;};
+     };
 
     if (el.textContent === null || el.textContent === undefined || el.textContent === '') {
     el.textContent = 'No category';
