@@ -30,7 +30,7 @@ mail: "work.haldavaroman@gmail.com",
 telegram: "",
 photo: RomanHaldava,
 role: "Developer",
-doneTasks: "фавікон, розмітка формиполя пошуку новин по ключовому слову"},
+doneTasks: "фавікон, розмітка форми поля пошуку новин по ключовому слову"},
 
 
 { fullName: "Anastasiia Herusova",
@@ -50,7 +50,7 @@ mail: "nikita.zhuk.1994@gmail.com",
 telegram: "https://t.me/NVZ1411",
 photo: NikitaZhuk,
 role: "Developer",
-doneTasks: ""},
+doneTasks: "фінальна версія хедеру, відкриття бургер-меню, відкриття форми пошуку"},
 
 
 { fullName: "Oleg Miholap",
@@ -70,7 +70,7 @@ mail: "bakumenkoanastasia2@gmail.com",
 telegram: "https://t.me/nastyshka15",
 photo: AnastasiiaBakumenko,
 role: "Developer",
-doneTasks: "календар"},
+doneTasks: "календар, рендер сторінки фейверіт"},
 
 
 { fullName: "Nazarii Tkachuk",
@@ -80,7 +80,7 @@ mail: "tkachuknazarii15@gmail.com",
 telegram: "https://t.me/Nazzik15",
 photo: NazariiTkachuk,
 role: "Developer",
-doneTasks: "розмітка хедеру як сукупності розміток"},
+doneTasks: "розмітка хедеру як сукупності розміток, доопрацювання пошуку по ключовому слову"},
 
 
 {fullName: "Olena Serbinenko",
@@ -120,7 +120,7 @@ mail: "yaroslava.plt@gmail.com",
 telegram: "https://t.me/yaroslava_plt",
 photo: YaroslavaPletsys,
 role: "Developer",
-doneTasks: "розмітка для пагінації,"},
+doneTasks: "розмітка для пагінації, пагінація фейверіт"},
 
 
 { fullName: "Andrew Sulymka",
@@ -130,7 +130,7 @@ mail: "andreysulymka5@gmail.com",
 telegram: "https://t.me/andreySulymka",
 photo: AndrewSulymka,
 role: "Developer",
-doneTasks: "змінні окрім кольорів"},
+doneTasks: "змінні, перемикання теми"},
 
 {fullName: "Yaroslav Velichko",
 linkedIn: "",
@@ -139,7 +139,7 @@ mail: "velichko14.11.97@gmail.com",
 telegram: "https://t.me/Crypto_Espresso",
 photo: YaroslavVelichko,
 role: "Developer",
-doneTasks: ""}
+doneTasks: "оформлення модалок"}
 ] 
 
 
